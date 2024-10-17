@@ -10,17 +10,26 @@ export const handler = async (event) => {
             return {
                 statusCode: 404,
                 body: JSON.stringify({ message: 'Comment not found' }),
+                headers: {
+                    "Access-Control-Allow-Origin" : '*'
+                 }
             };
         }
 
         return {
             statusCode: 200,
             body: JSON.stringify({ message: 'Comment deleted successfully' }),
+            headers: {
+                "Access-Control-Allow-Origin" : '*'
+             }
         };
     } catch (error) {
         return {
             statusCode: 500,
             body: JSON.stringify({ message: 'Error deleting comment', error }),
+            headers: {
+                "Access-Control-Allow-Origin" : '*'
+             }
         };
     }
 };

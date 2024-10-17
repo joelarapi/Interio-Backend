@@ -10,11 +10,17 @@ export const handler = async (event) => {
         return {
             statusCode: 201,
             body: JSON.stringify(newCategory),
+            headers: {
+                "Access-Control-Allow-Origin" : '*'
+             }
         };
     } catch (error) {
         return {
             statusCode: 500,
             body: JSON.stringify({ message: 'Error creating category', error }),
+            headers: {
+                "Access-Control-Allow-Origin" : '*'
+             }
         };
     }
 };

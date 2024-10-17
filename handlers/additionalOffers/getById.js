@@ -9,17 +9,26 @@ export const handler = async (event) => {
             return {
                 statusCode: 404,
                 body: JSON.stringify({ message: 'Additional offer not found' }),
+                headers: {
+                    "Access-Control-Allow-Origin" : '*'
+                 }
             };
         }
 
         return {
             statusCode: 200,
             body: JSON.stringify(additionalOffer),
+            headers: {
+                "Access-Control-Allow-Origin" : '*'
+             }
         };
     } catch (error) {
         return {
             statusCode: 500,
             body: JSON.stringify({ message: 'Error retrieving additional offer', error }),
+            headers: {
+                "Access-Control-Allow-Origin" : '*'
+             }
         };
     }
 };

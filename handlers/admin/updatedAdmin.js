@@ -14,17 +14,26 @@ export const handler = async (event) => {
             return {
                 statusCode: 404,
                 body: JSON.stringify({ message: 'Admin not found' }),
+                headers: {
+                    "Access-Control-Allow-Origin" : '*'
+                 }
             };
         }
 
         return {
             statusCode: 200,
             body: JSON.stringify(updatedAdmin),
+            headers: {
+                "Access-Control-Allow-Origin" : '*'
+             }
         };
     } catch (error) {
         return {
             statusCode: 500,
             body: JSON.stringify({ message: 'Error updating admin', error }),
+            headers: {
+                "Access-Control-Allow-Origin" : '*'
+             }
         };
     }
 };

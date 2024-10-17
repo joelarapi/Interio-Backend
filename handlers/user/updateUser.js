@@ -14,17 +14,26 @@ export const handler = async (event) => {
             return {
                 statusCode: 404,
                 body: JSON.stringify({ message: 'User not found' }),
+                headers: {
+                    "Access-Control-Allow-Origin" : '*'
+                 }
             };
         }
 
         return {
             statusCode: 200,
             body: JSON.stringify(updatedUser),
+            headers: {
+                "Access-Control-Allow-Origin" : '*'
+             }
         };
     } catch (error) {
         return {
             statusCode: 500,
             body: JSON.stringify({ message: 'Error updating user', error }),
+            headers: {
+                "Access-Control-Allow-Origin" : '*'
+             }
         };
     }
 };

@@ -9,11 +9,17 @@ export const handler = async (event) => {
         return {
             statusCode: 200,
             body: JSON.stringify(offers),
+            headers: {
+                "Access-Control-Allow-Origin" : '*'
+             }
         };
     } catch (error) {
         return {
             statusCode: 500,
             body: JSON.stringify({ message: 'Error retrieving post offers', error }),
+            headers: {
+                "Access-Control-Allow-Origin" : '*'
+             }
         };
     }
 };

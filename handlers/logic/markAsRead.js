@@ -20,11 +20,17 @@ export const handler = async (event) => {
         return {
             statusCode: 200,
             body: JSON.stringify(updatedNotification),
+            headers: {
+                "Access-Control-Allow-Origin" : '*'
+             }
         };
     } catch (error) {
         return {
             statusCode: 500,
             body: JSON.stringify({ message: 'Error marking notification as read', error }),
+            headers: {
+                "Access-Control-Allow-Origin" : '*'
+             }
         };
     }
 };

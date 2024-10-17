@@ -7,11 +7,17 @@ export const handler = async () => {
         return {
             statusCode: 200,
             body: JSON.stringify(categories),
+            headers: {
+                "Access-Control-Allow-Origin" : '*'
+             }
         };
     } catch (error) {
         return {
             statusCode: 500,
             body: JSON.stringify({ message: 'Error retrieving categories', error }),
+            headers: {
+                "Access-Control-Allow-Origin" : '*'
+             }
         };
     }
 };

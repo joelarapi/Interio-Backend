@@ -10,11 +10,17 @@ export const handler = async (event) => {
         return {
             statusCode: 201,
             body: JSON.stringify(newNotification),
+            headers: {
+                "Access-Control-Allow-Origin" : '*'
+             }
         };
     } catch (error) {
         return {
             statusCode: 500,
             body: JSON.stringify({ message: 'Error creating notification', error }),
+            headers: {
+                "Access-Control-Allow-Origin" : '*'
+             }
         };
     }
 };
