@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 
-const subscriptionMenagerSchema = new mongoose.Schema({
-    businessId: { type: mongoose.Schema.Types.ObjectId, required: true, ref: 'Business' },
+const subscriptionManagerSchema = new mongoose.Schema({
+    businessId: { type: mongoose.Schema.Types.ObjectId, required: true, ref: 'Business', unique: true },
     subscriptionId: { type: mongoose.Schema.Types.ObjectId, required: true, ref: 'SubscriptionPlan' },
     startDate: { type: Date, default: Date.now },
     endDate: { type: Date },
@@ -11,5 +11,5 @@ const subscriptionMenagerSchema = new mongoose.Schema({
     status: { type: String, enum: ['active', 'inactive'], default: 'active' }
 });
 
-const SubscriptionMenager = mongoose.model('SubscriptionMenager', subscriptionMenagerSchema);
-export default SubscriptionMenager;
+const SubscriptionManager = mongoose.model('SubscriptionManager', subscriptionManagerSchema);
+export default SubscriptionManager;
