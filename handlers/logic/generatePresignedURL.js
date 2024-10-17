@@ -4,7 +4,7 @@ import dotenv from "dotenv";
 
 dotenv.config();
 
-export const generatePresignedUrl = async (event, context, callback) => {
+export const handler = async (event, context, callback) => {
     context.callbackWaitsForEmptyEventLoop = false;
     const REGION = process.env.REGION;
     const BUCKET = process.env.AWS_S3_BUCKET_NAME;

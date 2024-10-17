@@ -1,6 +1,6 @@
 import User from "../../models/User";
 
-export const createUser = async (event) => {
+export const handler = async (event) => {
     const userData = JSON.parse(event.body);
 
     try {

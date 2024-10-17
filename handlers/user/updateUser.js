@@ -1,6 +1,6 @@
 import User from "../../models/User";
 
-export const updateUser = async (event) => {
+export const handler = async (event) => {
     const { id } = event.pathParameters;
     const userData = JSON.parse(event.body);
 
