@@ -1,4 +1,5 @@
-import Business from "../../models/Business";import Bookmark from "../../models/Bookmark";
+import Business from "../../models/Business";
+import Bookmark from "../../models/Bookmark";
 
 export const handler = async (event) => {
     const { businessId } = event.pathParameters;
