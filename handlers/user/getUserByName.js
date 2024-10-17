@@ -4,7 +4,7 @@ export const handler = async (event) => {
     const { username } = event.pathParameters;
 
     try {
-        const users = await User.find({ username: { $regex: name, $options: 'i' } });
+        const users = await User.find({ username: { $regex: username, $options: 'i' } });
         
         if (users.length === 0) {
             return {

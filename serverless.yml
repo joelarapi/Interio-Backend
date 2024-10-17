@@ -7,3 +7,78 @@ provider:
 
   environment:
     MONGODB_URI: ${env:MONGODB_URI} 
+
+
+
+functions:
+  getUser:
+    handler: handlers/user/getUserById.handler
+    events:
+      - http:
+          path: /user/{id}
+          method: GET
+          cors: true
+  createUser:
+    handler: handlers/user/createUser.handler
+    events:
+      - http:
+          path: /user
+          method: POST
+          cors: true
+  deleteUser:
+    handler: handlers/user/deleteUser.handler
+    events:
+      - http:
+          path: /user/{id}
+          method: DELETE
+          cors: true
+  getUserName:
+    handler: handlers/user/getUserByName.handler
+    events:
+      - http:
+          path: /user/search
+          method: GET
+          cors: true
+  updateUser:
+    handler: handlers/user/updateUser.handler
+    events:
+      - http:
+          path: /user/{id}
+          method: PUT
+          cors: true
+  getBusinessById:
+    handler: handlers/user/getBusinessById.handler
+    events:
+      - http:
+          path: /bussiness/{id}
+          method: GET
+          cors: true
+  createBusiness:
+    handler: handlers/user/createBusiness.handler
+    events:
+      - http:
+          path: /business
+          method: POST
+          cors: true
+  deleteBusiness:
+    handler: handlers/user/deleteBusiness.handler
+    events:
+      - http:
+          path: /business/{id}
+          method: DELETE
+          cors: true
+  getBusinessName:
+    handler: handlers/user/getBusinessName.handler
+    events:
+      - http:
+          path: /business/search
+          method: GET
+          cors: true
+  updateUser:
+    handler: handlers/user/updateUser.handler
+    events:
+      - http:
+          path: /user/{id}
+          method: PUT
+          cors: true
+  
