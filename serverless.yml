@@ -123,12 +123,71 @@ functions:
           path: /post/filtred
           method: GET
           cors: true
-  updateUser:
-    handler: handlers/user/updateUser.handler
+  getAvailablePosts:
+    handler: handlers/post/getOpenPosts.handler
     events:
       - http:
-          path: /user/{id}
+          path: /post/{id}
+          method: GET
+          cors: true
+  getadditionalOffers:
+    handler: handlers/additionalOffers/getAll.handler
+    events:
+      - http:
+          path: /additionalOffers
+          method: GET
+          cors: true
+  createadditionalOffers:
+    handler: handlers/additionalOffers/create.handler
+    events:
+      - http:
+          path: /additionalOffers
+          method: POST
+          cors: true
+  deleteadditionalOffers:
+    handler: handlers/additionalOffers/delete.handler
+    events:
+      - http:
+          path: /additionalOffers/{id}
+          method: DELETE
+          cors: true
+  getadditionalOffersById:
+    handler: handlers/additionalOffers/getById.handler
+    events:
+      - http:
+          path: /additionalOffersById/{id}
+          method: GET
+          cors: true
+  createAdmin:
+    handler: handlers/admin/createAdmin.handler
+    events:
+      - http:
+          path: /admin
+          method: POST
+          cors: true
+  getAdmin:
+    handler: handlers/admin/getAdminById.handler
+    events:
+      - http:
+          path: /admin/{id}
+          method: GET
+          cors: true
+  deleteAdmin:
+    handler: handlers/admin/deleteAdmin.handler
+    events:
+      - http:
+          path: /admin/{id}
+          method: DELETE
+          cors: true
+  updateAdmin:
+    handler: handlers/admin/updateUser.handler
+    events:
+      - http:
+          path: /admin/{id}
           method: PUT
           cors: true
+  
+  
+
 
   
