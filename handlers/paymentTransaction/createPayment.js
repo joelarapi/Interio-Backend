@@ -1,9 +1,11 @@
 import PaymentTransaction from "../../models/PaymentTransaction";
+import connectDB from "../../configurations/connectDB";
 
 export const handler = async (event) => {
     const transactionData = JSON.parse(event.body);
 
     try {
+        await connectDB();
         const newTransaction = new PaymentTransaction(transactionData);
         await newTransaction.save();
 

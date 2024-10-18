@@ -1,9 +1,11 @@
 import Post from "../../models/Post";
+import connectDB from "../../configurations/connectDB";
 
 export const handler = async (event) => {
     const { id } = event.pathParameters;
 
     try {
+        await connectDB();
         const deletedPost = await Post.findByIdAndDelete(id);
 
         if (!deletedPost) {

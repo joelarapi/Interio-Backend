@@ -1,9 +1,11 @@
 import SubscriptionPlan from "../../models/SubscriptionPlan";
+import connectDB from "../../configurations/connectDB";
 
 export const hanlder = async (event) => {
     const { id } = event.pathParameters;
 
     try {
+        await connectDB();
         const subscriptionPlan = await SubscriptionPlan.findById(id);
         if (!subscriptionPlan) {
             return {

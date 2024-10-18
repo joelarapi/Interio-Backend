@@ -1,9 +1,11 @@
 import Comment from "../../models/Comment";
+import connectDB from "../../configurations/connectDB";
 
 export const handler = async (event) => {
     const { postId } = event.pathParameters;
 
     try {
+        await connectDB();
         const comments = await Comment.find({ postId }).populate('authorId');
 
         return {

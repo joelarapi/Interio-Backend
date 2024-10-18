@@ -1,7 +1,9 @@
 import SubscriptionPlan from "../../models/SubscriptionPlan";
+import connectDB from "../../configurations/connectDB";
 
 export const handler = async () => {
     try {
+        await connectDB();
         const subscriptionPlans = await SubscriptionPlan.find();
 
         return {

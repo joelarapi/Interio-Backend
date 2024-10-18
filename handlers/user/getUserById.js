@@ -1,9 +1,11 @@
 import User from "../../models/User";
+import connectDB from "../../configurations/connectDB";
 
 export const handler = async (event) => {
     const { id } = event.pathParameters;
 
     try {
+        await connectDB();
         const user = await User.findById(id);
         if (!user) {
             return {

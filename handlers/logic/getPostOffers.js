@@ -1,9 +1,11 @@
 import Offer from '../../models/Offer';
+import connectDB from "../../configurations/connectDB";
 
 export const handler = async (event) => {
     const { postId } = event.pathParameters;
 
     try {
+        await connectDB();
         const offers = await Offer.find({ postId }).populate('businessId');
 
         return {

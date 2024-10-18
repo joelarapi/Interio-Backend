@@ -1,9 +1,11 @@
 import Offer from "../../models/Offer";
+import connectDB from "../../configurations/connectDB";
 
 export const handler = async (event) => {
     const { id } = event.pathParameters;
 
     try {
+        await connectDB();
         const deletedOffer = await Offer.findByIdAndDelete(id);
 
         if (!deletedOffer) {

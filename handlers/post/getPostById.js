@@ -1,9 +1,11 @@
 import Post from "../../models/Post";
+import connectDB from "../../configurations/connectDB";
 
 export const handler = async (event) => {
     const { id } = event.pathParameters;
 
     try {
+        await connectDB();
         const post = await Post.findById(id).populate('authorId');
 
         if (!post) {

@@ -1,8 +1,9 @@
 import Post from "../../models/Post";
+import connectDB from "../../configurations/connectDB";
 
 export const handler = async (event) => {
     try {
-        
+        await connectDB();
         const openPosts = await Post.find({ status: 'open' });
 
         if (openPosts.length === 0) {

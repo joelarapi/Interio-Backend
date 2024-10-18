@@ -1,10 +1,12 @@
 import User from "../../models/User";
+import connectDB from "../../configurations/connectDB";
 
 export const handler = async (event) => {
     const { id } = event.pathParameters;
     const userData = JSON.parse(event.body);
 
     try {
+        await connectDB();
         const updatedUser = await User.findByIdAndUpdate(id, userData, {
             new: true,
             runValidators: true,

@@ -1,9 +1,12 @@
 import Notification from "../../models/Notifications";
+import connectDB from "../../configurations/connectDB";
 
 export const handler = async (event) => {
     const { id } = event.pathParameters;
 
     try {
+        await connectDB();
+        
         const notification = await Notification.findById(id);
         if (!notification) {
             return {

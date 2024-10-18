@@ -1,9 +1,11 @@
 import User from "../../models/User";
+import connectDB from "../../configurations/connectDB";
 
 export const handler = async (event) => {
     const { username } = event.pathParameters;
 
     try {
+        await connectDB();
         const users = await User.find({ username: { $regex: username, $options: 'i' } });
         
         if (users.length === 0) {

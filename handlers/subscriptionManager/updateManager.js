@@ -1,10 +1,12 @@
 import SubscriptionManager from "../../models/SubscriptionManager";
+import connectDB from "../../configurations/connectDB";
 
 export const handler = async (event) => {
     const { id } = event.pathParameters;
     const updateData = JSON.parse(event.body);
 
     try {
+        await connectDB();
         const updatedManager = await SubscriptionManager.findByIdAndUpdate(id, updateData, { new: true });
 
         if (!updatedManager) {

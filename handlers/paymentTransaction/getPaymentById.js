@@ -1,9 +1,11 @@
 import PaymentTransaction from "../../models/PaymentTransaction";
+import connectDB from "../../configurations/connectDB";
 
 export const handler = async (event) => {
     const { id } = event.pathParameters;
 
     try {
+        await connectDB();
         const transaction = await PaymentTransaction.findById(id);
         if (!transaction) {
             return {

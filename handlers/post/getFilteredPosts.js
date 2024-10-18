@@ -1,9 +1,11 @@
 import Post from "../../models/Post";
+import connectDB from "../../configurations/connectDB";
 
 export const handler = async (event) => {
     const { locations, categories, minBudget, maxBudget, minOffers, maxOffers } = event.queryStringParameters || {};
 
     try {
+        await connectDB();
         const filters = {};
 
         if (locations) {

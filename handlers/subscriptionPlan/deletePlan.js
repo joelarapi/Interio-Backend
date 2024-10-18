@@ -1,9 +1,11 @@
 import SubscriptionPlan from "../../models/SubscriptionPlan";
+import connectDB from "../../configurations/connectDB";
 
 export const handler = async (event) => {
     const { id } = event.pathParameters;
 
     try {
+        await connectDB();
         const deletedSubscriptionPlan = await SubscriptionPlan.findByIdAndDelete(id);
         if (!deletedSubscriptionPlan) {
             return {

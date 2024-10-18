@@ -1,9 +1,11 @@
 import Message from "../../models/Message";
+import connectDB from "../../configurations/connectDB";
 
 export const handler = async (event) => {
     const { id } = event.pathParameters;
 
     try {
+        await connectDB();
         const message = await Message.findById(id);
         if (!message) {
             return {

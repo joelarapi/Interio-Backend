@@ -1,9 +1,11 @@
 import FinishedJobs from "../../models/FinishedJobs";
+import connectDB from "../../configurations/connectDB";
 
 export const handler = async (event) => {
     const { businessId } = event.pathParameters;
 
     try {
+        await connectDB();
         const jobs = await FinishedJobs.find({ businessId });
         return {
             statusCode: 200,

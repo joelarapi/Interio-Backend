@@ -1,9 +1,11 @@
 import SubscriptionManager from "../../models/SubscriptionManager";
+import connectDB from "../../configurations/connectDB";
 
 export const handler = async (event) => {
     const subscriptionData = JSON.parse(event.body);
 
     try {
+        await connectDB();
         const newSubscriptionManager = new SubscriptionManager(subscriptionData);
         await newSubscriptionManager.save();
 
