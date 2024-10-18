@@ -1,5 +1,5 @@
-import Offer from "../../models/Offer";
-import connectDB from "../../configurations/connectDB";
+import Offer from "../../models/Offer.js";
+import connectDB from "../../configurations/connectDB.js";
 
 export const handler = async (event) => {
     const { id } = event.pathParameters;

@@ -1,5 +1,5 @@
-import Categorie from "../../models/Categories";
-import connectDB from "../../configurations/connectDB";
+import Categorie from "../../models/Categories.js";
+import connectDB from "../../configurations/connectDB.js";
 
 export const handler = async () => {
     try {

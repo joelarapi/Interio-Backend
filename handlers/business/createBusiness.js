@@ -1,5 +1,5 @@
-import Business from "../../models/Business";
-import connectDB from "../../configurations/connectDB";
+import Business from "../../models/Business.js";
+import connectDB from "../../configurations/connectDB.js";
 
 export const handler = async (event) => {
     const businessData = JSON.parse(event.body);

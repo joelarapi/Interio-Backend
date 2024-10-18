@@ -1,5 +1,5 @@
-import SubscriptionPlan from "../../models/SubscriptionPlan";
-import connectDB from "../../configurations/connectDB";
+import SubscriptionPlan from "../../models/SubscriptionPlan.js";
+import connectDB from "../../configurations/connectDB.js";
 
 export const handler = async (event) => {
     const subscriptionPlanData = JSON.parse(event.body);

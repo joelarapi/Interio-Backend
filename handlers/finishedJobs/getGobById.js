@@ -1,5 +1,5 @@
-import FinishedJobs from "../../models/FinishedJobs";
-import connectDB from "../../configurations/connectDB";
+import FinishedJobs from "../../models/FinishedJobs.js";
+import connectDB from "../../configurations/connectDB.js";
 
 export const handler = async (event) => {
     const { id } = event.pathParameters;

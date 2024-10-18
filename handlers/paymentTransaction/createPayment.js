@@ -1,5 +1,5 @@
-import PaymentTransaction from "../../models/PaymentTransaction";
-import connectDB from "../../configurations/connectDB";
+import PaymentTransaction from "../../models/PaymentTransaction.js";
+import connectDB from "../../configurations/connectDB.js";
 
 export const handler = async (event) => {
     const transactionData = JSON.parse(event.body);

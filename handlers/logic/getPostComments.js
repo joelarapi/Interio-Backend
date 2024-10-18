@@ -1,5 +1,5 @@
-import Comment from "../../models/Comment";
-import connectDB from "../../configurations/connectDB";
+import Comment from "../../models/Comment.js";
+import connectDB from "../../configurations/connectDB.js";
 
 export const handler = async (event) => {
     const { postId } = event.pathParameters;

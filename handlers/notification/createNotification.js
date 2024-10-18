@@ -1,5 +1,5 @@
-import Notification from "../../models/Notifications";
-import connectDB from "../../configurations/connectDB";
+import Notification from "../../models/Notifications.js";
+import connectDB from "../../configurations/connectDB.js";
 
 export const handler = async (event) => {
     const notificationData = JSON.parse(event.body);

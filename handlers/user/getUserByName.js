@@ -1,5 +1,5 @@
-import User from "../../models/User";
-import connectDB from "../../configurations/connectDB";
+import User from "../../models/User.js";
+import connectDB from "../../configurations/connectDB.js";
 
 export const handler = async (event) => {
     const { username } = event.pathParameters;

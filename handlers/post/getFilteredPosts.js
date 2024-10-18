@@ -1,5 +1,5 @@
-import Post from "../../models/Post";
-import connectDB from "../../configurations/connectDB";
+import Post from "../../models/Post.js";
+import connectDB from "../../configurations/connectDB.js";
 
 export const handler = async (event) => {
     const { locations, categories, minBudget, maxBudget, minOffers, maxOffers } = event.queryStringParameters || {};

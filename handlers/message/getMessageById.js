@@ -1,5 +1,5 @@
-import Message from "../../models/Message";
-import connectDB from "../../configurations/connectDB";
+import Message from "../../models/Message.js";
+import connectDB from "../../configurations/connectDB.js";
 
 export const handler = async (event) => {
     const { id } = event.pathParameters;

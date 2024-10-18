@@ -1,5 +1,5 @@
-import SubscriptionManager from "../../models/SubscriptionManager";
-import connectDB from "../../configurations/connectDB";
+import SubscriptionManager from "../../models/SubscriptionManager.js";
+import connectDB from "../../configurations/connectDB.js";
 
 export const handler = async (event) => {
     const { businessId } = event.pathParameters;

@@ -1,0 +1,904 @@
+{
+  "C:\\Users\\User\\Documents\\GitHub\\Interio-Backend": {
+    "versionSfCore": null,
+    "versionFramework": "4.4.6",
+    "isWithinCompose": false,
+    "isCompose": false,
+    "composeOrgName": null,
+    "composeResolverProviders": {
+      "default-aws-credential-resolver": "<REDACTED>",
+      "env": {
+        "instance": {
+          "credentials": "<REDACTED>",
+          "serviceConfigFile": {
+            "org": "taleas1",
+            "app": "interio",
+            "service": "interio-service",
+            "provider": {
+              "name": "aws",
+              "runtime": "nodejs16.x",
+              "stage": "dev",
+              "region": "eu-central-1",
+              "memorySize": 128,
+              "environment": {
+                "MONGODB_URI": "mongodb+srv://interiotaleas:interiotaleas@cluster0.vnxct.mongodb.net/Interio"
+              },
+              "versionFunctions": true,
+              "compiledCloudFormationTemplate": {
+                "AWSTemplateFormatVersion": "2010-09-09",
+                "Description": "The AWS CloudFormation template for this Serverless application",
+                "Resources": {
+                  "CreateUserLogGroup": {
+                    "Type": "AWS::Logs::LogGroup",
+                    "Properties": {
+                      "LogGroupName": "/aws/lambda/interio-service-dev-createUser"
+                    }
+                  },
+                  "IamRoleLambdaExecution": {
+                    "Type": "AWS::IAM::Role",
+                    "Properties": {
+                      "AssumeRolePolicyDocument": {
+                        "Version": "2012-10-17",
+                        "Statement": [
+                          {
+                            "Effect": "Allow",
+                            "Principal": {
+                              "Service": [
+                                "lambda.amazonaws.com"
+                              ]
+                            },
+                            "Action": [
+                              "sts:AssumeRole"
+                            ]
+                          }
+                        ]
+                      },
+                      "Policies": [
+                        {
+                          "PolicyName": {
+                            "Fn::Join": [
+                              "-",
+                              [
+                                "interio-service",
+                                "dev",
+                                "lambda"
+                              ]
+                            ]
+                          },
+                          "PolicyDocument": {
+                            "Version": "2012-10-17",
+                            "Statement": [
+                              {
+                                "Effect": "Allow",
+                                "Action": [
+                                  "logs:CreateLogStream",
+                                  "logs:CreateLogGroup",
+                                  "logs:TagResource"
+                                ],
+                                "Resource": [
+                                  {
+                                    "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/interio-service-dev*:*"
+                                  }
+                                ]
+                              },
+                              {
+                                "Effect": "Allow",
+                                "Action": [
+                                  "logs:PutLogEvents"
+                                ],
+                                "Resource": [
+                                  {
+                                    "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/interio-service-dev*:*:*"
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        }
+                      ],
+                      "Path": "/",
+                      "RoleName": {
+                        "Fn::Join": [
+                          "-",
+                          [
+                            "interio-service",
+                            "dev",
+                            {
+                              "Ref": "AWS::Region"
+                            },
+                            "lambdaRole"
+                          ]
+                        ]
+                      }
+                    }
+                  },
+                  "CreateUserLambdaFunction": {
+                    "Type": "AWS::Lambda::Function",
+                    "Properties": {
+                      "Code": {
+                        "S3Bucket": "serverless-framework-deployments-eu-central-1-7d33afbf-5e19",
+                        "S3Key": "serverless/interio-service/dev/1729263241871-2024-10-18T14:54:01.871Z/interio-service.zip"
+                      },
+                      "Handler": "handlers/user/createUser.handler",
+                      "Runtime": "nodejs16.x",
+                      "FunctionName": "interio-service-dev-createUser",
+                      "MemorySize": 128,
+                      "Timeout": 6,
+                      "Environment": {
+                        "Variables": {
+                          "MONGODB_URI": "mongodb+srv://interiotaleas:interiotaleas@cluster0.vnxct.mongodb.net/Interio"
+                        }
+                      },
+                      "Role": {
+                        "Fn::GetAtt": [
+                          "IamRoleLambdaExecution",
+                          "Arn"
+                        ]
+                      }
+                    },
+                    "DependsOn": [
+                      "CreateUserLogGroup"
+                    ]
+                  },
+                  "CreateUserLambdaVersion04t9EaA7kvNNtqD1Rayim9vXdYfCWXMw8Vn1ZSGo78": {
+                    "Type": "AWS::Lambda::Version",
+                    "DeletionPolicy": "Retain",
+                    "Properties": {
+                      "FunctionName": {
+                        "Ref": "CreateUserLambdaFunction"
+                      },
+                      "CodeSha256": "XZcCwJZ9y+md42qHYWLwsUcDJmwkd6FkIxvwKI5k95Q="
+                    }
+                  },
+                  "ApiGatewayRestApi": {
+                    "Type": "AWS::ApiGateway::RestApi",
+                    "Properties": {
+                      "Name": "dev-interio-service",
+                      "EndpointConfiguration": {
+                        "Types": [
+                          "EDGE"
+                        ]
+                      },
+                      "Policy": ""
+                    }
+                  },
+                  "ApiGatewayResourceUser": {
+                    "Type": "AWS::ApiGateway::Resource",
+                    "Properties": {
+                      "ParentId": {
+                        "Fn::GetAtt": [
+                          "ApiGatewayRestApi",
+                          "RootResourceId"
+                        ]
+                      },
+                      "PathPart": "user",
+                      "RestApiId": {
+                        "Ref": "ApiGatewayRestApi"
+                      }
+                    }
+                  },
+                  "ApiGatewayMethodUserOptions": {
+                    "Type": "AWS::ApiGateway::Method",
+                    "Properties": {
+                      "AuthorizationType": "NONE",
+                      "HttpMethod": "OPTIONS",
+                      "MethodResponses": [
+                        {
+                          "StatusCode": "200",
+                          "ResponseParameters": {
+                            "method.response.header.Access-Control-Allow-Origin": true,
+                            "method.response.header.Access-Control-Allow-Headers": true,
+                            "method.response.header.Access-Control-Allow-Methods": true
+                          },
+                          "ResponseModels": {}
+                        }
+                      ],
+                      "RequestParameters": {},
+                      "Integration": {
+                        "Type": "MOCK",
+                        "RequestTemplates": {
+                          "application/json": "{statusCode:200}"
+                        },
+                        "ContentHandling": "CONVERT_TO_TEXT",
+                        "IntegrationResponses": [
+                          {
+                            "StatusCode": "200",
+                            "ResponseParameters": {
+                              "method.response.header.Access-Control-Allow-Origin": "'*'",
+                              "method.response.header.Access-Control-Allow-Headers": "'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token,X-Amz-User-Agent,X-Amzn-Trace-Id'",
+                              "method.response.header.Access-Control-Allow-Methods": "'OPTIONS,POST'"
+                            },
+                            "ResponseTemplates": {
+                              "application/json": ""
+                            }
+                          }
+                        ]
+                      },
+                      "ResourceId": {
+                        "Ref": "ApiGatewayResourceUser"
+                      },
+                      "RestApiId": {
+                        "Ref": "ApiGatewayRestApi"
+                      }
+                    }
+                  },
+                  "ApiGatewayMethodUserPost": {
+                    "Type": "AWS::ApiGateway::Method",
+                    "Properties": {
+                      "HttpMethod": "POST",
+                      "RequestParameters": {},
+                      "ResourceId": {
+                        "Ref": "ApiGatewayResourceUser"
+                      },
+                      "RestApiId": {
+                        "Ref": "ApiGatewayRestApi"
+                      },
+                      "ApiKeyRequired": "<REDACTED>",
+                      "AuthorizationType": "NONE",
+                      "Integration": {
+                        "IntegrationHttpMethod": "POST",
+                        "Type": "AWS_PROXY",
+                        "Uri": {
+                          "Fn::Join": [
+                            "",
+                            [
+                              "arn:",
+                              {
+                                "Ref": "AWS::Partition"
+                              },
+                              ":apigateway:",
+                              {
+                                "Ref": "AWS::Region"
+                              },
+                              ":lambda:path/2015-03-31/functions/",
+                              {
+                                "Fn::GetAtt": [
+                                  "CreateUserLambdaFunction",
+                                  "Arn"
+                                ]
+                              },
+                              "/invocations"
+                            ]
+                          ]
+                        }
+                      },
+                      "MethodResponses": []
+                    },
+                    "DependsOn": [
+                      "CreateUserLambdaPermissionApiGateway"
+                    ]
+                  },
+                  "ApiGatewayDeployment1729263238318": {
+                    "Type": "AWS::ApiGateway::Deployment",
+                    "Properties": {
+                      "RestApiId": {
+                        "Ref": "ApiGatewayRestApi"
+                      },
+                      "StageName": "dev"
+                    },
+                    "DependsOn": [
+                      "ApiGatewayMethodUserOptions",
+                      "ApiGatewayMethodUserPost"
+                    ]
+                  },
+                  "CreateUserLambdaPermissionApiGateway": {
+                    "Type": "AWS::Lambda::Permission",
+                    "Properties": {
+                      "FunctionName": {
+                        "Fn::GetAtt": [
+                          "CreateUserLambdaFunction",
+                          "Arn"
+                        ]
+                      },
+                      "Action": "lambda:InvokeFunction",
+                      "Principal": "apigateway.amazonaws.com",
+                      "SourceArn": {
+                        "Fn::Join": [
+                          "",
+                          [
+                            "arn:",
+                            {
+                              "Ref": "AWS::Partition"
+                            },
+                            ":execute-api:",
+                            {
+                              "Ref": "AWS::Region"
+                            },
+                            ":",
+                            {
+                              "Ref": "AWS::AccountId"
+                            },
+                            ":",
+                            {
+                              "Ref": "ApiGatewayRestApi"
+                            },
+                            "/*/*"
+                          ]
+                        ]
+                      }
+                    }
+                  }
+                },
+                "Outputs": {
+                  "ServerlessDeploymentBucketName": {
+                    "Value": "serverless-framework-deployments-eu-central-1-7d33afbf-5e19",
+                    "Export": {
+                      "Name": "sls-interio-service-dev-ServerlessDeploymentBucketName"
+                    }
+                  },
+                  "CreateUserLambdaFunctionQualifiedArn": {
+                    "Description": "Current Lambda function version",
+                    "Value": {
+                      "Ref": "CreateUserLambdaVersion04t9EaA7kvNNtqD1Rayim9vXdYfCWXMw8Vn1ZSGo78"
+                    },
+                    "Export": {
+                      "Name": "sls-interio-service-dev-CreateUserLambdaFunctionQualifiedArn"
+                    }
+                  },
+                  "ServiceEndpoint": {
+                    "Description": "URL of the service endpoint",
+                    "Value": {
+                      "Fn::Join": [
+                        "",
+                        [
+                          "https://",
+                          {
+                            "Ref": "ApiGatewayRestApi"
+                          },
+                          ".execute-api.",
+                          {
+                            "Ref": "AWS::Region"
+                          },
+                          ".",
+                          {
+                            "Ref": "AWS::URLSuffix"
+                          },
+                          "/dev"
+                        ]
+                      ]
+                    },
+                    "Export": {
+                      "Name": "sls-interio-service-dev-ServiceEndpoint"
+                    }
+                  }
+                }
+              },
+              "vpc": {}
+            },
+            "package": {
+              "include": [
+                "models/**",
+                "configurations/**",
+                "handlers/**"
+              ],
+              "artifactsS3KeyDirname": "serverless/interio-service/dev/code-artifacts",
+              "deploymentBucket": "serverless-framework-deployments-eu-central-1-7d33afbf-5e19",
+              "artifact": "C:\\Users\\User\\Documents\\GitHub\\Interio-Backend\\.serverless\\interio-service.zip",
+              "artifactDirectoryName": "serverless/interio-service/dev/1729263241871-2024-10-18T14:54:01.871Z"
+            },
+            "functions": {
+              "createUser": {
+                "handler": "handlers/user/createUser.handler",
+                "events": [
+                  {
+                    "http": {
+                      "path": "user",
+                      "method": "post",
+                      "cors": {
+                        "origin": "*",
+                        "methods": [
+                          "OPTIONS",
+                          "POST"
+                        ],
+                        "headers": [
+                          "Content-Type",
+                          "X-Amz-Date",
+                          "Authorization",
+                          "X-Api-Key",
+                          "X-Amz-Security-Token",
+                          "X-Amz-User-Agent",
+                          "X-Amzn-Trace-Id"
+                        ],
+                        "allowCredentials": "<REDACTED>"
+                      },
+                      "integration": "AWS_PROXY"
+                    }
+                  }
+                ],
+                "name": "interio-service-dev-createUser",
+                "package": {},
+                "memory": 128,
+                "timeout": 6,
+                "runtime": "nodejs16.x",
+                "vpc": {},
+                "versionLogicalId": "CreateUserLambdaVersion04t9EaA7kvNNtqD1Rayim9vXdYfCWXMw8Vn1ZSGo78"
+              }
+            }
+          },
+          "configFileDirPath": "C:\\Users\\User\\Documents\\GitHub\\Interio-Backend",
+          "config": {
+            "type": "env"
+          },
+          "options": {},
+          "stage": "dev",
+          "dashboard": null,
+          "logger": {
+            "namespace": "s:core:resolver:env",
+            "prefix": null,
+            "prefixColor": null
+          },
+          "_credentialsPromise": "<REDACTED>"
+        },
+        "resolvers": {}
+      }
+    },
+    "composeServiceName": null,
+    "servicePath": "C:\\Users\\User\\Documents\\GitHub\\Interio-Backend",
+    "serviceConfigFileName": "serverless.yml",
+    "service": {
+      "org": "taleas1",
+      "app": "interio",
+      "service": "interio-service",
+      "provider": {
+        "name": "aws",
+        "runtime": "nodejs16.x",
+        "stage": "dev",
+        "region": "eu-central-1",
+        "memorySize": 128,
+        "environment": {
+          "MONGODB_URI": "mongodb+srv://interiotaleas:interiotaleas@cluster0.vnxct.mongodb.net/Interio"
+        },
+        "versionFunctions": true,
+        "compiledCloudFormationTemplate": {
+          "AWSTemplateFormatVersion": "2010-09-09",
+          "Description": "The AWS CloudFormation template for this Serverless application",
+          "Resources": {
+            "CreateUserLogGroup": {
+              "Type": "AWS::Logs::LogGroup",
+              "Properties": {
+                "LogGroupName": "/aws/lambda/interio-service-dev-createUser"
+              }
+            },
+            "IamRoleLambdaExecution": {
+              "Type": "AWS::IAM::Role",
+              "Properties": {
+                "AssumeRolePolicyDocument": {
+                  "Version": "2012-10-17",
+                  "Statement": [
+                    {
+                      "Effect": "Allow",
+                      "Principal": {
+                        "Service": [
+                          "lambda.amazonaws.com"
+                        ]
+                      },
+                      "Action": [
+                        "sts:AssumeRole"
+                      ]
+                    }
+                  ]
+                },
+                "Policies": [
+                  {
+                    "PolicyName": {
+                      "Fn::Join": [
+                        "-",
+                        [
+                          "interio-service",
+                          "dev",
+                          "lambda"
+                        ]
+                      ]
+                    },
+                    "PolicyDocument": {
+                      "Version": "2012-10-17",
+                      "Statement": [
+                        {
+                          "Effect": "Allow",
+                          "Action": [
+                            "logs:CreateLogStream",
+                            "logs:CreateLogGroup",
+                            "logs:TagResource"
+                          ],
+                          "Resource": [
+                            {
+                              "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/interio-service-dev*:*"
+                            }
+                          ]
+                        },
+                        {
+                          "Effect": "Allow",
+                          "Action": [
+                            "logs:PutLogEvents"
+                          ],
+                          "Resource": [
+                            {
+                              "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/interio-service-dev*:*:*"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "Path": "/",
+                "RoleName": {
+                  "Fn::Join": [
+                    "-",
+                    [
+                      "interio-service",
+                      "dev",
+                      {
+                        "Ref": "AWS::Region"
+                      },
+                      "lambdaRole"
+                    ]
+                  ]
+                }
+              }
+            },
+            "CreateUserLambdaFunction": {
+              "Type": "AWS::Lambda::Function",
+              "Properties": {
+                "Code": {
+                  "S3Bucket": "serverless-framework-deployments-eu-central-1-7d33afbf-5e19",
+                  "S3Key": "serverless/interio-service/dev/1729263241871-2024-10-18T14:54:01.871Z/interio-service.zip"
+                },
+                "Handler": "handlers/user/createUser.handler",
+                "Runtime": "nodejs16.x",
+                "FunctionName": "interio-service-dev-createUser",
+                "MemorySize": 128,
+                "Timeout": 6,
+                "Environment": {
+                  "Variables": {
+                    "MONGODB_URI": "mongodb+srv://interiotaleas:interiotaleas@cluster0.vnxct.mongodb.net/Interio"
+                  }
+                },
+                "Role": {
+                  "Fn::GetAtt": [
+                    "IamRoleLambdaExecution",
+                    "Arn"
+                  ]
+                }
+              },
+              "DependsOn": [
+                "CreateUserLogGroup"
+              ]
+            },
+            "CreateUserLambdaVersion04t9EaA7kvNNtqD1Rayim9vXdYfCWXMw8Vn1ZSGo78": {
+              "Type": "AWS::Lambda::Version",
+              "DeletionPolicy": "Retain",
+              "Properties": {
+                "FunctionName": {
+                  "Ref": "CreateUserLambdaFunction"
+                },
+                "CodeSha256": "XZcCwJZ9y+md42qHYWLwsUcDJmwkd6FkIxvwKI5k95Q="
+              }
+            },
+            "ApiGatewayRestApi": {
+              "Type": "AWS::ApiGateway::RestApi",
+              "Properties": {
+                "Name": "dev-interio-service",
+                "EndpointConfiguration": {
+                  "Types": [
+                    "EDGE"
+                  ]
+                },
+                "Policy": ""
+              }
+            },
+            "ApiGatewayResourceUser": {
+              "Type": "AWS::ApiGateway::Resource",
+              "Properties": {
+                "ParentId": {
+                  "Fn::GetAtt": [
+                    "ApiGatewayRestApi",
+                    "RootResourceId"
+                  ]
+                },
+                "PathPart": "user",
+                "RestApiId": {
+                  "Ref": "ApiGatewayRestApi"
+                }
+              }
+            },
+            "ApiGatewayMethodUserOptions": {
+              "Type": "AWS::ApiGateway::Method",
+              "Properties": {
+                "AuthorizationType": "NONE",
+                "HttpMethod": "OPTIONS",
+                "MethodResponses": [
+                  {
+                    "StatusCode": "200",
+                    "ResponseParameters": {
+                      "method.response.header.Access-Control-Allow-Origin": true,
+                      "method.response.header.Access-Control-Allow-Headers": true,
+                      "method.response.header.Access-Control-Allow-Methods": true
+                    },
+                    "ResponseModels": {}
+                  }
+                ],
+                "RequestParameters": {},
+                "Integration": {
+                  "Type": "MOCK",
+                  "RequestTemplates": {
+                    "application/json": "{statusCode:200}"
+                  },
+                  "ContentHandling": "CONVERT_TO_TEXT",
+                  "IntegrationResponses": [
+                    {
+                      "StatusCode": "200",
+                      "ResponseParameters": {
+                        "method.response.header.Access-Control-Allow-Origin": "'*'",
+                        "method.response.header.Access-Control-Allow-Headers": "'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token,X-Amz-User-Agent,X-Amzn-Trace-Id'",
+                        "method.response.header.Access-Control-Allow-Methods": "'OPTIONS,POST'"
+                      },
+                      "ResponseTemplates": {
+                        "application/json": ""
+                      }
+                    }
+                  ]
+                },
+                "ResourceId": {
+                  "Ref": "ApiGatewayResourceUser"
+                },
+                "RestApiId": {
+                  "Ref": "ApiGatewayRestApi"
+                }
+              }
+            },
+            "ApiGatewayMethodUserPost": {
+              "Type": "AWS::ApiGateway::Method",
+              "Properties": {
+                "HttpMethod": "POST",
+                "RequestParameters": {},
+                "ResourceId": {
+                  "Ref": "ApiGatewayResourceUser"
+                },
+                "RestApiId": {
+                  "Ref": "ApiGatewayRestApi"
+                },
+                "ApiKeyRequired": "<REDACTED>",
+                "AuthorizationType": "NONE",
+                "Integration": {
+                  "IntegrationHttpMethod": "POST",
+                  "Type": "AWS_PROXY",
+                  "Uri": {
+                    "Fn::Join": [
+                      "",
+                      [
+                        "arn:",
+                        {
+                          "Ref": "AWS::Partition"
+                        },
+                        ":apigateway:",
+                        {
+                          "Ref": "AWS::Region"
+                        },
+                        ":lambda:path/2015-03-31/functions/",
+                        {
+                          "Fn::GetAtt": [
+                            "CreateUserLambdaFunction",
+                            "Arn"
+                          ]
+                        },
+                        "/invocations"
+                      ]
+                    ]
+                  }
+                },
+                "MethodResponses": []
+              },
+              "DependsOn": [
+                "CreateUserLambdaPermissionApiGateway"
+              ]
+            },
+            "ApiGatewayDeployment1729263238318": {
+              "Type": "AWS::ApiGateway::Deployment",
+              "Properties": {
+                "RestApiId": {
+                  "Ref": "ApiGatewayRestApi"
+                },
+                "StageName": "dev"
+              },
+              "DependsOn": [
+                "ApiGatewayMethodUserOptions",
+                "ApiGatewayMethodUserPost"
+              ]
+            },
+            "CreateUserLambdaPermissionApiGateway": {
+              "Type": "AWS::Lambda::Permission",
+              "Properties": {
+                "FunctionName": {
+                  "Fn::GetAtt": [
+                    "CreateUserLambdaFunction",
+                    "Arn"
+                  ]
+                },
+                "Action": "lambda:InvokeFunction",
+                "Principal": "apigateway.amazonaws.com",
+                "SourceArn": {
+                  "Fn::Join": [
+                    "",
+                    [
+                      "arn:",
+                      {
+                        "Ref": "AWS::Partition"
+                      },
+                      ":execute-api:",
+                      {
+                        "Ref": "AWS::Region"
+                      },
+                      ":",
+                      {
+                        "Ref": "AWS::AccountId"
+                      },
+                      ":",
+                      {
+                        "Ref": "ApiGatewayRestApi"
+                      },
+                      "/*/*"
+                    ]
+                  ]
+                }
+              }
+            }
+          },
+          "Outputs": {
+            "ServerlessDeploymentBucketName": {
+              "Value": "serverless-framework-deployments-eu-central-1-7d33afbf-5e19",
+              "Export": {
+                "Name": "sls-interio-service-dev-ServerlessDeploymentBucketName"
+              }
+            },
+            "CreateUserLambdaFunctionQualifiedArn": {
+              "Description": "Current Lambda function version",
+              "Value": {
+                "Ref": "CreateUserLambdaVersion04t9EaA7kvNNtqD1Rayim9vXdYfCWXMw8Vn1ZSGo78"
+              },
+              "Export": {
+                "Name": "sls-interio-service-dev-CreateUserLambdaFunctionQualifiedArn"
+              }
+            },
+            "ServiceEndpoint": {
+              "Description": "URL of the service endpoint",
+              "Value": {
+                "Fn::Join": [
+                  "",
+                  [
+                    "https://",
+                    {
+                      "Ref": "ApiGatewayRestApi"
+                    },
+                    ".execute-api.",
+                    {
+                      "Ref": "AWS::Region"
+                    },
+                    ".",
+                    {
+                      "Ref": "AWS::URLSuffix"
+                    },
+                    "/dev"
+                  ]
+                ]
+              },
+              "Export": {
+                "Name": "sls-interio-service-dev-ServiceEndpoint"
+              }
+            }
+          }
+        },
+        "vpc": {}
+      },
+      "package": {
+        "include": [
+          "models/**",
+          "configurations/**",
+          "handlers/**"
+        ],
+        "artifactsS3KeyDirname": "serverless/interio-service/dev/code-artifacts",
+        "deploymentBucket": "serverless-framework-deployments-eu-central-1-7d33afbf-5e19",
+        "artifact": "C:\\Users\\User\\Documents\\GitHub\\Interio-Backend\\.serverless\\interio-service.zip",
+        "artifactDirectoryName": "serverless/interio-service/dev/1729263241871-2024-10-18T14:54:01.871Z"
+      },
+      "functions": {
+        "createUser": {
+          "handler": "handlers/user/createUser.handler",
+          "events": [
+            {
+              "http": {
+                "path": "user",
+                "method": "post",
+                "cors": {
+                  "origin": "*",
+                  "methods": [
+                    "OPTIONS",
+                    "POST"
+                  ],
+                  "headers": [
+                    "Content-Type",
+                    "X-Amz-Date",
+                    "Authorization",
+                    "X-Api-Key",
+                    "X-Amz-Security-Token",
+                    "X-Amz-User-Agent",
+                    "X-Amzn-Trace-Id"
+                  ],
+                  "allowCredentials": "<REDACTED>"
+                },
+                "integration": "AWS_PROXY"
+              }
+            }
+          ],
+          "name": "interio-service-dev-createUser",
+          "package": {},
+          "memory": 128,
+          "timeout": 6,
+          "runtime": "nodejs16.x",
+          "vpc": {},
+          "versionLogicalId": "CreateUserLambdaVersion04t9EaA7kvNNtqD1Rayim9vXdYfCWXMw8Vn1ZSGo78"
+        }
+      }
+    },
+    "serviceRawFile": "# \"org\" ensures this Service is used with the correct Serverless Framework Access Key.\r\norg: taleas1\r\n# \"app\" enables Serverless Framework Dashboard features and sharing them with other Services.\r\napp: interio\r\n\r\nservice: interio-service\r\nprovider:\r\n  name: aws\r\n  runtime: nodejs16.x \r\n  stage: dev\r\n  region: eu-central-1\r\n  memorySize: 128\r\n\r\n  environment:\r\n    MONGODB_URI: ${env:MONGODB_URI} \r\n\r\npackage:\r\n  include:\r\n    - models/**\r\n    - configurations/**\r\n    - handlers/**\r\n\r\nfunctions:\r\n  # getUser:\r\n  #   handler: handlers/user/getUserById.handler\r\n  #   events:\r\n  #     - http:\r\n  #         path: /user/{id}\r\n  #         method: GET\r\n  #         cors: true\r\n  createUser:\r\n    handler: handlers/user/createUser.handler\r\n    events:\r\n      - http:\r\n          path: /user\r\n          method: POST\r\n          cors: true\r\n  # deleteUser:\r\n  #   handler: handlers/user/deleteUser.handler\r\n  #   events:\r\n  #     - http:\r\n  #         path: /user/{id}\r\n  #         method: DELETE\r\n  #         cors: true\r\n  # getUserName:\r\n  #   handler: handlers/user/getUserByName.handler\r\n  #   events:\r\n  #     - http:\r\n  #         path: /user/search\r\n  #         method: GET\r\n  #         cors: true\r\n  # updateUser:\r\n  #   handler: handlers/user/updateUser.handler\r\n  #   events:\r\n  #     - http:\r\n  #         path: /user/{id}\r\n  #         method: PUT\r\n  #         cors: true\r\n  # getBusinessById:\r\n  #   handler: handlers/business/getBusinessById.handler\r\n  #   events:\r\n  #     - http:\r\n  #         path: /bussiness/{id}\r\n  #         method: GET\r\n  #         cors: true\r\n  # createBusiness:\r\n  #   handler: handlers/business/createBusiness.handler\r\n  #   events:\r\n  #     - http:\r\n  #         path: /business\r\n  #         method: POST\r\n  #         cors: true\r\n  # deleteBusiness:\r\n  #   handler: handlers/business/deleteBusiness.handler\r\n  #   events:\r\n  #     - http:\r\n  #         path: /business/{id}\r\n  #         method: DELETE\r\n  #         cors: true\r\n  # getBusinessName:\r\n  #   handler: handlers/business/getBusinessByName.handler\r\n  #   events:\r\n  #     - http:\r\n  #         path: /business/search\r\n  #         method: GET\r\n  #         cors: true\r\n  # updateBusiness:\r\n  #   handler: handlers/business/updateBusiness.handler\r\n  #   events:\r\n  #     - http:\r\n  #         path: /business/{id}\r\n  #         method: PUT\r\n  #         cors: true\r\n  # getPostById:\r\n  #   handler: handlers/post/getPostById.handler\r\n  #   events:\r\n  #     - http:\r\n  #         path: /post/{id}\r\n  #         method: GET\r\n  #         cors: true\r\n  # createPost:\r\n  #   handler: handlers/post/createPost.handler\r\n  #   events:\r\n  #     - http:\r\n  #         path: /post\r\n  #         method: POST\r\n  #         cors: true\r\n  # deletePost:\r\n  #   handler: handlers/post/deletePost.handler\r\n  #   events:\r\n  #     - http:\r\n  #         path: /post/{id}\r\n  #         method: DELETE\r\n  #         cors: true\r\n  # getFiltredPosts:\r\n  #   handler: handlers/post/getFiltredPosts.handler\r\n  #   events:\r\n  #     - http:\r\n  #         path: /post/filtred\r\n  #         method: GET\r\n  #         cors: true\r\n  # getAvailablePosts:\r\n  #   handler: handlers/post/getOpenPosts.handler\r\n  #   events:\r\n  #     - http:\r\n  #         path: /post/{id}\r\n  #         method: GET\r\n  #         cors: true",
+    "command": [
+      "deploy"
+    ],
+    "options": {},
+    "error": null,
+    "params": {},
+    "machineId": "93bc2de42810bb0562b05da4f13c53d6",
+    "stage": "dev",
+    "accessKeyV2": "<REDACTED>",
+    "accessKeyV1": "<REDACTED>",
+    "orgId": "b517195c-0b15-4f9f-b44f-23444c1a6099",
+    "orgName": "taleas1",
+    "userId": "S7sK4DmHfqzbtRSr44",
+    "dashboard": {
+      "isEnabledForService": true,
+      "requiredAuthentication": false,
+      "orgFeaturesInUse": {
+        "providers": false,
+        "monitoring": false
+      },
+      "orgObservabilityIntegrations": null,
+      "serviceAppId": "rzxl57CQVR0D4XDKW5",
+      "serviceProvider": null,
+      "instanceParameters": null
+    },
+    "userName": "taleas1",
+    "subscription": null,
+    "userEmail": "besjolavelo@gmail.com",
+    "serviceProviderAwsRegion": "eu-central-1",
+    "serviceProviderAwsCredentials": "<REDACTED>",
+    "serviceProviderAwsAccountId": "944511268761",
+    "projectType": "traditional",
+    "versionSf": "4.4.6",
+    "serviceProviderAwsCfStackName": "interio-service-dev",
+    "integrations": {},
+    "serviceUniqueId": "arn:aws:cloudformation:eu-central-1:944511268761:stack/interio-service-dev/651a37f0-8d4d-11ef-887b-06d22eb3fe13",
+    "serviceProviderAwsCfStackId": "arn:aws:cloudformation:eu-central-1:944511268761:stack/interio-service-dev/651a37f0-8d4d-11ef-887b-06d22eb3fe13",
+    "serviceProviderAwsCfStackCreated": "2024-10-18T12:35:02.150Z",
+    "serviceProviderAwsCfStackUpdated": "2024-10-18T14:54:05.371Z",
+    "serviceProviderAwsCfStackStatus": "UPDATE_COMPLETE",
+    "serviceProviderAwsCfStackOutputs": [
+      {
+        "OutputKey": "CreateUserLambdaFunctionQualifiedArn",
+        "OutputValue": "arn:aws:lambda:eu-central-1:944511268761:function:interio-service-dev-createUser:9",
+        "Description": "Current Lambda function version",
+        "ExportName": "sls-interio-service-dev-CreateUserLambdaFunctionQualifiedArn"
+      },
+      {
+        "OutputKey": "ServiceEndpoint",
+        "OutputValue": "https://akvct836lc.execute-api.eu-central-1.amazonaws.com/dev",
+        "Description": "URL of the service endpoint",
+        "ExportName": "sls-interio-service-dev-ServiceEndpoint"
+      },
+      {
+        "OutputKey": "ServerlessDeploymentBucketName",
+        "OutputValue": "serverless-framework-deployments-eu-central-1-7d33afbf-5e19",
+        "ExportName": "sls-interio-service-dev-ServerlessDeploymentBucketName"
+      }
+    ]
+  }
+}

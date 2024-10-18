@@ -1,6 +1,6 @@
-import Business from "../../models/Business";
-import Category from "../../models/Category";
-import connectDB from "../../configurations/connectDB";
+import Business from "../../models/Business.js";
+import Category from "../../models/Category.js";
+import connectDB from "../../configurations/connectDB.js";
 
 export const handler = async (event) => {
     const { category } = event.pathParameters;

@@ -19,6 +19,7 @@ provider:
 #     - handlers/**
 
 functions:
+<<<<<<< Updated upstream
 #   getUser:
 #     handler: handlers/user/getUserById.handler
 #     events:
@@ -26,6 +27,15 @@ functions:
 #           path: /user/{id}
 #           method: GET
 #           cors: true
+=======
+  # getUser:
+  #   handler: handlers/user/getUserById.handler
+  #   events:
+  #     - http:
+  #         path: /user/{id}
+  #         method: GET
+  #         cors: true
+>>>>>>> Stashed changes
   createUser:
     handler: handlers/user/createUser.handler
     events:
