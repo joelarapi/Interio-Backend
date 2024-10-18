@@ -1,0 +1,661 @@
+{
+  "C:\\Users\\Admin\\Documents\\GitHub\\Interio-Backend": {
+    "versionSfCore": null,
+    "versionFramework": "4.4.6",
+    "isWithinCompose": false,
+    "isCompose": false,
+    "composeOrgName": null,
+    "composeResolverProviders": {
+      "default-aws-credential-resolver": "<REDACTED>",
+      "env": {
+        "instance": {
+          "credentials": "<REDACTED>",
+          "serviceConfigFile": {
+            "provider": {
+              "name": "aws",
+              "runtime": "nodejs16.x",
+              "stage": "dev",
+              "region": "eu-central-1",
+              "memorySize": 128,
+              "environment": {
+                "MONGODB_URI": "mongodb+srv://interiotaleas:interiotaleas@cluster0.vnxct.mongodb.net/Interio"
+              }
+            },
+            "functions": {
+              "getUser": {
+                "handler": "handlers/user/getUserById.handler",
+                "events": [
+                  {
+                    "http": {
+                      "path": "/user/{id}",
+                      "method": "GET",
+                      "cors": true
+                    }
+                  }
+                ]
+              },
+              "createUser": {
+                "handler": "handlers/user/createUser.handler",
+                "events": [
+                  {
+                    "http": {
+                      "path": "/user",
+                      "method": "POST",
+                      "cors": true
+                    }
+                  }
+                ]
+              },
+              "deleteUser": {
+                "handler": "handlers/user/deleteUser.handler",
+                "events": [
+                  {
+                    "http": {
+                      "path": "/user/{id}",
+                      "method": "DELETE",
+                      "cors": true
+                    }
+                  }
+                ]
+              },
+              "getUserName": {
+                "handler": "handlers/user/getUserByName.handler",
+                "events": [
+                  {
+                    "http": {
+                      "path": "/user/search",
+                      "method": "GET",
+                      "cors": true
+                    }
+                  }
+                ]
+              },
+              "updateUser": {
+                "handler": "handlers/user/updateUser.handler",
+                "events": [
+                  {
+                    "http": {
+                      "path": "/user/{id}",
+                      "method": "PUT",
+                      "cors": true
+                    }
+                  }
+                ]
+              },
+              "getBusinessById": {
+                "handler": "handlers/business/getBusinessById.handler",
+                "events": [
+                  {
+                    "http": {
+                      "path": "/bussiness/{id}",
+                      "method": "GET",
+                      "cors": true
+                    }
+                  }
+                ]
+              },
+              "createBusiness": {
+                "handler": "handlers/business/createBusiness.handler",
+                "events": [
+                  {
+                    "http": {
+                      "path": "/business",
+                      "method": "POST",
+                      "cors": true
+                    }
+                  }
+                ]
+              },
+              "deleteBusiness": {
+                "handler": "handlers/business/deleteBusiness.handler",
+                "events": [
+                  {
+                    "http": {
+                      "path": "/business/{id}",
+                      "method": "DELETE",
+                      "cors": true
+                    }
+                  }
+                ]
+              },
+              "getBusinessName": {
+                "handler": "handlers/business/getBusinessByName.handler",
+                "events": [
+                  {
+                    "http": {
+                      "path": "/business/search",
+                      "method": "GET",
+                      "cors": true
+                    }
+                  }
+                ]
+              },
+              "updateBusiness": {
+                "handler": "handlers/business/updateBusiness.handler",
+                "events": [
+                  {
+                    "http": {
+                      "path": "/business/{id}",
+                      "method": "PUT",
+                      "cors": true
+                    }
+                  }
+                ]
+              },
+              "getPostById": {
+                "handler": "handlers/post/getPostById.handler",
+                "events": [
+                  {
+                    "http": {
+                      "path": "/post/{id}",
+                      "method": "GET",
+                      "cors": true
+                    }
+                  }
+                ]
+              },
+              "createPost": {
+                "handler": "handlers/post/createPost.handler",
+                "events": [
+                  {
+                    "http": {
+                      "path": "/post",
+                      "method": "POST",
+                      "cors": true
+                    }
+                  }
+                ]
+              },
+              "deletePost": {
+                "handler": "handlers/post/deletePost.handler",
+                "events": [
+                  {
+                    "http": {
+                      "path": "/post/{id}",
+                      "method": "DELETE",
+                      "cors": true
+                    }
+                  }
+                ]
+              },
+              "getFiltredPosts": {
+                "handler": "handlers/post/getFiltredPosts.handler",
+                "events": [
+                  {
+                    "http": {
+                      "path": "/post/filtred",
+                      "method": "GET",
+                      "cors": true
+                    }
+                  }
+                ]
+              },
+              "getAvailablePosts": {
+                "handler": "handlers/post/getOpenPosts.handler",
+                "events": [
+                  {
+                    "http": {
+                      "path": "/post/{id}",
+                      "method": "GET",
+                      "cors": true
+                    }
+                  }
+                ]
+              },
+              "getadditionalOffers": {
+                "handler": "handlers/additionalOffers/getAll.handler",
+                "events": [
+                  {
+                    "http": {
+                      "path": "/additionalOffers",
+                      "method": "GET",
+                      "cors": true
+                    }
+                  }
+                ]
+              },
+              "createadditionalOffers": {
+                "handler": "handlers/additionalOffers/create.handler",
+                "events": [
+                  {
+                    "http": {
+                      "path": "/additionalOffers",
+                      "method": "POST",
+                      "cors": true
+                    }
+                  }
+                ]
+              },
+              "deleteadditionalOffers": {
+                "handler": "handlers/additionalOffers/delete.handler",
+                "events": [
+                  {
+                    "http": {
+                      "path": "/additionalOffers/{id}",
+                      "method": "DELETE",
+                      "cors": true
+                    }
+                  }
+                ]
+              },
+              "getadditionalOffersById": {
+                "handler": "handlers/additionalOffers/getById.handler",
+                "events": [
+                  {
+                    "http": {
+                      "path": "/additionalOffersById/{id}",
+                      "method": "GET",
+                      "cors": true
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "configFileDirPath": "C:\\Users\\Admin\\Documents\\GitHub\\Interio-Backend",
+          "config": {
+            "type": "env"
+          },
+          "options": {},
+          "stage": "dev",
+          "dashboard": null,
+          "logger": {
+            "namespace": "s:core:resolver:env",
+            "prefix": null,
+            "prefixColor": null
+          },
+          "_credentialsPromise": "<REDACTED>"
+        },
+        "resolvers": {}
+      }
+    },
+    "composeServiceName": null,
+    "servicePath": "C:\\Users\\Admin\\Documents\\GitHub\\Interio-Backend",
+    "serviceConfigFileName": "serverless.yml",
+    "service": {
+      "provider": {
+        "name": "aws",
+        "runtime": "nodejs16.x",
+        "stage": "dev",
+        "region": "eu-central-1",
+        "memorySize": 128,
+        "environment": {
+          "MONGODB_URI": "mongodb+srv://interiotaleas:interiotaleas@cluster0.vnxct.mongodb.net/Interio"
+        }
+      },
+      "functions": {
+        "getUser": {
+          "handler": "handlers/user/getUserById.handler",
+          "events": [
+            {
+              "http": {
+                "path": "/user/{id}",
+                "method": "GET",
+                "cors": true
+              }
+            }
+          ]
+        },
+        "createUser": {
+          "handler": "handlers/user/createUser.handler",
+          "events": [
+            {
+              "http": {
+                "path": "/user",
+                "method": "POST",
+                "cors": true
+              }
+            }
+          ]
+        },
+        "deleteUser": {
+          "handler": "handlers/user/deleteUser.handler",
+          "events": [
+            {
+              "http": {
+                "path": "/user/{id}",
+                "method": "DELETE",
+                "cors": true
+              }
+            }
+          ]
+        },
+        "getUserName": {
+          "handler": "handlers/user/getUserByName.handler",
+          "events": [
+            {
+              "http": {
+                "path": "/user/search",
+                "method": "GET",
+                "cors": true
+              }
+            }
+          ]
+        },
+        "updateUser": {
+          "handler": "handlers/user/updateUser.handler",
+          "events": [
+            {
+              "http": {
+                "path": "/user/{id}",
+                "method": "PUT",
+                "cors": true
+              }
+            }
+          ]
+        },
+        "getBusinessById": {
+          "handler": "handlers/business/getBusinessById.handler",
+          "events": [
+            {
+              "http": {
+                "path": "/bussiness/{id}",
+                "method": "GET",
+                "cors": true
+              }
+            }
+          ]
+        },
+        "createBusiness": {
+          "handler": "handlers/business/createBusiness.handler",
+          "events": [
+            {
+              "http": {
+                "path": "/business",
+                "method": "POST",
+                "cors": true
+              }
+            }
+          ]
+        },
+        "deleteBusiness": {
+          "handler": "handlers/business/deleteBusiness.handler",
+          "events": [
+            {
+              "http": {
+                "path": "/business/{id}",
+                "method": "DELETE",
+                "cors": true
+              }
+            }
+          ]
+        },
+        "getBusinessName": {
+          "handler": "handlers/business/getBusinessByName.handler",
+          "events": [
+            {
+              "http": {
+                "path": "/business/search",
+                "method": "GET",
+                "cors": true
+              }
+            }
+          ]
+        },
+        "updateBusiness": {
+          "handler": "handlers/business/updateBusiness.handler",
+          "events": [
+            {
+              "http": {
+                "path": "/business/{id}",
+                "method": "PUT",
+                "cors": true
+              }
+            }
+          ]
+        },
+        "getPostById": {
+          "handler": "handlers/post/getPostById.handler",
+          "events": [
+            {
+              "http": {
+                "path": "/post/{id}",
+                "method": "GET",
+                "cors": true
+              }
+            }
+          ]
+        },
+        "createPost": {
+          "handler": "handlers/post/createPost.handler",
+          "events": [
+            {
+              "http": {
+                "path": "/post",
+                "method": "POST",
+                "cors": true
+              }
+            }
+          ]
+        },
+        "deletePost": {
+          "handler": "handlers/post/deletePost.handler",
+          "events": [
+            {
+              "http": {
+                "path": "/post/{id}",
+                "method": "DELETE",
+                "cors": true
+              }
+            }
+          ]
+        },
+        "getFiltredPosts": {
+          "handler": "handlers/post/getFiltredPosts.handler",
+          "events": [
+            {
+              "http": {
+                "path": "/post/filtred",
+                "method": "GET",
+                "cors": true
+              }
+            }
+          ]
+        },
+        "getAvailablePosts": {
+          "handler": "handlers/post/getOpenPosts.handler",
+          "events": [
+            {
+              "http": {
+                "path": "/post/{id}",
+                "method": "GET",
+                "cors": true
+              }
+            }
+          ]
+        },
+        "getadditionalOffers": {
+          "handler": "handlers/additionalOffers/getAll.handler",
+          "events": [
+            {
+              "http": {
+                "path": "/additionalOffers",
+                "method": "GET",
+                "cors": true
+              }
+            }
+          ]
+        },
+        "createadditionalOffers": {
+          "handler": "handlers/additionalOffers/create.handler",
+          "events": [
+            {
+              "http": {
+                "path": "/additionalOffers",
+                "method": "POST",
+                "cors": true
+              }
+            }
+          ]
+        },
+        "deleteadditionalOffers": {
+          "handler": "handlers/additionalOffers/delete.handler",
+          "events": [
+            {
+              "http": {
+                "path": "/additionalOffers/{id}",
+                "method": "DELETE",
+                "cors": true
+              }
+            }
+          ]
+        },
+        "getadditionalOffersById": {
+          "handler": "handlers/additionalOffers/getById.handler",
+          "events": [
+            {
+              "http": {
+                "path": "/additionalOffersById/{id}",
+                "method": "GET",
+                "cors": true
+              }
+            }
+          ]
+        }
+      }
+    },
+    "serviceRawFile": "provider:\r\n  name: aws\r\n  runtime: nodejs16.x \r\n  stage: dev\r\n  region: eu-central-1\r\n  memorySize: 128\r\n\r\n  environment:\r\n    MONGODB_URI: ${env:MONGODB_URI} \r\n\r\n\r\n\r\nfunctions:\r\n  getUser:\r\n    handler: handlers/user/getUserById.handler\r\n    events:\r\n      - http:\r\n          path: /user/{id}\r\n          method: GET\r\n          cors: true\r\n  createUser:\r\n    handler: handlers/user/createUser.handler\r\n    events:\r\n      - http:\r\n          path: /user\r\n          method: POST\r\n          cors: true\r\n  deleteUser:\r\n    handler: handlers/user/deleteUser.handler\r\n    events:\r\n      - http:\r\n          path: /user/{id}\r\n          method: DELETE\r\n          cors: true\r\n  getUserName:\r\n    handler: handlers/user/getUserByName.handler\r\n    events:\r\n      - http:\r\n          path: /user/search\r\n          method: GET\r\n          cors: true\r\n  updateUser:\r\n    handler: handlers/user/updateUser.handler\r\n    events:\r\n      - http:\r\n          path: /user/{id}\r\n          method: PUT\r\n          cors: true\r\n  getBusinessById:\r\n    handler: handlers/business/getBusinessById.handler\r\n    events:\r\n      - http:\r\n          path: /bussiness/{id}\r\n          method: GET\r\n          cors: true\r\n  createBusiness:\r\n    handler: handlers/business/createBusiness.handler\r\n    events:\r\n      - http:\r\n          path: /business\r\n          method: POST\r\n          cors: true\r\n  deleteBusiness:\r\n    handler: handlers/business/deleteBusiness.handler\r\n    events:\r\n      - http:\r\n          path: /business/{id}\r\n          method: DELETE\r\n          cors: true\r\n  getBusinessName:\r\n    handler: handlers/business/getBusinessByName.handler\r\n    events:\r\n      - http:\r\n          path: /business/search\r\n          method: GET\r\n          cors: true\r\n  updateBusiness:\r\n    handler: handlers/business/updateBusiness.handler\r\n    events:\r\n      - http:\r\n          path: /business/{id}\r\n          method: PUT\r\n          cors: true\r\n  getPostById:\r\n    handler: handlers/post/getPostById.handler\r\n    events:\r\n      - http:\r\n          path: /post/{id}\r\n          method: GET\r\n          cors: true\r\n  createPost:\r\n    handler: handlers/post/createPost.handler\r\n    events:\r\n      - http:\r\n          path: /post\r\n          method: POST\r\n          cors: true\r\n  deletePost:\r\n    handler: handlers/post/deletePost.handler\r\n    events:\r\n      - http:\r\n          path: /post/{id}\r\n          method: DELETE\r\n          cors: true\r\n  getFiltredPosts:\r\n    handler: handlers/post/getFiltredPosts.handler\r\n    events:\r\n      - http:\r\n          path: /post/filtred\r\n          method: GET\r\n          cors: true\r\n  getAvailablePosts:\r\n    handler: handlers/post/getOpenPosts.handler\r\n    events:\r\n      - http:\r\n          path: /post/{id}\r\n          method: GET\r\n          cors: true\r\n  getadditionalOffers:\r\n    handler: handlers/additionalOffers/getAll.handler\r\n    events:\r\n      - http:\r\n          path: /additionalOffers\r\n          method: GET\r\n          cors: true\r\n  createadditionalOffers:\r\n    handler: handlers/additionalOffers/create.handler\r\n    events:\r\n      - http:\r\n          path: /additionalOffers\r\n          method: POST\r\n          cors: true\r\n  deleteadditionalOffers:\r\n    handler: handlers/additionalOffers/delete.handler\r\n    events:\r\n      - http:\r\n          path: /additionalOffers/{id}\r\n          method: DELETE\r\n          cors: true\r\n  getadditionalOffersById:\r\n    handler: handlers/additionalOffers/getById.handler\r\n    events:\r\n      - http:\r\n          path: /additionalOffersById/{id}\r\n          method: GET\r\n          cors: true\r\n          ",
+    "command": [
+      "deploy"
+    ],
+    "options": {},
+    "error": {
+      "message": "\"service\" property is missing in serverless.yml",
+      "stack": "ServerlessError2: \"service\" property is missing in serverless.yml\n    at Service.loadServiceFileParam (file:///C:/Users/Admin/.serverless/releases/4.4.6/package/dist/sf-core.js:954:9442)\n    at Service.load (file:///C:/Users/Admin/.serverless/releases/4.4.6/package/dist/sf-core.js:954:6975)\n    at Serverless.init (file:///C:/Users/Admin/.serverless/releases/4.4.6/package/dist/sf-core.js:960:9896)\n    at runFramework (file:///C:/Users/Admin/.serverless/releases/4.4.6/package/dist/sf-core.js:983:1279)\n    at async route (file:///C:/Users/Admin/.serverless/releases/4.4.6/package/dist/sf-core.js:1011:13954)\n    at async Object.run2 [as run] (file:///C:/Users/Admin/.serverless/releases/4.4.6/package/dist/sf-core.js:1011:14355)\n    at async run3 (file:///C:/Users/Admin/.serverless/releases/4.4.6/package/dist/sf-core.js:1011:15617)",
+      "code": "SERVICE_NAME_MISSING"
+    },
+    "params": {},
+    "machineId": "712e1090871bf6121d1a04e293ab902c",
+    "stage": "dev",
+    "accessKeyV2": "<REDACTED>",
+    "accessKeyV1": "<REDACTED>",
+    "orgId": "e0ef2361-c60d-4ee3-b0e7-b12088cd64e1",
+    "orgName": "taleas",
+    "userId": "gLphCzG1ppJQlPLxZ0",
+    "dashboard": {
+      "isEnabledForService": false,
+      "requiredAuthentication": false,
+      "orgFeaturesInUse": null,
+      "orgObservabilityIntegrations": null,
+      "serviceAppId": null,
+      "serviceProvider": null,
+      "instanceParameters": null
+    },
+    "userName": "taleas",
+    "subscription": null,
+    "userEmail": "palomaabdurramani@gmail.com",
+    "serviceProviderAwsRegion": "eu-central-1",
+    "serviceProviderAwsCredentials": "<REDACTED>",
+    "serviceProviderAwsAccountId": "944511268761",
+    "projectType": "traditional",
+    "versionSf": "4.4.6",
+    "serviceUniqueId": "arn:aws:cloudformation:eu-central-1:944511268761:stack/interio-service-dev/651a37f0-8d4d-11ef-887b-06d22eb3fe13",
+    "serviceProviderAwsCfStackId": "arn:aws:cloudformation:eu-central-1:944511268761:stack/interio-service-dev/651a37f0-8d4d-11ef-887b-06d22eb3fe13",
+    "serviceProviderAwsCfStackCreated": "2024-10-18T12:35:02.150Z",
+    "serviceProviderAwsCfStackUpdated": "2024-10-18T13:28:51.325Z",
+    "serviceProviderAwsCfStackStatus": "UPDATE_COMPLETE",
+    "serviceProviderAwsCfStackOutputs": [
+      {
+        "OutputKey": "DeleteUserLambdaFunctionQualifiedArn",
+        "OutputValue": "arn:aws:lambda:eu-central-1:944511268761:function:interio-service-dev-deleteUser:4",
+        "Description": "Current Lambda function version",
+        "ExportName": "sls-interio-service-dev-DeleteUserLambdaFunctionQualifiedArn"
+      },
+      {
+        "OutputKey": "DeletePostLambdaFunctionQualifiedArn",
+        "OutputValue": "arn:aws:lambda:eu-central-1:944511268761:function:interio-service-dev-deletePost:4",
+        "Description": "Current Lambda function version",
+        "ExportName": "sls-interio-service-dev-DeletePostLambdaFunctionQualifiedArn"
+      },
+      {
+        "OutputKey": "GetAvailablePostsLambdaFunctionQualifiedArn",
+        "OutputValue": "arn:aws:lambda:eu-central-1:944511268761:function:interio-service-dev-getAvailablePosts:4",
+        "Description": "Current Lambda function version",
+        "ExportName": "sls-interio-service-dev-GetAvailablePostsLambdaFunctionQualifiedArn"
+      },
+      {
+        "OutputKey": "GetFiltredPostsLambdaFunctionQualifiedArn",
+        "OutputValue": "arn:aws:lambda:eu-central-1:944511268761:function:interio-service-dev-getFiltredPosts:4",
+        "Description": "Current Lambda function version",
+        "ExportName": "sls-interio-service-dev-GetFiltredPostsLambdaFunctionQualifiedArn"
+      },
+      {
+        "OutputKey": "DeleteBusinessLambdaFunctionQualifiedArn",
+        "OutputValue": "arn:aws:lambda:eu-central-1:944511268761:function:interio-service-dev-deleteBusiness:4",
+        "Description": "Current Lambda function version",
+        "ExportName": "sls-interio-service-dev-DeleteBusinessLambdaFunctionQualifiedArn"
+      },
+      {
+        "OutputKey": "GetBusinessByIdLambdaFunctionQualifiedArn",
+        "OutputValue": "arn:aws:lambda:eu-central-1:944511268761:function:interio-service-dev-getBusinessById:4",
+        "Description": "Current Lambda function version",
+        "ExportName": "sls-interio-service-dev-GetBusinessByIdLambdaFunctionQualifiedArn"
+      },
+      {
+        "OutputKey": "CreateBusinessLambdaFunctionQualifiedArn",
+        "OutputValue": "arn:aws:lambda:eu-central-1:944511268761:function:interio-service-dev-createBusiness:4",
+        "Description": "Current Lambda function version",
+        "ExportName": "sls-interio-service-dev-CreateBusinessLambdaFunctionQualifiedArn"
+      },
+      {
+        "OutputKey": "UpdateBusinessLambdaFunctionQualifiedArn",
+        "OutputValue": "arn:aws:lambda:eu-central-1:944511268761:function:interio-service-dev-updateBusiness:4",
+        "Description": "Current Lambda function version",
+        "ExportName": "sls-interio-service-dev-UpdateBusinessLambdaFunctionQualifiedArn"
+      },
+      {
+        "OutputKey": "UpdateUserLambdaFunctionQualifiedArn",
+        "OutputValue": "arn:aws:lambda:eu-central-1:944511268761:function:interio-service-dev-updateUser:4",
+        "Description": "Current Lambda function version",
+        "ExportName": "sls-interio-service-dev-UpdateUserLambdaFunctionQualifiedArn"
+      },
+      {
+        "OutputKey": "GetUserLambdaFunctionQualifiedArn",
+        "OutputValue": "arn:aws:lambda:eu-central-1:944511268761:function:interio-service-dev-getUser:4",
+        "Description": "Current Lambda function version",
+        "ExportName": "sls-interio-service-dev-GetUserLambdaFunctionQualifiedArn"
+      },
+      {
+        "OutputKey": "GetUserNameLambdaFunctionQualifiedArn",
+        "OutputValue": "arn:aws:lambda:eu-central-1:944511268761:function:interio-service-dev-getUserName:4",
+        "Description": "Current Lambda function version",
+        "ExportName": "sls-interio-service-dev-GetUserNameLambdaFunctionQualifiedArn"
+      },
+      {
+        "OutputKey": "ServerlessDeploymentBucketName",
+        "OutputValue": "serverless-framework-deployments-eu-central-1-7d33afbf-5e19",
+        "ExportName": "sls-interio-service-dev-ServerlessDeploymentBucketName"
+      },
+      {
+        "OutputKey": "GetPostByIdLambdaFunctionQualifiedArn",
+        "OutputValue": "arn:aws:lambda:eu-central-1:944511268761:function:interio-service-dev-getPostById:4",
+        "Description": "Current Lambda function version",
+        "ExportName": "sls-interio-service-dev-GetPostByIdLambdaFunctionQualifiedArn"
+      },
+      {
+        "OutputKey": "CreatePostLambdaFunctionQualifiedArn",
+        "OutputValue": "arn:aws:lambda:eu-central-1:944511268761:function:interio-service-dev-createPost:4",
+        "Description": "Current Lambda function version",
+        "ExportName": "sls-interio-service-dev-CreatePostLambdaFunctionQualifiedArn"
+      },
+      {
+        "OutputKey": "CreateUserLambdaFunctionQualifiedArn",
+        "OutputValue": "arn:aws:lambda:eu-central-1:944511268761:function:interio-service-dev-createUser:4",
+        "Description": "Current Lambda function version",
+        "ExportName": "sls-interio-service-dev-CreateUserLambdaFunctionQualifiedArn"
+      },
+      {
+        "OutputKey": "GetBusinessNameLambdaFunctionQualifiedArn",
+        "OutputValue": "arn:aws:lambda:eu-central-1:944511268761:function:interio-service-dev-getBusinessName:4",
+        "Description": "Current Lambda function version",
+        "ExportName": "sls-interio-service-dev-GetBusinessNameLambdaFunctionQualifiedArn"
+      },
+      {
+        "OutputKey": "ServiceEndpoint",
+        "OutputValue": "https://akvct836lc.execute-api.eu-central-1.amazonaws.com/dev",
+        "Description": "URL of the service endpoint",
+        "ExportName": "sls-interio-service-dev-ServiceEndpoint"
+      }
+    ]
+  }
+}
