@@ -1,3 +1,9 @@
+# "org" ensures this Service is used with the correct Serverless Framework Access Key.
+org: taleas1
+# "app" enables Serverless Framework Dashboard features and sharing them with other Services.
+app: interio
+
+service: interio-service
 provider:
   name: aws
   runtime: nodejs16.x 
@@ -8,7 +14,11 @@ provider:
   environment:
     MONGODB_URI: ${env:MONGODB_URI} 
 
-
+package:
+  include:
+    - models/**
+    - configurations/**
+    - handlers/**
 
 functions:
   getUser:
@@ -116,37 +126,3 @@ functions:
           path: /post/{id}
           method: GET
           cors: true
-  getadditionalOffers:
-    handler: handlers/additionalOffers/getAll.handler
-    events:
-      - http:
-          path: /additionalOffers
-          method: GET
-          cors: true
-  createadditionalOffers:
-    handler: handlers/additionalOffers/create.handler
-    events:
-      - http:
-          path: /additionalOffers
-          method: POST
-          cors: true
-  deleteadditionalOffers:
-    handler: handlers/additionalOffers/delete.handler
-    events:
-      - http:
-          path: /additionalOffers/{id}
-          method: DELETE
-          cors: true
-  getadditionalOffersById:
-    handler: handlers/additionalOffers/getById.handler
-    events:
-      - http:
-          path: /additionalOffersById/{id}
-          method: GET
-          cors: true
-
-  
-  
-
-
-  

@@ -1,4 +1,4 @@
-import User from "../../models/User";
+import User from "../../models/User.js";
 import connectDB from "../../configurations/connectDB";
 
 
@@ -8,7 +8,7 @@ export const handler = async (event) => {
 
     try {
         await connectDB();
-        console.log('db')
+        console.log('dbm')
         const newUser = new User(userData);
         await newUser.save();
         console.log('heree')
