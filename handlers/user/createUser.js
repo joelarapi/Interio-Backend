@@ -1,17 +1,13 @@
 import User from "../../models/User.js";
-import connectDB from "../../configurations/connectDB";
-
+import connectDB from "../../configurations/connectDB.js";
 
 export const handler = async (event) => {
     const userData = JSON.parse(event.body);
-    console.log(event)
 
     try {
         await connectDB();
-        console.log('dbm')
         const newUser = new User(userData);
         await newUser.save();
-        console.log('heree')
 
         return {
             statusCode: 201,
