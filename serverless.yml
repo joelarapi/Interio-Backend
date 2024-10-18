@@ -81,20 +81,6 @@ functions:
           path: /business/{id}
           method: PUT
           cors: true
-  getBusinessBookmark:
-    handler: handlers/business/getBusinessBookmark.handler
-    events:
-      - http:
-          path: /business/{id}/bookmark
-          method: GET
-          cors: true
-  getBusinessCollection:
-    handler: handlers/business/getBusinessCollection.handler
-    events:
-      - http:
-          path: /business/{id}/collection
-          method: GET
-          cors: true
   getPostById:
     handler: handlers/post/getPostById.handler
     events:
@@ -158,34 +144,7 @@ functions:
           path: /additionalOffersById/{id}
           method: GET
           cors: true
-  createAdmin:
-    handler: handlers/admin/createAdmin.handler
-    events:
-      - http:
-          path: /admin
-          method: POST
-          cors: true
-  getAdmin:
-    handler: handlers/admin/getAdminById.handler
-    events:
-      - http:
-          path: /admin/{id}
-          method: GET
-          cors: true
-  deleteAdmin:
-    handler: handlers/admin/deleteAdmin.handler
-    events:
-      - http:
-          path: /admin/{id}
-          method: DELETE
-          cors: true
-  updateAdmin:
-    handler: handlers/admin/updateUser.handler
-    events:
-      - http:
-          path: /admin/{id}
-          method: PUT
-          cors: true
+
   
   
 
