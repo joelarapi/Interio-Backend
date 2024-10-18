@@ -1,6 +1,4 @@
-# "org" ensures this Service is used with the correct Serverless Framework Access Key.
 org: taleas1
-# "app" enables Serverless Framework Dashboard features and sharing them with other Services.
 app: interio
 
 service: interio-service
