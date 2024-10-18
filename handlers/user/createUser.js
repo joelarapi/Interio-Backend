@@ -8,8 +8,10 @@ export const handler = async (event) => {
 
     try {
         await connectDB();
+        console.log('db')
         const newUser = new User(userData);
         await newUser.save();
+        console.log('heree')
 
         return {
             statusCode: 201,
