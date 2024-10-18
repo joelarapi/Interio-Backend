@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-const jobListingSchema = new mongoose.Schema({
+const FinishedJobsSchema = new mongoose.Schema({
     postId: { type: mongoose.Schema.Types.ObjectId, required: true, ref: 'Post' },
     businessId: { type: mongoose.Schema.Types.ObjectId, required: true, ref: 'Business' },
     rating: { type: Number },
@@ -8,5 +8,5 @@ const jobListingSchema = new mongoose.Schema({
     createdAt: { type: Date, default: Date.now }
 });
 
-const JobListing = mongoose.model('JobListing', jobListingSchema);
-export default JobListing;
+const FinishedJobs = mongoose.model('FinishedJobs', FinishedJobsSchema);
+export default FinishedJobs;

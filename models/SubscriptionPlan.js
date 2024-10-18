@@ -3,8 +3,9 @@ import mongoose from "mongoose";
 const subscriptionPlanSchema = new mongoose.Schema({
     name: { type: String, required: true },
     price: { type: Number, required: true },
-    offersNumber: { type: Number, required: true },
-    badge: { type: String, enum: ['diamond', 'gold', 'silver']},
+    offersNumber: { type: Number},
+    promoNumber: { type: Number},
+    badge: { type: String, enum: ['diamond', 'gold', 'silver', null], default: null},
     setAsTopOffer: { type: Boolean, default: false },
     createdAt: { type: Date, default: Date.now },
     lastModified: { type: Date, default: Date.now }

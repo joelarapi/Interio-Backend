@@ -1,14 +1,14 @@
-import Admin from "../../models/Admin";
+import FinishedJobs from "../../models/FinishedJobs";
 
 export const handler = async (event) => {
     const { id } = event.pathParameters;
 
     try {
-        const admin = await Admin.findById(id);
-        if (!admin) {
+        const finishedJobs = await FinishedJobs.findById(id).populate('postId').populate('businessId');
+        if (!finishedJobs) {
             return {
                 statusCode: 404,
-                body: JSON.stringify({ message: 'Admin not found' }),
+                body: JSON.stringify({ message: 'Job listing not found' }),
                 headers: {
                     "Access-Control-Allow-Origin" : '*'
                  }
@@ -17,7 +17,7 @@ export const handler = async (event) => {
 
         return {
             statusCode: 200,
-            body: JSON.stringify(admin),
+            body: JSON.stringify(finishedJobs),
             headers: {
                 "Access-Control-Allow-Origin" : '*'
              }
@@ -25,7 +25,7 @@ export const handler = async (event) => {
     } catch (error) {
         return {
             statusCode: 500,
-            body: JSON.stringify({ message: 'Error retrieving admin', error }),
+            body: JSON.stringify({ message: 'Error retrieving job listing', error }),
             headers: {
                 "Access-Control-Allow-Origin" : '*'
              }

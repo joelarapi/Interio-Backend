@@ -11,7 +11,7 @@ const postSchema = new mongoose.Schema({
         name: { type: String, required: true },
         measurements: { type: String }
     }],
-    jobListing: { type: mongoose.Schema.Types.ObjectId, ref: 'JobListing' },
+    FinishedJobs: { type: mongoose.Schema.Types.ObjectId, ref: 'FinishedJobs' },
     category: { type: mongoose.Schema.Types.ObjectId, ref: 'Category' },
     offers: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Offer' }],
     status: { type: String, enum: ['open', 'closed', 'completed'], default: 'open' },

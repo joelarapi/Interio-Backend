@@ -1,10 +1,10 @@
-import JobListing from "../../models/JobListing";
+import FinishedJobs from "../../models/FinishedJobs";
 
 export const handler = async (event) => {
     const { businessId } = event.pathParameters;
 
     try {
-        const jobs = await JobListing.find({ businessId });
+        const jobs = await FinishedJobs.find({ businessId });
         return {
             statusCode: 200,
             body: JSON.stringify(jobs),

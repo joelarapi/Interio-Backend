@@ -11,14 +11,25 @@ const businessSchema = new mongoose.Schema({
     rating: { type: Number, default: 0 },
     description: { type: String, default: null },
     websiteLink: { type: String },
-    collection: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Collection' }],
+    showroom: {
+        type: [String],
+        validate: [arrayLimit, '{PATH} exceeds the limit of 50'],
+    },
     availableOfferNumber: { type: Number, default: 5 },
     subscriptionPlan: { type: mongoose.Schema.Types.ObjectId, ref: 'SubscriptionPlan' },
     offers: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Offer' }],
-    bookmark: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Bookmark' }],
+    bookmarks: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Bookmark' }],
+    promos: {
+        type: [String],
+        upUntil: { type: Date }
+    },
     createdAt: { type: Date, default: Date.now },
     lastModified: { type: Date, default: Date.now }
 });
+
+function arrayLimit(val) {
+    return val.length <= 50;
+}
 
 businessSchema.pre("save", async function(next){
     this.lastModified = Date.now();

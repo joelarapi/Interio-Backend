@@ -1,15 +1,15 @@
-import Bookmark from "../../models/Bookmark";
+import FinishedJobs from "../../models/FinishedJobs";
 
 export const handler = async (event) => {
-    const bookmarkData = JSON.parse(event.body);
+    const finishedJobsData = JSON.parse(event.body);
 
     try {
-        const newBookmark = new Bookmark(bookmarkData);
-        await newBookmark.save();
+        const newFinishedJobs = new FinishedJobs(finishedJobsData);
+        await newFinishedJobs.save();
 
         return {
             statusCode: 201,
-            body: JSON.stringify(newBookmark),
+            body: JSON.stringify(newFinishedJobs),
             headers: {
                 "Access-Control-Allow-Origin" : '*'
              }
@@ -17,7 +17,7 @@ export const handler = async (event) => {
     } catch (error) {
         return {
             statusCode: 500,
-            body: JSON.stringify({ message: 'Error creating bookmark', error }),
+            body: JSON.stringify({ message: 'Error creating job listing', error }),
             headers: {
                 "Access-Control-Allow-Origin" : '*'
              }
