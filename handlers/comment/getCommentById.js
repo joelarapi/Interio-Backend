@@ -1,7 +1,6 @@
 import Comment from "../../models/Comment";
 import connectDB from "../../configurations/connectDB";
 
-
 export const handler = async (event) => {
     const { id } = event.pathParameters;
 

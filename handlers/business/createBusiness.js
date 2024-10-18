@@ -2,10 +2,10 @@ import Business from "../../models/Business";
 import connectDB from "../../configurations/connectDB";
 
 export const handler = async (event) => {
-    await connectDB();
     const businessData = JSON.parse(event.body);
 
     try {
+        await connectDB();
         const newBusiness = new Business(businessData);
         await newBusiness.save();
 

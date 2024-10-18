@@ -1,7 +1,6 @@
 import Business from "../../models/Business";
 import connectDB from "../../configurations/connectDB";
 
-
 export const handler = async (event) => {
     const { id } = event.pathParameters;
     const businessData = JSON.parse(event.body);

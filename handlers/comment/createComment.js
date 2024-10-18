@@ -1,7 +1,6 @@
 import Comment from "../../models/Comment";
 import connectDB from "../../configurations/connectDB";
 
-
 export const handler = async (event) => {
     const commentData = JSON.parse(event.body);
 

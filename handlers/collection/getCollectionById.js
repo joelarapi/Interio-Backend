@@ -1,7 +1,6 @@
 import Collection from "../../models/Collection";
 import connectDB from "../../configurations/connectDB";
 
-
 export const handler = async (event) => {
     const { id } = event.pathParameters;
 

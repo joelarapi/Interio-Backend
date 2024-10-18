@@ -1,7 +1,6 @@
 import Categorie from "../../models/Categories";
 import connectDB from "../../configurations/connectDB";
 
-
 export const handler = async () => {
     try {
         await connectDB();
