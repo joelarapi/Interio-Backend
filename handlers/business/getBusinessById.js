@@ -4,7 +4,7 @@ export const handler = async (event) => {
     const { id } = event.pathParameters;
 
     try {
-        const business = await Business.findById(id).populate('category');
+        const business = await Business.findById(id).populate('category bookmarks showroom');
 
         if (!business) {
             return {
