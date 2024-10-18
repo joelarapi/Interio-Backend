@@ -1,16 +1,17 @@
 import User from "../../models/User.js";
 import connectDB from "../../configurations/connectDB.js";
-<<<<<<< Updated upstream
 
 export const handler = async (event) => {
+    if (!event.body) {
+        return {
+            statusCode: 400,
+            body: JSON.stringify({ message: 'Request body is required' }),
+            headers: {
+                "Access-Control-Allow-Origin": '*'
+            }
+        };
+    }
     const userData = JSON.parse(event.body);
-=======
-
-
-export const handler = async (event) => {
-    const userData = JSON.parse(event.body);
-   
->>>>>>> Stashed changes
 
     try {
         await connectDB();
