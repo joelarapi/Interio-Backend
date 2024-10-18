@@ -1,9 +1,12 @@
 import Categorie from "../../models/Categories";
+import connectDB from "../../configurations/connectDB";
+
 
 export const handler = async (event) => {
     const categoryData = JSON.parse(event.body);
 
     try {
+        await connectDB();
         const newCategory = new Categorie(categoryData);
         await newCategory.save();
 

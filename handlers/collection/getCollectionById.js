@@ -1,9 +1,12 @@
 import Collection from "../../models/Collection";
+import connectDB from "../../configurations/connectDB";
+
 
 export const handler = async (event) => {
     const { id } = event.pathParameters;
 
     try {
+        await connectDB();
         const collection = await Collection.findById(id).populate('businessId');
         
         if (!collection) {

@@ -1,9 +1,12 @@
 import Business from "../../models/Business";
+import connectDB from "../../configurations/connectDB";
+
 
 export const handler = async (event) => {
     const { id } = event.pathParameters;
 
     try {
+        await connectDB();
         const business = await Business.findById(id).populate('category bookmarks showroom');
 
         if (!business) {

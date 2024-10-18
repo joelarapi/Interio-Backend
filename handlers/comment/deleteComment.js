@@ -1,9 +1,11 @@
 import Comment from "../../models/Comment";
+import connectDB from "../../configurations/connectDB";
 
 export const handler = async (event) => {
     const { id } = event.pathParameters;
 
     try {
+        await connectDB();
         const deletedComment = await Comment.findByIdAndDelete(id);
 
         if (!deletedComment) {

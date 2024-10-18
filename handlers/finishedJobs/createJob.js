@@ -1,9 +1,12 @@
 import FinishedJobs from "../../models/FinishedJobs";
+import connectDB from "../../configurations/connectDB";
+
 
 export const handler = async (event) => {
     const finishedJobsData = JSON.parse(event.body);
 
     try {
+        await connectDB();
         const newFinishedJobs = new FinishedJobs(finishedJobsData);
         await newFinishedJobs.save();
 

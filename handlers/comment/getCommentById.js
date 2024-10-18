@@ -1,9 +1,12 @@
 import Comment from "../../models/Comment";
+import connectDB from "../../configurations/connectDB";
+
 
 export const handler = async (event) => {
     const { id } = event.pathParameters;
 
     try {
+        await connectDB();
         const comment = await Comment.findById(id);
         if (!comment) {
             return {

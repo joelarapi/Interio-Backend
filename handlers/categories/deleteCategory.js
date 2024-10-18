@@ -1,9 +1,12 @@
 import Categorie from "../../models/Categories";
+import connectDB from "../../configurations/connectDB";
+
 
 export const handler = async (event) => {
     const { id } = event.pathParameters;
 
     try {
+        await connectDB();
         const deletedCategory = await Categorie.findByIdAndDelete(id);
 
         if (!deletedCategory) {

@@ -1,9 +1,12 @@
 import Collection from "../../models/Collection";
+import connectDB from "../../configurations/connectDB";
+
 
 export const handler = async (event) => {
     const { id } = event.pathParameters;
 
     try {
+        await connectDB();
         const deletedCollection = await Collection.findByIdAndDelete(id);
 
         if (!deletedCollection) {

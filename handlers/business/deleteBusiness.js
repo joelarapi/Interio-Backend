@@ -1,9 +1,12 @@
 import Business from "../../models/Business";
+import connectDB from "../../configurations/connectDB";
+
 
 export const handler = async (event) => {
     const { id } = event.pathParameters;
 
     try {
+        await connectDB();
         const deletedBusiness = await Business.findByIdAndDelete(id);
 
         if (!deletedBusiness) {

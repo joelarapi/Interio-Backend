@@ -1,10 +1,13 @@
 import Business from "../../models/Business";
+import connectDB from "../../configurations/connectDB";
+
 
 export const handler = async (event) => {
     const { id } = event.pathParameters;
     const businessData = JSON.parse(event.body);
 
     try {
+        await connectDB();
         const updatedBusiness = await Business.findByIdAndUpdate(id, businessData, {
             new: true,
             runValidators: true,

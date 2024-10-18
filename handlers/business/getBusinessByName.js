@@ -1,9 +1,12 @@
 import Business from "../../models/Business";
+import connectDB from "../../configurations/connectDB";
+
 
 export const handler = async (event) => {
     const { name } = event.pathParameters;
 
     try {
+        await connectDB();
         const businesses = await Business.find({ businessName: { $regex: name, $options: 'i' } });
         if (businesses.length === 0) {
             return {

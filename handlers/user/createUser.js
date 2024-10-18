@@ -1,8 +1,10 @@
 import User from "../../models/User";
 import connectDB from "../../configurations/connectDB";
 
+
 export const handler = async (event) => {
     const userData = JSON.parse(event.body);
+    console.log(event)
 
     try {
         await connectDB();

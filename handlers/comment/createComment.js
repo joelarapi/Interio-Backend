@@ -1,9 +1,12 @@
 import Comment from "../../models/Comment";
+import connectDB from "../../configurations/connectDB";
+
 
 export const handler = async (event) => {
     const commentData = JSON.parse(event.body);
 
     try {
+        await connectDB();
         const newComment = new Comment(commentData);
         await newComment.save();
 
