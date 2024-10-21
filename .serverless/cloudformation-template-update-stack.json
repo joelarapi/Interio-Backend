@@ -1,14 +1,23 @@
 {
   "AWSTemplateFormatVersion": "2010-09-09",
   "Description": "The AWS CloudFormation template for this Serverless application",
-<<<<<<< Updated upstream
-  "Resources": {},
-=======
   "Resources": {
+    "GetUserLogGroup": {
+      "Type": "AWS::Logs::LogGroup",
+      "Properties": {
+        "LogGroupName": "/aws/lambda/interio-service-dev-getUser"
+      }
+    },
     "CreateUserLogGroup": {
       "Type": "AWS::Logs::LogGroup",
       "Properties": {
         "LogGroupName": "/aws/lambda/interio-service-dev-createUser"
+      }
+    },
+    "CreateBusinessLogGroup": {
+      "Type": "AWS::Logs::LogGroup",
+      "Properties": {
+        "LogGroupName": "/aws/lambda/interio-service-dev-createBusiness"
       }
     },
     "IamRoleLambdaExecution": {
@@ -89,12 +98,40 @@
         }
       }
     },
+    "GetUserLambdaFunction": {
+      "Type": "AWS::Lambda::Function",
+      "Properties": {
+        "Code": {
+          "S3Bucket": "serverless-framework-deployments-eu-central-1-7d33afbf-5e19",
+          "S3Key": "serverless/interio-service/dev/1729495051686-2024-10-21T07:17:31.686Z/interio-service.zip"
+        },
+        "Handler": "handlers/user/getUserById.handler",
+        "Runtime": "nodejs16.x",
+        "FunctionName": "interio-service-dev-getUser",
+        "MemorySize": 128,
+        "Timeout": 6,
+        "Environment": {
+          "Variables": {
+            "MONGODB_URI": "mongodb+srv://interiotaleas:interiotaleas@cluster0.vnxct.mongodb.net/Interio"
+          }
+        },
+        "Role": {
+          "Fn::GetAtt": [
+            "IamRoleLambdaExecution",
+            "Arn"
+          ]
+        }
+      },
+      "DependsOn": [
+        "GetUserLogGroup"
+      ]
+    },
     "CreateUserLambdaFunction": {
       "Type": "AWS::Lambda::Function",
       "Properties": {
         "Code": {
           "S3Bucket": "serverless-framework-deployments-eu-central-1-7d33afbf-5e19",
-          "S3Key": "serverless/interio-service/dev/1729263241871-2024-10-18T14:54:01.871Z/interio-service.zip"
+          "S3Key": "serverless/interio-service/dev/1729495051686-2024-10-21T07:17:31.686Z/interio-service.zip"
         },
         "Handler": "handlers/user/createUser.handler",
         "Runtime": "nodejs16.x",
@@ -117,14 +154,62 @@
         "CreateUserLogGroup"
       ]
     },
-    "CreateUserLambdaVersion04t9EaA7kvNNtqD1Rayim9vXdYfCWXMw8Vn1ZSGo78": {
+    "CreateBusinessLambdaFunction": {
+      "Type": "AWS::Lambda::Function",
+      "Properties": {
+        "Code": {
+          "S3Bucket": "serverless-framework-deployments-eu-central-1-7d33afbf-5e19",
+          "S3Key": "serverless/interio-service/dev/1729495051686-2024-10-21T07:17:31.686Z/interio-service.zip"
+        },
+        "Handler": "handlers/business/createBusiness.handler",
+        "Runtime": "nodejs16.x",
+        "FunctionName": "interio-service-dev-createBusiness",
+        "MemorySize": 128,
+        "Timeout": 6,
+        "Environment": {
+          "Variables": {
+            "MONGODB_URI": "mongodb+srv://interiotaleas:interiotaleas@cluster0.vnxct.mongodb.net/Interio"
+          }
+        },
+        "Role": {
+          "Fn::GetAtt": [
+            "IamRoleLambdaExecution",
+            "Arn"
+          ]
+        }
+      },
+      "DependsOn": [
+        "CreateBusinessLogGroup"
+      ]
+    },
+    "GetUserLambdaVersionqz0XD0Pq8NdtVVMAK2dRZ5GsDKSP2y6WERk2teC6Q": {
+      "Type": "AWS::Lambda::Version",
+      "DeletionPolicy": "Retain",
+      "Properties": {
+        "FunctionName": {
+          "Ref": "GetUserLambdaFunction"
+        },
+        "CodeSha256": "nhATOb4OrAIv3XkQS3+FS7ovgR3+uSDgPNEb/IAEgkI="
+      }
+    },
+    "CreateUserLambdaVersionfi8vUNMqozrL0h9FJVxop4QJ5vnbrWp8XrmHxlUVirY": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "CreateUserLambdaFunction"
         },
-        "CodeSha256": "XZcCwJZ9y+md42qHYWLwsUcDJmwkd6FkIxvwKI5k95Q="
+        "CodeSha256": "nhATOb4OrAIv3XkQS3+FS7ovgR3+uSDgPNEb/IAEgkI="
+      }
+    },
+    "CreateBusinessLambdaVersiona2nta4fdfgVl1gYRXedPdtRLNfqEIqokT1TQ4tsFjqI": {
+      "Type": "AWS::Lambda::Version",
+      "DeletionPolicy": "Retain",
+      "Properties": {
+        "FunctionName": {
+          "Ref": "CreateBusinessLambdaFunction"
+        },
+        "CodeSha256": "nhATOb4OrAIv3XkQS3+FS7ovgR3+uSDgPNEb/IAEgkI="
       }
     },
     "ApiGatewayRestApi": {
@@ -149,6 +234,78 @@
           ]
         },
         "PathPart": "user",
+        "RestApiId": {
+          "Ref": "ApiGatewayRestApi"
+        }
+      }
+    },
+    "ApiGatewayResourceUserIdVar": {
+      "Type": "AWS::ApiGateway::Resource",
+      "Properties": {
+        "ParentId": {
+          "Ref": "ApiGatewayResourceUser"
+        },
+        "PathPart": "{id}",
+        "RestApiId": {
+          "Ref": "ApiGatewayRestApi"
+        }
+      }
+    },
+    "ApiGatewayResourceBusiness": {
+      "Type": "AWS::ApiGateway::Resource",
+      "Properties": {
+        "ParentId": {
+          "Fn::GetAtt": [
+            "ApiGatewayRestApi",
+            "RootResourceId"
+          ]
+        },
+        "PathPart": "business",
+        "RestApiId": {
+          "Ref": "ApiGatewayRestApi"
+        }
+      }
+    },
+    "ApiGatewayMethodUserIdVarOptions": {
+      "Type": "AWS::ApiGateway::Method",
+      "Properties": {
+        "AuthorizationType": "NONE",
+        "HttpMethod": "OPTIONS",
+        "MethodResponses": [
+          {
+            "StatusCode": "200",
+            "ResponseParameters": {
+              "method.response.header.Access-Control-Allow-Origin": true,
+              "method.response.header.Access-Control-Allow-Headers": true,
+              "method.response.header.Access-Control-Allow-Methods": true
+            },
+            "ResponseModels": {}
+          }
+        ],
+        "RequestParameters": {},
+        "Integration": {
+          "Type": "MOCK",
+          "RequestTemplates": {
+            "application/json": "{statusCode:200}"
+          },
+          "ContentHandling": "CONVERT_TO_TEXT",
+          "IntegrationResponses": [
+            {
+              "StatusCode": "200",
+              "ResponseParameters": {
+                "method.response.header.Access-Control-Allow-Origin": "'*'",
+                "method.response.header.Access-Control-Allow-Headers": "'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token,X-Amz-User-Agent,X-Amzn-Trace-Id'",
+                "method.response.header.Access-Control-Allow-Methods": "'OPTIONS,GET'"
+              },
+              "ResponseTemplates": {
+                "application/json": ""
+              }
+            }
+          ]
+        },
+        "ResourceId": {
+          "Ref": "ApiGatewayResourceUserIdVar"
+        },
         "RestApiId": {
           "Ref": "ApiGatewayRestApi"
         }
@@ -199,6 +356,97 @@
         }
       }
     },
+    "ApiGatewayMethodBusinessOptions": {
+      "Type": "AWS::ApiGateway::Method",
+      "Properties": {
+        "AuthorizationType": "NONE",
+        "HttpMethod": "OPTIONS",
+        "MethodResponses": [
+          {
+            "StatusCode": "200",
+            "ResponseParameters": {
+              "method.response.header.Access-Control-Allow-Origin": true,
+              "method.response.header.Access-Control-Allow-Headers": true,
+              "method.response.header.Access-Control-Allow-Methods": true
+            },
+            "ResponseModels": {}
+          }
+        ],
+        "RequestParameters": {},
+        "Integration": {
+          "Type": "MOCK",
+          "RequestTemplates": {
+            "application/json": "{statusCode:200}"
+          },
+          "ContentHandling": "CONVERT_TO_TEXT",
+          "IntegrationResponses": [
+            {
+              "StatusCode": "200",
+              "ResponseParameters": {
+                "method.response.header.Access-Control-Allow-Origin": "'*'",
+                "method.response.header.Access-Control-Allow-Headers": "'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token,X-Amz-User-Agent,X-Amzn-Trace-Id'",
+                "method.response.header.Access-Control-Allow-Methods": "'OPTIONS,POST'"
+              },
+              "ResponseTemplates": {
+                "application/json": ""
+              }
+            }
+          ]
+        },
+        "ResourceId": {
+          "Ref": "ApiGatewayResourceBusiness"
+        },
+        "RestApiId": {
+          "Ref": "ApiGatewayRestApi"
+        }
+      }
+    },
+    "ApiGatewayMethodUserIdVarGet": {
+      "Type": "AWS::ApiGateway::Method",
+      "Properties": {
+        "HttpMethod": "GET",
+        "RequestParameters": {},
+        "ResourceId": {
+          "Ref": "ApiGatewayResourceUserIdVar"
+        },
+        "RestApiId": {
+          "Ref": "ApiGatewayRestApi"
+        },
+        "ApiKeyRequired": false,
+        "AuthorizationType": "NONE",
+        "Integration": {
+          "IntegrationHttpMethod": "POST",
+          "Type": "AWS_PROXY",
+          "Uri": {
+            "Fn::Join": [
+              "",
+              [
+                "arn:",
+                {
+                  "Ref": "AWS::Partition"
+                },
+                ":apigateway:",
+                {
+                  "Ref": "AWS::Region"
+                },
+                ":lambda:path/2015-03-31/functions/",
+                {
+                  "Fn::GetAtt": [
+                    "GetUserLambdaFunction",
+                    "Arn"
+                  ]
+                },
+                "/invocations"
+              ]
+            ]
+          }
+        },
+        "MethodResponses": []
+      },
+      "DependsOn": [
+        "GetUserLambdaPermissionApiGateway"
+      ]
+    },
     "ApiGatewayMethodUserPost": {
       "Type": "AWS::ApiGateway::Method",
       "Properties": {
@@ -245,7 +493,53 @@
         "CreateUserLambdaPermissionApiGateway"
       ]
     },
-    "ApiGatewayDeployment1729263238318": {
+    "ApiGatewayMethodBusinessPost": {
+      "Type": "AWS::ApiGateway::Method",
+      "Properties": {
+        "HttpMethod": "POST",
+        "RequestParameters": {},
+        "ResourceId": {
+          "Ref": "ApiGatewayResourceBusiness"
+        },
+        "RestApiId": {
+          "Ref": "ApiGatewayRestApi"
+        },
+        "ApiKeyRequired": false,
+        "AuthorizationType": "NONE",
+        "Integration": {
+          "IntegrationHttpMethod": "POST",
+          "Type": "AWS_PROXY",
+          "Uri": {
+            "Fn::Join": [
+              "",
+              [
+                "arn:",
+                {
+                  "Ref": "AWS::Partition"
+                },
+                ":apigateway:",
+                {
+                  "Ref": "AWS::Region"
+                },
+                ":lambda:path/2015-03-31/functions/",
+                {
+                  "Fn::GetAtt": [
+                    "CreateBusinessLambdaFunction",
+                    "Arn"
+                  ]
+                },
+                "/invocations"
+              ]
+            ]
+          }
+        },
+        "MethodResponses": []
+      },
+      "DependsOn": [
+        "CreateBusinessLambdaPermissionApiGateway"
+      ]
+    },
+    "ApiGatewayDeployment1729495047033": {
       "Type": "AWS::ApiGateway::Deployment",
       "Properties": {
         "RestApiId": {
@@ -254,9 +548,50 @@
         "StageName": "dev"
       },
       "DependsOn": [
+        "ApiGatewayMethodUserIdVarOptions",
         "ApiGatewayMethodUserOptions",
-        "ApiGatewayMethodUserPost"
+        "ApiGatewayMethodBusinessOptions",
+        "ApiGatewayMethodUserIdVarGet",
+        "ApiGatewayMethodUserPost",
+        "ApiGatewayMethodBusinessPost"
       ]
+    },
+    "GetUserLambdaPermissionApiGateway": {
+      "Type": "AWS::Lambda::Permission",
+      "Properties": {
+        "FunctionName": {
+          "Fn::GetAtt": [
+            "GetUserLambdaFunction",
+            "Arn"
+          ]
+        },
+        "Action": "lambda:InvokeFunction",
+        "Principal": "apigateway.amazonaws.com",
+        "SourceArn": {
+          "Fn::Join": [
+            "",
+            [
+              "arn:",
+              {
+                "Ref": "AWS::Partition"
+              },
+              ":execute-api:",
+              {
+                "Ref": "AWS::Region"
+              },
+              ":",
+              {
+                "Ref": "AWS::AccountId"
+              },
+              ":",
+              {
+                "Ref": "ApiGatewayRestApi"
+              },
+              "/*/*"
+            ]
+          ]
+        }
+      }
     },
     "CreateUserLambdaPermissionApiGateway": {
       "Type": "AWS::Lambda::Permission",
@@ -294,25 +629,77 @@
           ]
         }
       }
+    },
+    "CreateBusinessLambdaPermissionApiGateway": {
+      "Type": "AWS::Lambda::Permission",
+      "Properties": {
+        "FunctionName": {
+          "Fn::GetAtt": [
+            "CreateBusinessLambdaFunction",
+            "Arn"
+          ]
+        },
+        "Action": "lambda:InvokeFunction",
+        "Principal": "apigateway.amazonaws.com",
+        "SourceArn": {
+          "Fn::Join": [
+            "",
+            [
+              "arn:",
+              {
+                "Ref": "AWS::Partition"
+              },
+              ":execute-api:",
+              {
+                "Ref": "AWS::Region"
+              },
+              ":",
+              {
+                "Ref": "AWS::AccountId"
+              },
+              ":",
+              {
+                "Ref": "ApiGatewayRestApi"
+              },
+              "/*/*"
+            ]
+          ]
+        }
+      }
     }
   },
->>>>>>> Stashed changes
   "Outputs": {
     "ServerlessDeploymentBucketName": {
       "Value": "serverless-framework-deployments-eu-central-1-7d33afbf-5e19",
       "Export": {
         "Name": "sls-interio-service-dev-ServerlessDeploymentBucketName"
       }
-<<<<<<< Updated upstream
-=======
+    },
+    "GetUserLambdaFunctionQualifiedArn": {
+      "Description": "Current Lambda function version",
+      "Value": {
+        "Ref": "GetUserLambdaVersionqz0XD0Pq8NdtVVMAK2dRZ5GsDKSP2y6WERk2teC6Q"
+      },
+      "Export": {
+        "Name": "sls-interio-service-dev-GetUserLambdaFunctionQualifiedArn"
+      }
     },
     "CreateUserLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "CreateUserLambdaVersion04t9EaA7kvNNtqD1Rayim9vXdYfCWXMw8Vn1ZSGo78"
+        "Ref": "CreateUserLambdaVersionfi8vUNMqozrL0h9FJVxop4QJ5vnbrWp8XrmHxlUVirY"
       },
       "Export": {
         "Name": "sls-interio-service-dev-CreateUserLambdaFunctionQualifiedArn"
+      }
+    },
+    "CreateBusinessLambdaFunctionQualifiedArn": {
+      "Description": "Current Lambda function version",
+      "Value": {
+        "Ref": "CreateBusinessLambdaVersiona2nta4fdfgVl1gYRXedPdtRLNfqEIqokT1TQ4tsFjqI"
+      },
+      "Export": {
+        "Name": "sls-interio-service-dev-CreateBusinessLambdaFunctionQualifiedArn"
       }
     },
     "ServiceEndpoint": {
@@ -340,7 +727,6 @@
       "Export": {
         "Name": "sls-interio-service-dev-ServiceEndpoint"
       }
->>>>>>> Stashed changes
     }
   }
 }

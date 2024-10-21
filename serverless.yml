@@ -27,13 +27,13 @@ functions:
 #           method: GET
 #           cors: true
 
-  # getUser:
-  #   handler: handlers/user/getUserById.handler
-  #   events:
-  #     - http:
-  #         path: /user/{id}
-  #         method: GET
-  #         cors: true
+  getUser:
+    handler: handlers/user/getUserById.handler
+    events:
+      - http:
+          path: /user/{id}
+          method: GET
+          cors: true
   createUser:
     handler: handlers/user/createUser.handler
     events:
@@ -69,13 +69,13 @@ functions:
   #         path: /bussiness/{id}
   #         method: GET
   #         cors: true
-  # createBusiness:
-  #   handler: handlers/business/createBusiness.handler
-  #   events:
-  #     - http:
-  #         path: /business
-  #         method: POST
-  #         cors: true
+  createBusiness:
+    handler: handlers/business/createBusiness.handler
+    events:
+      - http:
+          path: /business
+          method: POST
+          cors: true
   # deleteBusiness:
   #   handler: handlers/business/deleteBusiness.handler
   #   events:
