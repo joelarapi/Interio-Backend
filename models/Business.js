@@ -18,7 +18,7 @@ const businessSchema = new mongoose.Schema({
     availableOfferNumber: { type: Number, default: 5 },
     subscriptionPlan: { type: mongoose.Schema.Types.ObjectId, ref: 'SubscriptionPlan' },
     offers: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Offer' }],
-    bookmarks: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Bookmark' }],
+    bookmarks: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Post' }],
     promos: {
         type: [String],
         upUntil: { type: Date }
