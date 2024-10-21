@@ -9,14 +9,53 @@ export const handler = async (event) => {
         await connectDB();
         //const business = await Business.findById(id).populate('category bookmarks showroom');
         const business = await Business.findById(id);
-
+        
         if (!business) {
             return {
                 statusCode: 404,
                 body: JSON.stringify({ message: 'Business not found' }),
                 headers: {
-                    "Access-Control-Allow-Origin" : '*'
-                 }
+                    "Access-Control-Allow-Origin": '*'
+                }
+            };
+        }
+
+        try {
+            await business.populate('category');
+        } catch (populateError) {
+            console.error("Error populating category:", populateError);
+            return {
+                statusCode: 500,
+                body: JSON.stringify({ message: 'Error during category population', error: populateError.message }),
+                headers: {
+                    "Access-Control-Allow-Origin": '*'
+                }
+            };
+        }
+
+        try {
+            await business.populate('bookmarks');
+        } catch (populateError) {
+            console.error("Error populating bookmarks:", populateError);
+            return {
+                statusCode: 500,
+                body: JSON.stringify({ message: 'Error during bookmarks population', error: populateError.message }),
+                headers: {
+                    "Access-Control-Allow-Origin": '*'
+                }
+            };
+        }
+
+        try {
+            await business.populate('showroom');
+        } catch (populateError) {
+            console.error("Error populating showroom:", populateError);
+            return {
+                statusCode: 500,
+                body: JSON.stringify({ message: 'Error during showroom population', error: populateError.message }),
+                headers: {
+                    "Access-Control-Allow-Origin": '*'
+                }
             };
         }
 
