@@ -68,27 +68,27 @@ functions:
           path: /business
           method: POST
           cors: true
-  # deleteBusiness:
-  #   handler: handlers/business/deleteBusiness.handler
-  #   events:
-  #     - http:
-  #         path: /business/{id}
-  #         method: DELETE
-  #         cors: true
-  # getBusinessName:
-  #   handler: handlers/business/getBusinessByName.handler
-  #   events:
-  #     - http:
-  #         path: /business/search
-  #         method: GET
-  #         cors: true
-  # updateBusiness:
-  #   handler: handlers/business/updateBusiness.handler
-  #   events:
-  #     - http:
-  #         path: /business/{id}
-  #         method: PUT
-  #         cors: true
+  deleteBusiness:
+    handler: handlers/business/deleteBusiness.handler
+    events:
+      - http:
+          path: /business/{id}
+          method: DELETE
+          cors: true
+  getBusinessName:
+    handler: handlers/business/getBusinessByName.handler
+    events:
+      - http:
+          path: /business/search
+          method: GET
+          cors: true
+  updateBusiness:
+    handler: handlers/business/updateBusiness.handler
+    events:
+      - http:
+          path: /business/{id}
+          method: PUT
+          cors: true
   # getPostById:
   #   handler: handlers/post/getPostById.handler
   #   events:

@@ -1,5 +1,6 @@
 import Business from "../../models/Business.js";
 import connectDB from "../../configurations/connectDB.js";
+import Post from  "../../models/Post.js"
 
 export const handler = async (event) => {
     const { id } = event.pathParameters;
