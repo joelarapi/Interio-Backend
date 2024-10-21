@@ -124,3 +124,25 @@ functions:
           path: /post/available
           method: GET
           cors: true
+  createOffer:
+    handler: handlers/offer/createOffer.handler
+    events:
+      - http:
+          path: /offer
+          method: POST
+          cors: true
+  deleteOffer:
+    handler: handlers/offer/deleteOffer.handler
+    events:
+      - http:
+          path: /offer/{id}
+          method: DELETE
+          cors: true
+    getOfferById:
+    handler: handlers/offer/getOfferById.handler
+    events:
+      - http:
+          path: /offer/{id}
+          method: GET
+          cors: true
+ 
