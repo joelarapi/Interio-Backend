@@ -143,7 +143,7 @@
             "Properties": {
               "Code": {
                 "S3Bucket": "serverless-framework-deployments-eu-central-1-7d33afbf-5e19",
-                "S3Key": "serverless/interio-service/dev/1729502383053-2024-10-21T09:19:43.053Z/interio-service.zip"
+                "S3Key": "serverless/interio-service/dev/1729502925982-2024-10-21T09:28:45.982Z/interio-service.zip"
               },
               "Handler": "handlers/user/getUserById.handler",
               "Runtime": "nodejs16.x",
@@ -171,7 +171,7 @@
             "Properties": {
               "Code": {
                 "S3Bucket": "serverless-framework-deployments-eu-central-1-7d33afbf-5e19",
-                "S3Key": "serverless/interio-service/dev/1729502383053-2024-10-21T09:19:43.053Z/interio-service.zip"
+                "S3Key": "serverless/interio-service/dev/1729502925982-2024-10-21T09:28:45.982Z/interio-service.zip"
               },
               "Handler": "handlers/user/createUser.handler",
               "Runtime": "nodejs16.x",
@@ -199,7 +199,7 @@
             "Properties": {
               "Code": {
                 "S3Bucket": "serverless-framework-deployments-eu-central-1-7d33afbf-5e19",
-                "S3Key": "serverless/interio-service/dev/1729502383053-2024-10-21T09:19:43.053Z/interio-service.zip"
+                "S3Key": "serverless/interio-service/dev/1729502925982-2024-10-21T09:28:45.982Z/interio-service.zip"
               },
               "Handler": "handlers/user/deleteUser.handler",
               "Runtime": "nodejs16.x",
@@ -227,7 +227,7 @@
             "Properties": {
               "Code": {
                 "S3Bucket": "serverless-framework-deployments-eu-central-1-7d33afbf-5e19",
-                "S3Key": "serverless/interio-service/dev/1729502383053-2024-10-21T09:19:43.053Z/interio-service.zip"
+                "S3Key": "serverless/interio-service/dev/1729502925982-2024-10-21T09:28:45.982Z/interio-service.zip"
               },
               "Handler": "handlers/user/getUserByName.handler",
               "Runtime": "nodejs16.x",
@@ -255,7 +255,7 @@
             "Properties": {
               "Code": {
                 "S3Bucket": "serverless-framework-deployments-eu-central-1-7d33afbf-5e19",
-                "S3Key": "serverless/interio-service/dev/1729502383053-2024-10-21T09:19:43.053Z/interio-service.zip"
+                "S3Key": "serverless/interio-service/dev/1729502925982-2024-10-21T09:28:45.982Z/interio-service.zip"
               },
               "Handler": "handlers/user/updateUser.handler",
               "Runtime": "nodejs16.x",
@@ -283,7 +283,7 @@
             "Properties": {
               "Code": {
                 "S3Bucket": "serverless-framework-deployments-eu-central-1-7d33afbf-5e19",
-                "S3Key": "serverless/interio-service/dev/1729502383053-2024-10-21T09:19:43.053Z/interio-service.zip"
+                "S3Key": "serverless/interio-service/dev/1729502925982-2024-10-21T09:28:45.982Z/interio-service.zip"
               },
               "Handler": "handlers/business/getBusinessById.handler",
               "Runtime": "nodejs16.x",
@@ -311,7 +311,7 @@
             "Properties": {
               "Code": {
                 "S3Bucket": "serverless-framework-deployments-eu-central-1-7d33afbf-5e19",
-                "S3Key": "serverless/interio-service/dev/1729502383053-2024-10-21T09:19:43.053Z/interio-service.zip"
+                "S3Key": "serverless/interio-service/dev/1729502925982-2024-10-21T09:28:45.982Z/interio-service.zip"
               },
               "Handler": "handlers/business/createBusiness.handler",
               "Runtime": "nodejs16.x",
@@ -1029,7 +1029,7 @@
               "CreateBusinessLambdaPermissionApiGateway"
             ]
           },
-          "ApiGatewayDeployment1729502377754": {
+          "ApiGatewayDeployment1729502922544": {
             "Type": "AWS::ApiGateway::Deployment",
             "Properties": {
               "RestApiId": {
@@ -1688,7 +1688,7 @@
     "artifact": "C:\\Users\\User\\Documents\\GitHub\\Interio-Backend\\.serverless\\interio-service.zip"
   },
   "package": {
-    "artifactDirectoryName": "serverless/interio-service/dev/1729502383053-2024-10-21T09:19:43.053Z",
+    "artifactDirectoryName": "serverless/interio-service/dev/1729502925982-2024-10-21T09:28:45.982Z",
     "artifact": "interio-service.zip"
   }
 }
