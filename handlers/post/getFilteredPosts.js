@@ -6,6 +6,7 @@ export const handler = async (event) => {
 
     try {
         await connectDB();
+
         const filters = {};
 
         if (locations) {
@@ -30,41 +31,18 @@ export const handler = async (event) => {
             filters.createdAt = { $gte: dateLimit };
         }
 
-        const filteredPosts = await Post.find(filters);
+        const filteredPosts = await Post.find(filters)
+            .populate('category')
+            .populate('offers') 
+            .exec();
 
-        try {
-            await filteredPosts.populate('category');
-        } catch (populateError) {
-            console.error("Error populating category:", populateError);
-            return {
-                statusCode: 500,
-                body: JSON.stringify({ message: 'Error during category population', error: populateError.message }),
-                headers: {
-                    "Access-Control-Allow-Origin": '*'
-                }
-            };
-        }
-
-        try {
-            await filteredPosts.populate('offers');
-        } catch (populateError) {
-            console.error("Error populating bookmarks:", populateError);
-            return {
-                statusCode: 500,
-                body: JSON.stringify({ message: 'Error during bookmarks population', error: populateError.message }),
-                headers: {
-                    "Access-Control-Allow-Origin": '*'
-                }
-            };
-        }
-
-        if (filteredPosts.length === 0) {
+        if (!filteredPosts || filteredPosts.length === 0) {
             return {
                 statusCode: 404,
                 body: JSON.stringify({ message: 'No posts found with the given filters' }),
                 headers: {
-                    "Access-Control-Allow-Origin" : '*'
-                 }
+                    "Access-Control-Allow-Origin": '*'
+                }
             };
         }
 
@@ -72,16 +50,18 @@ export const handler = async (event) => {
             statusCode: 200,
             body: JSON.stringify(filteredPosts),
             headers: {
-                "Access-Control-Allow-Origin" : '*'
-             }
+                "Access-Control-Allow-Origin": '*'
+            }
         };
+
     } catch (error) {
+        console.error("Error retrieving filtered posts:", error);
         return {
             statusCode: 500,
-            body: JSON.stringify({ message: 'Error retrieving filtered posts', error }),
+            body: JSON.stringify({ message: 'Error retrieving filtered posts', error: error.message }),
             headers: {
-                "Access-Control-Allow-Origin" : '*'
-             }
+                "Access-Control-Allow-Origin": '*'
+            }
         };
     }
 };
