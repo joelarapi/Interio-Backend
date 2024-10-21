@@ -2,7 +2,7 @@ import Post from "../../models/Post.js";
 import connectDB from "../../configurations/connectDB.js";
 
 export const handler = async (event) => {
-    const { locations, categories, minBudget, maxBudget, minOffers, maxOffers } = event.queryStringParameters || {};
+    const { locations, categories, minBudget, maxBudget, daysAgo } = event.queryStringParameters || {};
 
     try {
         await connectDB();
@@ -24,10 +24,10 @@ export const handler = async (event) => {
             if (maxBudget) filters.budget.$lte = Number(maxBudget);
         }
 
-        if (minOffers || maxOffers) {
-            filters.offers = { $size: {} };
-            if (minOffers) filters.offers.$size.$gte = Number(minOffers);
-            if (maxOffers) filters.offers.$size.$lte = Number(maxOffers);
+        if (daysAgo) {
+            const dateLimit = new Date();
+            dateLimit.setDate(dateLimit.getDate() - Number(daysAgo));
+            filters.createdAt = { $gte: dateLimit };
         }
 
         const filteredPosts = await Post.find(filters).populate('category offers');
