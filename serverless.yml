@@ -110,17 +110,17 @@ functions:
           path: /post/{id}
           method: DELETE
           cors: true
-  # getFiltredPosts:
-  #   handler: handlers/post/getFiltredPosts.handler
-  #   events:
-  #     - http:
-  #         path: /post/filtred
-  #         method: GET
-  #         cors: true
-  # getAvailablePosts:
-  #   handler: handlers/post/getOpenPosts.handler
-  #   events:
-  #     - http:
-  #         path: /post/{id}
-  #         method: GET
-  #         cors: true
+  getFiltredPosts:
+    handler: handlers/post/getFiltredPosts.handler
+    events:
+      - http:
+          path: /post/filtred
+          method: GET
+          cors: true
+  getAvailablePosts:
+    handler: handlers/post/getAvailablePosts.handler
+    events:
+      - http:
+          path: /post/available
+          method: GET
+          cors: true
