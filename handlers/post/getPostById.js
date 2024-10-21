@@ -6,7 +6,7 @@ export const handler = async (event) => {
 
     try {
         await connectDB();
-        const post = await Post.findById(id).populate('userId');
+        const post = await Post.findById(id);
 
         if (!post) {
             return {
