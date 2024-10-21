@@ -89,27 +89,27 @@ functions:
           path: /business/{id}
           method: PUT
           cors: true
-  # getPostById:
-  #   handler: handlers/post/getPostById.handler
-  #   events:
-  #     - http:
-  #         path: /post/{id}
-  #         method: GET
-  #         cors: true
-  # createPost:
-  #   handler: handlers/post/createPost.handler
-  #   events:
-  #     - http:
-  #         path: /post
-  #         method: POST
-  #         cors: true
-  # deletePost:
-  #   handler: handlers/post/deletePost.handler
-  #   events:
-  #     - http:
-  #         path: /post/{id}
-  #         method: DELETE
-  #         cors: true
+  getPostById:
+    handler: handlers/post/getPostById.handler
+    events:
+      - http:
+          path: /post/{id}
+          method: GET
+          cors: true
+  createPost:
+    handler: handlers/post/createPost.handler
+    events:
+      - http:
+          path: /post
+          method: POST
+          cors: true
+  deletePost:
+    handler: handlers/post/deletePost.handler
+    events:
+      - http:
+          path: /post/{id}
+          method: DELETE
+          cors: true
   # getFiltredPosts:
   #   handler: handlers/post/getFiltredPosts.handler
   #   events:
