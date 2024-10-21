@@ -7,7 +7,8 @@ export const handler = async (event) => {
     try {
         console.log(id);
         await connectDB();
-        const business = await Business.findById(id).populate('category bookmarks showroom');
+        //const business = await Business.findById(id).populate('category bookmarks showroom');
+        const business = await Business.findById(id);
 
         if (!business) {
             return {
