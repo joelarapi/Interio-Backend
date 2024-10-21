@@ -46,19 +46,6 @@ export const handler = async (event) => {
             };
         }
 
-        try {
-            await business.populate('showroom');
-        } catch (populateError) {
-            console.error("Error populating showroom:", populateError);
-            return {
-                statusCode: 500,
-                body: JSON.stringify({ message: 'Error during showroom population', error: populateError.message }),
-                headers: {
-                    "Access-Control-Allow-Origin": '*'
-                }
-            };
-        }
-
         return {
             statusCode: 200,
             body: JSON.stringify(business),
