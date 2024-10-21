@@ -119,7 +119,11 @@
             "Properties": {
               "Code": {
                 "S3Bucket": "serverless-framework-deployments-eu-central-1-7d33afbf-5e19",
+<<<<<<< Updated upstream
                 "S3Key": "serverless/interio-service/dev/1729495051686-2024-10-21T07:17:31.686Z/interio-service.zip"
+=======
+                "S3Key": "serverless/interio-service/dev/1729265231605-2024-10-18T15:27:11.605Z/interio-service.zip"
+>>>>>>> Stashed changes
               },
               "Handler": "handlers/user/getUserById.handler",
               "Runtime": "nodejs16.x",
@@ -147,7 +151,11 @@
             "Properties": {
               "Code": {
                 "S3Bucket": "serverless-framework-deployments-eu-central-1-7d33afbf-5e19",
+<<<<<<< Updated upstream
                 "S3Key": "serverless/interio-service/dev/1729495051686-2024-10-21T07:17:31.686Z/interio-service.zip"
+=======
+                "S3Key": "serverless/interio-service/dev/1729265231605-2024-10-18T15:27:11.605Z/interio-service.zip"
+>>>>>>> Stashed changes
               },
               "Handler": "handlers/user/createUser.handler",
               "Runtime": "nodejs16.x",
@@ -170,6 +178,7 @@
               "CreateUserLogGroup"
             ]
           },
+<<<<<<< Updated upstream
           "CreateBusinessLambdaFunction": {
             "Type": "AWS::Lambda::Function",
             "Properties": {
@@ -199,22 +208,33 @@
             ]
           },
           "GetUserLambdaVersionqz0XD0Pq8NdtVVMAK2dRZ5GsDKSP2y6WERk2teC6Q": {
+=======
+          "GetUserLambdaVersionSKTsGHM0BhyrJUOR7Bd9ofuJeNqCkGfi4MCg8q1JGOk": {
+>>>>>>> Stashed changes
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "GetUserLambdaFunction"
               },
+<<<<<<< Updated upstream
               "CodeSha256": "nhATOb4OrAIv3XkQS3+FS7ovgR3+uSDgPNEb/IAEgkI="
             }
           },
           "CreateUserLambdaVersionfi8vUNMqozrL0h9FJVxop4QJ5vnbrWp8XrmHxlUVirY": {
+=======
+              "CodeSha256": "Cx4jVJL75HDzfkrYSmaLiaeXZvcSB2edTLWnOkcy4DU="
+            }
+          },
+          "CreateUserLambdaVersionFQiP6CQkA8zx0hlfRNU4zdAphutLnhgTBqc3SZpfw": {
+>>>>>>> Stashed changes
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "CreateUserLambdaFunction"
               },
+<<<<<<< Updated upstream
               "CodeSha256": "nhATOb4OrAIv3XkQS3+FS7ovgR3+uSDgPNEb/IAEgkI="
             }
           },
@@ -226,6 +246,9 @@
                 "Ref": "CreateBusinessLambdaFunction"
               },
               "CodeSha256": "nhATOb4OrAIv3XkQS3+FS7ovgR3+uSDgPNEb/IAEgkI="
+=======
+              "CodeSha256": "Cx4jVJL75HDzfkrYSmaLiaeXZvcSB2edTLWnOkcy4DU="
+>>>>>>> Stashed changes
             }
           },
           "ApiGatewayRestApi": {
@@ -267,6 +290,7 @@
               }
             }
           },
+<<<<<<< Updated upstream
           "ApiGatewayResourceBusiness": {
             "Type": "AWS::ApiGateway::Resource",
             "Properties": {
@@ -282,6 +306,8 @@
               }
             }
           },
+=======
+>>>>>>> Stashed changes
           "ApiGatewayMethodUserIdVarOptions": {
             "Type": "AWS::ApiGateway::Method",
             "Properties": {
@@ -372,6 +398,7 @@
               }
             }
           },
+<<<<<<< Updated upstream
           "ApiGatewayMethodBusinessOptions": {
             "Type": "AWS::ApiGateway::Method",
             "Properties": {
@@ -417,6 +444,8 @@
               }
             }
           },
+=======
+>>>>>>> Stashed changes
           "ApiGatewayMethodUserIdVarGet": {
             "Type": "AWS::ApiGateway::Method",
             "Properties": {
@@ -509,6 +538,7 @@
               "CreateUserLambdaPermissionApiGateway"
             ]
           },
+<<<<<<< Updated upstream
           "ApiGatewayMethodBusinessPost": {
             "Type": "AWS::ApiGateway::Method",
             "Properties": {
@@ -556,6 +586,9 @@
             ]
           },
           "ApiGatewayDeployment1729495047033": {
+=======
+          "ApiGatewayDeployment1729265226359": {
+>>>>>>> Stashed changes
             "Type": "AWS::ApiGateway::Deployment",
             "Properties": {
               "RestApiId": {
@@ -566,10 +599,15 @@
             "DependsOn": [
               "ApiGatewayMethodUserIdVarOptions",
               "ApiGatewayMethodUserOptions",
+<<<<<<< Updated upstream
               "ApiGatewayMethodBusinessOptions",
               "ApiGatewayMethodUserIdVarGet",
               "ApiGatewayMethodUserPost",
               "ApiGatewayMethodBusinessPost"
+=======
+              "ApiGatewayMethodUserIdVarGet",
+              "ApiGatewayMethodUserPost"
+>>>>>>> Stashed changes
             ]
           },
           "GetUserLambdaPermissionApiGateway": {
@@ -694,7 +732,11 @@
           "GetUserLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
+<<<<<<< Updated upstream
               "Ref": "GetUserLambdaVersionqz0XD0Pq8NdtVVMAK2dRZ5GsDKSP2y6WERk2teC6Q"
+=======
+              "Ref": "GetUserLambdaVersionSKTsGHM0BhyrJUOR7Bd9ofuJeNqCkGfi4MCg8q1JGOk"
+>>>>>>> Stashed changes
             },
             "Export": {
               "Name": "sls-interio-service-dev-GetUserLambdaFunctionQualifiedArn"
@@ -703,7 +745,11 @@
           "CreateUserLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
+<<<<<<< Updated upstream
               "Ref": "CreateUserLambdaVersionfi8vUNMqozrL0h9FJVxop4QJ5vnbrWp8XrmHxlUVirY"
+=======
+              "Ref": "CreateUserLambdaVersionFQiP6CQkA8zx0hlfRNU4zdAphutLnhgTBqc3SZpfw"
+>>>>>>> Stashed changes
             },
             "Export": {
               "Name": "sls-interio-service-dev-CreateUserLambdaFunctionQualifiedArn"
@@ -784,7 +830,11 @@
         "timeout": 6,
         "runtime": "nodejs16.x",
         "vpc": {},
+<<<<<<< Updated upstream
         "versionLogicalId": "GetUserLambdaVersionqz0XD0Pq8NdtVVMAK2dRZ5GsDKSP2y6WERk2teC6Q"
+=======
+        "versionLogicalId": "GetUserLambdaVersionSKTsGHM0BhyrJUOR7Bd9ofuJeNqCkGfi4MCg8q1JGOk"
+>>>>>>> Stashed changes
       },
       "createUser": {
         "handler": "handlers/user/createUser.handler",
@@ -820,6 +870,7 @@
         "timeout": 6,
         "runtime": "nodejs16.x",
         "vpc": {},
+<<<<<<< Updated upstream
         "versionLogicalId": "CreateUserLambdaVersionfi8vUNMqozrL0h9FJVxop4QJ5vnbrWp8XrmHxlUVirY"
       },
       "createBusiness": {
@@ -857,6 +908,9 @@
         "runtime": "nodejs16.x",
         "vpc": {},
         "versionLogicalId": "CreateBusinessLambdaVersiona2nta4fdfgVl1gYRXedPdtRLNfqEIqokT1TQ4tsFjqI"
+=======
+        "versionLogicalId": "CreateUserLambdaVersionFQiP6CQkA8zx0hlfRNU4zdAphutLnhgTBqc3SZpfw"
+>>>>>>> Stashed changes
       }
     },
     "configValidationMode": "warn",
@@ -877,10 +931,17 @@
     "org": "taleas1",
     "orgId": null,
     "layers": {},
+<<<<<<< Updated upstream
     "artifact": "C:\\Users\\User\\Documents\\GitHub\\Interio-Backend\\.serverless\\interio-service.zip"
   },
   "package": {
     "artifactDirectoryName": "serverless/interio-service/dev/1729495051686-2024-10-21T07:17:31.686Z",
+=======
+    "artifact": "C:\\Users\\Admin\\Documents\\GitHub\\Interio-Backend\\.serverless\\interio-service.zip"
+  },
+  "package": {
+    "artifactDirectoryName": "serverless/interio-service/dev/1729265231605-2024-10-18T15:27:11.605Z",
+>>>>>>> Stashed changes
     "artifact": "interio-service.zip"
   }
 }

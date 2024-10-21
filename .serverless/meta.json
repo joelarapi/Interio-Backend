@@ -1,5 +1,5 @@
 {
-  "C:\\Users\\User\\Documents\\GitHub\\Interio-Backend": {
+  "C:\\Users\\Admin\\Documents\\GitHub\\Interio-Backend": {
     "versionSfCore": null,
     "versionFramework": "4.4.6",
     "isWithinCompose": false,
@@ -129,7 +129,11 @@
                     "Properties": {
                       "Code": {
                         "S3Bucket": "serverless-framework-deployments-eu-central-1-7d33afbf-5e19",
+<<<<<<< Updated upstream
                         "S3Key": "serverless/interio-service/dev/1729495051686-2024-10-21T07:17:31.686Z/interio-service.zip"
+=======
+                        "S3Key": "serverless/interio-service/dev/1729265231605-2024-10-18T15:27:11.605Z/interio-service.zip"
+>>>>>>> Stashed changes
                       },
                       "Handler": "handlers/user/getUserById.handler",
                       "Runtime": "nodejs16.x",
@@ -157,7 +161,11 @@
                     "Properties": {
                       "Code": {
                         "S3Bucket": "serverless-framework-deployments-eu-central-1-7d33afbf-5e19",
+<<<<<<< Updated upstream
                         "S3Key": "serverless/interio-service/dev/1729495051686-2024-10-21T07:17:31.686Z/interio-service.zip"
+=======
+                        "S3Key": "serverless/interio-service/dev/1729265231605-2024-10-18T15:27:11.605Z/interio-service.zip"
+>>>>>>> Stashed changes
                       },
                       "Handler": "handlers/user/createUser.handler",
                       "Runtime": "nodejs16.x",
@@ -180,6 +188,7 @@
                       "CreateUserLogGroup"
                     ]
                   },
+<<<<<<< Updated upstream
                   "CreateBusinessLambdaFunction": {
                     "Type": "AWS::Lambda::Function",
                     "Properties": {
@@ -209,22 +218,33 @@
                     ]
                   },
                   "GetUserLambdaVersionqz0XD0Pq8NdtVVMAK2dRZ5GsDKSP2y6WERk2teC6Q": {
+=======
+                  "GetUserLambdaVersionSKTsGHM0BhyrJUOR7Bd9ofuJeNqCkGfi4MCg8q1JGOk": {
+>>>>>>> Stashed changes
                     "Type": "AWS::Lambda::Version",
                     "DeletionPolicy": "Retain",
                     "Properties": {
                       "FunctionName": {
                         "Ref": "GetUserLambdaFunction"
                       },
+<<<<<<< Updated upstream
                       "CodeSha256": "nhATOb4OrAIv3XkQS3+FS7ovgR3+uSDgPNEb/IAEgkI="
                     }
                   },
                   "CreateUserLambdaVersionfi8vUNMqozrL0h9FJVxop4QJ5vnbrWp8XrmHxlUVirY": {
+=======
+                      "CodeSha256": "Cx4jVJL75HDzfkrYSmaLiaeXZvcSB2edTLWnOkcy4DU="
+                    }
+                  },
+                  "CreateUserLambdaVersionFQiP6CQkA8zx0hlfRNU4zdAphutLnhgTBqc3SZpfw": {
+>>>>>>> Stashed changes
                     "Type": "AWS::Lambda::Version",
                     "DeletionPolicy": "Retain",
                     "Properties": {
                       "FunctionName": {
                         "Ref": "CreateUserLambdaFunction"
                       },
+<<<<<<< Updated upstream
                       "CodeSha256": "nhATOb4OrAIv3XkQS3+FS7ovgR3+uSDgPNEb/IAEgkI="
                     }
                   },
@@ -236,6 +256,9 @@
                         "Ref": "CreateBusinessLambdaFunction"
                       },
                       "CodeSha256": "nhATOb4OrAIv3XkQS3+FS7ovgR3+uSDgPNEb/IAEgkI="
+=======
+                      "CodeSha256": "Cx4jVJL75HDzfkrYSmaLiaeXZvcSB2edTLWnOkcy4DU="
+>>>>>>> Stashed changes
                     }
                   },
                   "ApiGatewayRestApi": {
@@ -277,6 +300,7 @@
                       }
                     }
                   },
+<<<<<<< Updated upstream
                   "ApiGatewayResourceBusiness": {
                     "Type": "AWS::ApiGateway::Resource",
                     "Properties": {
@@ -292,6 +316,8 @@
                       }
                     }
                   },
+=======
+>>>>>>> Stashed changes
                   "ApiGatewayMethodUserIdVarOptions": {
                     "Type": "AWS::ApiGateway::Method",
                     "Properties": {
@@ -382,6 +408,7 @@
                       }
                     }
                   },
+<<<<<<< Updated upstream
                   "ApiGatewayMethodBusinessOptions": {
                     "Type": "AWS::ApiGateway::Method",
                     "Properties": {
@@ -427,6 +454,8 @@
                       }
                     }
                   },
+=======
+>>>>>>> Stashed changes
                   "ApiGatewayMethodUserIdVarGet": {
                     "Type": "AWS::ApiGateway::Method",
                     "Properties": {
@@ -519,6 +548,7 @@
                       "CreateUserLambdaPermissionApiGateway"
                     ]
                   },
+<<<<<<< Updated upstream
                   "ApiGatewayMethodBusinessPost": {
                     "Type": "AWS::ApiGateway::Method",
                     "Properties": {
@@ -566,6 +596,9 @@
                     ]
                   },
                   "ApiGatewayDeployment1729495047033": {
+=======
+                  "ApiGatewayDeployment1729265226359": {
+>>>>>>> Stashed changes
                     "Type": "AWS::ApiGateway::Deployment",
                     "Properties": {
                       "RestApiId": {
@@ -576,10 +609,15 @@
                     "DependsOn": [
                       "ApiGatewayMethodUserIdVarOptions",
                       "ApiGatewayMethodUserOptions",
+<<<<<<< Updated upstream
                       "ApiGatewayMethodBusinessOptions",
                       "ApiGatewayMethodUserIdVarGet",
                       "ApiGatewayMethodUserPost",
                       "ApiGatewayMethodBusinessPost"
+=======
+                      "ApiGatewayMethodUserIdVarGet",
+                      "ApiGatewayMethodUserPost"
+>>>>>>> Stashed changes
                     ]
                   },
                   "GetUserLambdaPermissionApiGateway": {
@@ -704,7 +742,11 @@
                   "GetUserLambdaFunctionQualifiedArn": {
                     "Description": "Current Lambda function version",
                     "Value": {
+<<<<<<< Updated upstream
                       "Ref": "GetUserLambdaVersionqz0XD0Pq8NdtVVMAK2dRZ5GsDKSP2y6WERk2teC6Q"
+=======
+                      "Ref": "GetUserLambdaVersionSKTsGHM0BhyrJUOR7Bd9ofuJeNqCkGfi4MCg8q1JGOk"
+>>>>>>> Stashed changes
                     },
                     "Export": {
                       "Name": "sls-interio-service-dev-GetUserLambdaFunctionQualifiedArn"
@@ -713,7 +755,11 @@
                   "CreateUserLambdaFunctionQualifiedArn": {
                     "Description": "Current Lambda function version",
                     "Value": {
+<<<<<<< Updated upstream
                       "Ref": "CreateUserLambdaVersionfi8vUNMqozrL0h9FJVxop4QJ5vnbrWp8XrmHxlUVirY"
+=======
+                      "Ref": "CreateUserLambdaVersionFQiP6CQkA8zx0hlfRNU4zdAphutLnhgTBqc3SZpfw"
+>>>>>>> Stashed changes
                     },
                     "Export": {
                       "Name": "sls-interio-service-dev-CreateUserLambdaFunctionQualifiedArn"
@@ -793,7 +839,11 @@
                 "timeout": 6,
                 "runtime": "nodejs16.x",
                 "vpc": {},
+<<<<<<< Updated upstream
                 "versionLogicalId": "GetUserLambdaVersionqz0XD0Pq8NdtVVMAK2dRZ5GsDKSP2y6WERk2teC6Q"
+=======
+                "versionLogicalId": "GetUserLambdaVersionSKTsGHM0BhyrJUOR7Bd9ofuJeNqCkGfi4MCg8q1JGOk"
+>>>>>>> Stashed changes
               },
               "createUser": {
                 "handler": "handlers/user/createUser.handler",
@@ -829,6 +879,7 @@
                 "timeout": 6,
                 "runtime": "nodejs16.x",
                 "vpc": {},
+<<<<<<< Updated upstream
                 "versionLogicalId": "CreateUserLambdaVersionfi8vUNMqozrL0h9FJVxop4QJ5vnbrWp8XrmHxlUVirY"
               },
               "createBusiness": {
@@ -866,10 +917,13 @@
                 "runtime": "nodejs16.x",
                 "vpc": {},
                 "versionLogicalId": "CreateBusinessLambdaVersiona2nta4fdfgVl1gYRXedPdtRLNfqEIqokT1TQ4tsFjqI"
+=======
+                "versionLogicalId": "CreateUserLambdaVersionFQiP6CQkA8zx0hlfRNU4zdAphutLnhgTBqc3SZpfw"
+>>>>>>> Stashed changes
               }
             }
           },
-          "configFileDirPath": "C:\\Users\\User\\Documents\\GitHub\\Interio-Backend",
+          "configFileDirPath": "C:\\Users\\Admin\\Documents\\GitHub\\Interio-Backend",
           "config": {
             "type": "env"
           },
@@ -887,7 +941,7 @@
       }
     },
     "composeServiceName": null,
-    "servicePath": "C:\\Users\\User\\Documents\\GitHub\\Interio-Backend",
+    "servicePath": "C:\\Users\\Admin\\Documents\\GitHub\\Interio-Backend",
     "serviceConfigFileName": "serverless.yml",
     "service": {
       "org": "taleas1",
@@ -1008,7 +1062,11 @@
               "Properties": {
                 "Code": {
                   "S3Bucket": "serverless-framework-deployments-eu-central-1-7d33afbf-5e19",
+<<<<<<< Updated upstream
                   "S3Key": "serverless/interio-service/dev/1729495051686-2024-10-21T07:17:31.686Z/interio-service.zip"
+=======
+                  "S3Key": "serverless/interio-service/dev/1729265231605-2024-10-18T15:27:11.605Z/interio-service.zip"
+>>>>>>> Stashed changes
                 },
                 "Handler": "handlers/user/getUserById.handler",
                 "Runtime": "nodejs16.x",
@@ -1036,7 +1094,11 @@
               "Properties": {
                 "Code": {
                   "S3Bucket": "serverless-framework-deployments-eu-central-1-7d33afbf-5e19",
+<<<<<<< Updated upstream
                   "S3Key": "serverless/interio-service/dev/1729495051686-2024-10-21T07:17:31.686Z/interio-service.zip"
+=======
+                  "S3Key": "serverless/interio-service/dev/1729265231605-2024-10-18T15:27:11.605Z/interio-service.zip"
+>>>>>>> Stashed changes
                 },
                 "Handler": "handlers/user/createUser.handler",
                 "Runtime": "nodejs16.x",
@@ -1059,6 +1121,7 @@
                 "CreateUserLogGroup"
               ]
             },
+<<<<<<< Updated upstream
             "CreateBusinessLambdaFunction": {
               "Type": "AWS::Lambda::Function",
               "Properties": {
@@ -1088,22 +1151,33 @@
               ]
             },
             "GetUserLambdaVersionqz0XD0Pq8NdtVVMAK2dRZ5GsDKSP2y6WERk2teC6Q": {
+=======
+            "GetUserLambdaVersionSKTsGHM0BhyrJUOR7Bd9ofuJeNqCkGfi4MCg8q1JGOk": {
+>>>>>>> Stashed changes
               "Type": "AWS::Lambda::Version",
               "DeletionPolicy": "Retain",
               "Properties": {
                 "FunctionName": {
                   "Ref": "GetUserLambdaFunction"
                 },
+<<<<<<< Updated upstream
                 "CodeSha256": "nhATOb4OrAIv3XkQS3+FS7ovgR3+uSDgPNEb/IAEgkI="
               }
             },
             "CreateUserLambdaVersionfi8vUNMqozrL0h9FJVxop4QJ5vnbrWp8XrmHxlUVirY": {
+=======
+                "CodeSha256": "Cx4jVJL75HDzfkrYSmaLiaeXZvcSB2edTLWnOkcy4DU="
+              }
+            },
+            "CreateUserLambdaVersionFQiP6CQkA8zx0hlfRNU4zdAphutLnhgTBqc3SZpfw": {
+>>>>>>> Stashed changes
               "Type": "AWS::Lambda::Version",
               "DeletionPolicy": "Retain",
               "Properties": {
                 "FunctionName": {
                   "Ref": "CreateUserLambdaFunction"
                 },
+<<<<<<< Updated upstream
                 "CodeSha256": "nhATOb4OrAIv3XkQS3+FS7ovgR3+uSDgPNEb/IAEgkI="
               }
             },
@@ -1115,6 +1189,9 @@
                   "Ref": "CreateBusinessLambdaFunction"
                 },
                 "CodeSha256": "nhATOb4OrAIv3XkQS3+FS7ovgR3+uSDgPNEb/IAEgkI="
+=======
+                "CodeSha256": "Cx4jVJL75HDzfkrYSmaLiaeXZvcSB2edTLWnOkcy4DU="
+>>>>>>> Stashed changes
               }
             },
             "ApiGatewayRestApi": {
@@ -1156,6 +1233,7 @@
                 }
               }
             },
+<<<<<<< Updated upstream
             "ApiGatewayResourceBusiness": {
               "Type": "AWS::ApiGateway::Resource",
               "Properties": {
@@ -1171,6 +1249,8 @@
                 }
               }
             },
+=======
+>>>>>>> Stashed changes
             "ApiGatewayMethodUserIdVarOptions": {
               "Type": "AWS::ApiGateway::Method",
               "Properties": {
@@ -1261,6 +1341,7 @@
                 }
               }
             },
+<<<<<<< Updated upstream
             "ApiGatewayMethodBusinessOptions": {
               "Type": "AWS::ApiGateway::Method",
               "Properties": {
@@ -1306,6 +1387,8 @@
                 }
               }
             },
+=======
+>>>>>>> Stashed changes
             "ApiGatewayMethodUserIdVarGet": {
               "Type": "AWS::ApiGateway::Method",
               "Properties": {
@@ -1398,6 +1481,7 @@
                 "CreateUserLambdaPermissionApiGateway"
               ]
             },
+<<<<<<< Updated upstream
             "ApiGatewayMethodBusinessPost": {
               "Type": "AWS::ApiGateway::Method",
               "Properties": {
@@ -1445,6 +1529,9 @@
               ]
             },
             "ApiGatewayDeployment1729495047033": {
+=======
+            "ApiGatewayDeployment1729265226359": {
+>>>>>>> Stashed changes
               "Type": "AWS::ApiGateway::Deployment",
               "Properties": {
                 "RestApiId": {
@@ -1455,10 +1542,15 @@
               "DependsOn": [
                 "ApiGatewayMethodUserIdVarOptions",
                 "ApiGatewayMethodUserOptions",
+<<<<<<< Updated upstream
                 "ApiGatewayMethodBusinessOptions",
                 "ApiGatewayMethodUserIdVarGet",
                 "ApiGatewayMethodUserPost",
                 "ApiGatewayMethodBusinessPost"
+=======
+                "ApiGatewayMethodUserIdVarGet",
+                "ApiGatewayMethodUserPost"
+>>>>>>> Stashed changes
               ]
             },
             "GetUserLambdaPermissionApiGateway": {
@@ -1583,7 +1675,11 @@
             "GetUserLambdaFunctionQualifiedArn": {
               "Description": "Current Lambda function version",
               "Value": {
+<<<<<<< Updated upstream
                 "Ref": "GetUserLambdaVersionqz0XD0Pq8NdtVVMAK2dRZ5GsDKSP2y6WERk2teC6Q"
+=======
+                "Ref": "GetUserLambdaVersionSKTsGHM0BhyrJUOR7Bd9ofuJeNqCkGfi4MCg8q1JGOk"
+>>>>>>> Stashed changes
               },
               "Export": {
                 "Name": "sls-interio-service-dev-GetUserLambdaFunctionQualifiedArn"
@@ -1592,7 +1688,11 @@
             "CreateUserLambdaFunctionQualifiedArn": {
               "Description": "Current Lambda function version",
               "Value": {
+<<<<<<< Updated upstream
                 "Ref": "CreateUserLambdaVersionfi8vUNMqozrL0h9FJVxop4QJ5vnbrWp8XrmHxlUVirY"
+=======
+                "Ref": "CreateUserLambdaVersionFQiP6CQkA8zx0hlfRNU4zdAphutLnhgTBqc3SZpfw"
+>>>>>>> Stashed changes
               },
               "Export": {
                 "Name": "sls-interio-service-dev-CreateUserLambdaFunctionQualifiedArn"
@@ -1672,7 +1772,11 @@
           "timeout": 6,
           "runtime": "nodejs16.x",
           "vpc": {},
+<<<<<<< Updated upstream
           "versionLogicalId": "GetUserLambdaVersionqz0XD0Pq8NdtVVMAK2dRZ5GsDKSP2y6WERk2teC6Q"
+=======
+          "versionLogicalId": "GetUserLambdaVersionSKTsGHM0BhyrJUOR7Bd9ofuJeNqCkGfi4MCg8q1JGOk"
+>>>>>>> Stashed changes
         },
         "createUser": {
           "handler": "handlers/user/createUser.handler",
@@ -1708,6 +1812,7 @@
           "timeout": 6,
           "runtime": "nodejs16.x",
           "vpc": {},
+<<<<<<< Updated upstream
           "versionLogicalId": "CreateUserLambdaVersionfi8vUNMqozrL0h9FJVxop4QJ5vnbrWp8XrmHxlUVirY"
         },
         "createBusiness": {
@@ -1749,19 +1854,26 @@
       }
     },
     "serviceRawFile": "org: taleas1\r\napp: interio\r\n\r\nservice: interio-service\r\nprovider:\r\n  name: aws\r\n  runtime: nodejs16.x \r\n  stage: dev\r\n  region: eu-central-1\r\n  memorySize: 128\r\n\r\n  environment:\r\n    MONGODB_URI: ${env:MONGODB_URI} \r\n\r\n# package:\r\n#   include:\r\n#     - models/**\r\n#     - configurations/**\r\n#     - handlers/**\r\n\r\nfunctions:\r\n#   getUser:\r\n#     handler: handlers/user/getUserById.handler\r\n#     events:\r\n#       - http:\r\n#           path: /user/{id}\r\n#           method: GET\r\n#           cors: true\r\n\r\n  getUser:\r\n    handler: handlers/user/getUserById.handler\r\n    events:\r\n      - http:\r\n          path: /user/{id}\r\n          method: GET\r\n          cors: true\r\n  createUser:\r\n    handler: handlers/user/createUser.handler\r\n    events:\r\n      - http:\r\n          path: /user\r\n          method: POST\r\n          cors: true\r\n  # deleteUser:\r\n  #   handler: handlers/user/deleteUser.handler\r\n  #   events:\r\n  #     - http:\r\n  #         path: /user/{id}\r\n  #         method: DELETE\r\n  #         cors: true\r\n  # getUserName:\r\n  #   handler: handlers/user/getUserByName.handler\r\n  #   events:\r\n  #     - http:\r\n  #         path: /user/search\r\n  #         method: GET\r\n  #         cors: true\r\n  # updateUser:\r\n  #   handler: handlers/user/updateUser.handler\r\n  #   events:\r\n  #     - http:\r\n  #         path: /user/{id}\r\n  #         method: PUT\r\n  #         cors: true\r\n  # getBusinessById:\r\n  #   handler: handlers/business/getBusinessById.handler\r\n  #   events:\r\n  #     - http:\r\n  #         path: /bussiness/{id}\r\n  #         method: GET\r\n  #         cors: true\r\n  createBusiness:\r\n    handler: handlers/business/createBusiness.handler\r\n    events:\r\n      - http:\r\n          path: /business\r\n          method: POST\r\n          cors: true\r\n  # deleteBusiness:\r\n  #   handler: handlers/business/deleteBusiness.handler\r\n  #   events:\r\n  #     - http:\r\n  #         path: /business/{id}\r\n  #         method: DELETE\r\n  #         cors: true\r\n  # getBusinessName:\r\n  #   handler: handlers/business/getBusinessByName.handler\r\n  #   events:\r\n  #     - http:\r\n  #         path: /business/search\r\n  #         method: GET\r\n  #         cors: true\r\n  # updateBusiness:\r\n  #   handler: handlers/business/updateBusiness.handler\r\n  #   events:\r\n  #     - http:\r\n  #         path: /business/{id}\r\n  #         method: PUT\r\n  #         cors: true\r\n  # getPostById:\r\n  #   handler: handlers/post/getPostById.handler\r\n  #   events:\r\n  #     - http:\r\n  #         path: /post/{id}\r\n  #         method: GET\r\n  #         cors: true\r\n  # createPost:\r\n  #   handler: handlers/post/createPost.handler\r\n  #   events:\r\n  #     - http:\r\n  #         path: /post\r\n  #         method: POST\r\n  #         cors: true\r\n  # deletePost:\r\n  #   handler: handlers/post/deletePost.handler\r\n  #   events:\r\n  #     - http:\r\n  #         path: /post/{id}\r\n  #         method: DELETE\r\n  #         cors: true\r\n  # getFiltredPosts:\r\n  #   handler: handlers/post/getFiltredPosts.handler\r\n  #   events:\r\n  #     - http:\r\n  #         path: /post/filtred\r\n  #         method: GET\r\n  #         cors: true\r\n  # getAvailablePosts:\r\n  #   handler: handlers/post/getOpenPosts.handler\r\n  #   events:\r\n  #     - http:\r\n  #         path: /post/{id}\r\n  #         method: GET\r\n  #         cors: true",
+=======
+          "versionLogicalId": "CreateUserLambdaVersionFQiP6CQkA8zx0hlfRNU4zdAphutLnhgTBqc3SZpfw"
+        }
+      }
+    },
+    "serviceRawFile": "org: taleas1\r\napp: interio\r\n\r\nservice: interio-service\r\nprovider:\r\n  name: aws\r\n  runtime: nodejs16.x \r\n  stage: dev\r\n  region: eu-central-1\r\n  memorySize: 128\r\n\r\n  environment:\r\n    MONGODB_URI: ${env:MONGODB_URI} \r\n\r\n# package:\r\n#   include:\r\n#     - models/**\r\n#     - configurations/**\r\n#     - handlers/**\r\n\r\nfunctions:\r\n  getUser:\r\n    handler: handlers/user/getUserById.handler\r\n    events:\r\n      - http:\r\n          path: /user/{id}\r\n          method: GET\r\n          cors: true\r\n\r\n  # getUser:\r\n  #   handler: handlers/user/getUserById.handler\r\n  #   events:\r\n  #     - http:\r\n  #         path: /user/{id}\r\n  #         method: GET\r\n  #         cors: true\r\n  createUser:\r\n    handler: handlers/user/createUser.handler\r\n    events:\r\n      - http:\r\n          path: /user\r\n          method: POST\r\n          cors: true\r\n  # deleteUser:\r\n  #   handler: handlers/user/deleteUser.handler\r\n  #   events:\r\n  #     - http:\r\n  #         path: /user/{id}\r\n  #         method: DELETE\r\n  #         cors: true\r\n  # getUserName:\r\n  #   handler: handlers/user/getUserByName.handler\r\n  #   events:\r\n  #     - http:\r\n  #         path: /user/search\r\n  #         method: GET\r\n  #         cors: true\r\n  # updateUser:\r\n  #   handler: handlers/user/updateUser.handler\r\n  #   events:\r\n  #     - http:\r\n  #         path: /user/{id}\r\n  #         method: PUT\r\n  #         cors: true\r\n  # getBusinessById:\r\n  #   handler: handlers/business/getBusinessById.handler\r\n  #   events:\r\n  #     - http:\r\n  #         path: /bussiness/{id}\r\n  #         method: GET\r\n  #         cors: true\r\n  # createBusiness:\r\n  #   handler: handlers/business/createBusiness.handler\r\n  #   events:\r\n  #     - http:\r\n  #         path: /business\r\n  #         method: POST\r\n  #         cors: true\r\n  # deleteBusiness:\r\n  #   handler: handlers/business/deleteBusiness.handler\r\n  #   events:\r\n  #     - http:\r\n  #         path: /business/{id}\r\n  #         method: DELETE\r\n  #         cors: true\r\n  # getBusinessName:\r\n  #   handler: handlers/business/getBusinessByName.handler\r\n  #   events:\r\n  #     - http:\r\n  #         path: /business/search\r\n  #         method: GET\r\n  #         cors: true\r\n  # updateBusiness:\r\n  #   handler: handlers/business/updateBusiness.handler\r\n  #   events:\r\n  #     - http:\r\n  #         path: /business/{id}\r\n  #         method: PUT\r\n  #         cors: true\r\n  # getPostById:\r\n  #   handler: handlers/post/getPostById.handler\r\n  #   events:\r\n  #     - http:\r\n  #         path: /post/{id}\r\n  #         method: GET\r\n  #         cors: true\r\n  # createPost:\r\n  #   handler: handlers/post/createPost.handler\r\n  #   events:\r\n  #     - http:\r\n  #         path: /post\r\n  #         method: POST\r\n  #         cors: true\r\n  # deletePost:\r\n  #   handler: handlers/post/deletePost.handler\r\n  #   events:\r\n  #     - http:\r\n  #         path: /post/{id}\r\n  #         method: DELETE\r\n  #         cors: true\r\n  # getFiltredPosts:\r\n  #   handler: handlers/post/getFiltredPosts.handler\r\n  #   events:\r\n  #     - http:\r\n  #         path: /post/filtred\r\n  #         method: GET\r\n  #         cors: true\r\n  # getAvailablePosts:\r\n  #   handler: handlers/post/getOpenPosts.handler\r\n  #   events:\r\n  #     - http:\r\n  #         path: /post/{id}\r\n  #         method: GET\r\n  #         cors: true",
+>>>>>>> Stashed changes
     "command": [
       "deploy"
     ],
     "options": {},
     "error": null,
     "params": {},
-    "machineId": "93bc2de42810bb0562b05da4f13c53d6",
+    "machineId": "712e1090871bf6121d1a04e293ab902c",
     "stage": "dev",
     "accessKeyV2": "<REDACTED>",
     "accessKeyV1": "<REDACTED>",
     "orgId": "b517195c-0b15-4f9f-b44f-23444c1a6099",
     "orgName": "taleas1",
-    "userId": "S7sK4DmHfqzbtRSr44",
+    "userId": "gLphCzG1ppJQlPLxZ0",
     "dashboard": {
       "isEnabledForService": true,
       "requiredAuthentication": false,
@@ -1774,9 +1886,9 @@
       "serviceProvider": null,
       "instanceParameters": null
     },
-    "userName": "taleas1",
+    "userName": "taleas",
     "subscription": null,
-    "userEmail": "besjolavelo@gmail.com",
+    "userEmail": "palomaabdurramani@gmail.com",
     "serviceProviderAwsRegion": "eu-central-1",
     "serviceProviderAwsCredentials": "<REDACTED>",
     "serviceProviderAwsAccountId": "944511268761",
@@ -1787,6 +1899,7 @@
     "serviceUniqueId": "arn:aws:cloudformation:eu-central-1:944511268761:stack/interio-service-dev/651a37f0-8d4d-11ef-887b-06d22eb3fe13",
     "serviceProviderAwsCfStackId": "arn:aws:cloudformation:eu-central-1:944511268761:stack/interio-service-dev/651a37f0-8d4d-11ef-887b-06d22eb3fe13",
     "serviceProviderAwsCfStackCreated": "2024-10-18T12:35:02.150Z",
+<<<<<<< Updated upstream
     "serviceProviderAwsCfStackUpdated": "2024-10-21T07:17:38.181Z",
     "serviceProviderAwsCfStackStatus": "UPDATE_COMPLETE",
     "serviceProviderAwsCfStackOutputs": [
@@ -1799,12 +1912,24 @@
       {
         "OutputKey": "GetUserLambdaFunctionQualifiedArn",
         "OutputValue": "arn:aws:lambda:eu-central-1:944511268761:function:interio-service-dev-getUser:10",
+=======
+    "serviceProviderAwsCfStackUpdated": "2024-10-18T15:29:51.182Z",
+    "serviceProviderAwsCfStackStatus": "UPDATE_COMPLETE",
+    "serviceProviderAwsCfStackOutputs": [
+      {
+        "OutputKey": "GetUserLambdaFunctionQualifiedArn",
+        "OutputValue": "arn:aws:lambda:eu-central-1:944511268761:function:interio-service-dev-getUser:9",
+>>>>>>> Stashed changes
         "Description": "Current Lambda function version",
         "ExportName": "sls-interio-service-dev-GetUserLambdaFunctionQualifiedArn"
       },
       {
         "OutputKey": "CreateUserLambdaFunctionQualifiedArn",
+<<<<<<< Updated upstream
         "OutputValue": "arn:aws:lambda:eu-central-1:944511268761:function:interio-service-dev-createUser:11",
+=======
+        "OutputValue": "arn:aws:lambda:eu-central-1:944511268761:function:interio-service-dev-createUser:10",
+>>>>>>> Stashed changes
         "Description": "Current Lambda function version",
         "ExportName": "sls-interio-service-dev-CreateUserLambdaFunctionQualifiedArn"
       },
