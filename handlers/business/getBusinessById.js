@@ -5,6 +5,7 @@ export const handler = async (event) => {
     const { id } = event.pathParameters;
 
     try {
+        console.log(id);
         await connectDB();
         const business = await Business.findById(id).populate('category bookmarks showroom');
 
