@@ -1,4 +1,5 @@
 import Post from "../../models/Post.js";
+import Category from "../../models/Categories.js";
 import connectDB from "../../configurations/connectDB.js";
 
 export const handler = async (event) => {
@@ -16,7 +17,9 @@ export const handler = async (event) => {
 
         if (categories) {
             const categoriesArray = categories.split(',');
-            filters.category = { $in: categoriesArray };
+            const categoryDocs = await Category.find({ name: { $in: categoriesArray } });
+            const categoryIds = categoryDocs.map(cat => cat._id);
+            filters.category = { $in: categoryIds };
         }
 
         if (minBudget || maxBudget) {
@@ -33,7 +36,7 @@ export const handler = async (event) => {
 
         const filteredPosts = await Post.find(filters)
             .populate('category')
-            .populate('offers') 
+            .populate('offers')
             .exec();
 
         if (!filteredPosts || filteredPosts.length === 0) {
