@@ -2,7 +2,17 @@ import Business from "../../models/Business.js";
 import connectDB from "../../configurations/connectDB.js";
 
 export const handler = async (event) => {
-    const { name } = event.pathParameters;
+    const { name } = event.queryStringParameters || {};
+
+    if (!name) {
+        return {
+            statusCode: 400,
+            body: JSON.stringify({ message: 'Name is required' }),
+            headers: {
+                "Access-Control-Allow-Origin": '*'
+            }
+        };
+    }
 
     try {
         await connectDB();
