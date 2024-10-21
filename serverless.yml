@@ -19,14 +19,6 @@ provider:
 #     - handlers/**
 
 functions:
-#   getUser:
-#     handler: handlers/user/getUserById.handler
-#     events:
-#       - http:
-#           path: /user/{id}
-#           method: GET
-#           cors: true
-
   getUser:
     handler: handlers/user/getUserById.handler
     events:
@@ -41,34 +33,34 @@ functions:
           path: /user
           method: POST
           cors: true
-  # deleteUser:
-  #   handler: handlers/user/deleteUser.handler
-  #   events:
-  #     - http:
-  #         path: /user/{id}
-  #         method: DELETE
-  #         cors: true
-  # getUserName:
-  #   handler: handlers/user/getUserByName.handler
-  #   events:
-  #     - http:
-  #         path: /user/search
-  #         method: GET
-  #         cors: true
-  # updateUser:
-  #   handler: handlers/user/updateUser.handler
-  #   events:
-  #     - http:
-  #         path: /user/{id}
-  #         method: PUT
-  #         cors: true
-  # getBusinessById:
-  #   handler: handlers/business/getBusinessById.handler
-  #   events:
-  #     - http:
-  #         path: /bussiness/{id}
-  #         method: GET
-  #         cors: true
+  deleteUser:
+    handler: handlers/user/deleteUser.handler
+    events:
+      - http:
+          path: /user/{id}
+          method: DELETE
+          cors: true
+  getUserName:
+    handler: handlers/user/getUserByName.handler
+    events:
+      - http:
+          path: /user/search
+          method: GET
+          cors: true
+  updateUser:
+    handler: handlers/user/updateUser.handler
+    events:
+      - http:
+          path: /user/{id}
+          method: PUT
+          cors: true
+  getBusinessById:
+    handler: handlers/business/getBusinessById.handler
+    events:
+      - http:
+          path: /business/{id}
+          method: GET
+          cors: true
   createBusiness:
     handler: handlers/business/createBusiness.handler
     events:
