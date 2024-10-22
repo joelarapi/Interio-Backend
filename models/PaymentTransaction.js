@@ -4,7 +4,7 @@ import SubscriptionPlan from "./SubscriptionPlan.js";
 const paymentTransactionSchema = new mongoose.Schema({
     businessId: { type: mongoose.Schema.Types.ObjectId, required: true, ref: 'Business' },
     subscriptionId: { type: mongoose.Schema.Types.ObjectId, ref: 'SubscriptionPlan', required: true },
-    amount: { type: Number, required: true },
+    amount: { type: Number},
     status: { type: String, enum: ['pending', 'completed', 'failed'], required: true },
     paymentMethod: { type: String, enum: ['credit', 'debit', 'paypal'], required: true },
     transactionId: { type: String, required: true },
