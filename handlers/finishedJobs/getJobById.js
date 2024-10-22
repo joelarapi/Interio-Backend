@@ -6,7 +6,7 @@ export const handler = async (event) => {
 
     try {
         await connectDB();
-        const finishedJobs = await FinishedJobs.findById(id).populate('postId').populate('businessId');
+        const finishedJobs = await FinishedJobs.findById(id);
         if (!finishedJobs) {
             return {
                 statusCode: 404,
