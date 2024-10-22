@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-import SubscriptionPlan from "./SubscriptionPlan";
+import SubscriptionPlan from "./SubscriptionPlan.js";
 
 const subscriptionManagerSchema = new mongoose.Schema({
     businessId: { type: mongoose.Schema.Types.ObjectId, required: true, ref: 'Business', unique: true },
