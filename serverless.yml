@@ -264,6 +264,34 @@ functions:
           path: /subscriptionPlan/{id}
           method: DELETE
           cors: true
+  createSubscriptionManager:
+    handler: handlers/subscriptionManager/createManager.handler
+    events:
+      - http:
+          path: /subscriptionManager
+          method: POST
+          cors: true
+  getSubscriptionManager:
+    handler: handlers/subscriptionManager/getManagerById.handler
+    events:
+      - http:
+          path: /subscriptionManager/{id}
+          method: GET
+          cors: true
+  updateSubscriptionManager:
+    handler: handlers/subscriptionManager/updateManager.handler
+    events:
+      - http:
+          path: /subscriptionManager/{id}
+          method: PUT
+          cors: true
+  getAllSubscriptionManager:
+    handler: handlers/subscriptionManager/getSubscriptionManager.handler
+    events:
+      - http:
+          path: /subscriptionManager/all
+          method: DELETE
+          cors: true
   
   
   
