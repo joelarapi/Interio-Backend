@@ -36,32 +36,6 @@ export const handler = async (event) => {
 
         const filteredPosts = await Post.find(filters);
 
-        try {
-            await filteredPosts.populate('offers');
-        } catch (populateError) {
-            console.error("Error populating offers:", populateError);
-            return {
-                statusCode: 500,
-                body: JSON.stringify({ message: 'Error during category population', error: populateError.message }),
-                headers: {
-                    "Access-Control-Allow-Origin": '*'
-                }
-            };
-        }
-
-        try {
-            await filteredPosts.populate('category');
-        } catch (populateError) {
-            console.error("Error populating category:", populateError);
-            return {
-                statusCode: 500,
-                body: JSON.stringify({ message: 'Error during bookmarks population', error: populateError.message }),
-                headers: {
-                    "Access-Control-Allow-Origin": '*'
-                }
-            };
-        }
-
         if (!filteredPosts || filteredPosts.length === 0) {
             return {
                 statusCode: 404,
