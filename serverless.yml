@@ -236,5 +236,35 @@ functions:
           path: /notification/{id}
           method: GET
           cors: true
+  createSubscriptionPlan:
+    handler: handlers/subscriptionPlan/createPlan.handler
+    events:
+      - http:
+          path: /subscriptionPlan
+          method: POST
+          cors: true
+  getSubscriptionPlan:
+    handler: handlers/subscriptionPlan/getPlanById.handler
+    events:
+      - http:
+          path: /subscriptionPlan/{id}
+          method: GET
+          cors: true
+  getAllSubscriptionPlans:
+    handler: handlers/subscriptionPlan/getAll.handler
+    events:
+      - http:
+          path: /subscriptionPlan/all
+          method: GET
+          cors: true
+  deleteSubscriptionPlan:
+    handler: handlers/subscriptionPlan/deletePlan.handler
+    events:
+      - http:
+          path: /subscriptionPlan/{id}
+          method: DELETE
+          cors: true
+  
+  
   
  
