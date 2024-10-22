@@ -7,7 +7,6 @@ export const handler = async (event) => {
 
     try {
         await connectDB();
-        console.log("locations " + locations +"categories "+ categories + "minBudget "+ minBudget +"maxBudget "+ maxBudget + "daysAgo " + daysAgo);
         const filters = {};
 
         if (locations) {
@@ -33,9 +32,9 @@ export const handler = async (event) => {
             dateLimit.setDate(dateLimit.getDate() - Number(daysAgo));
             filters.createdAt = { $gte: dateLimit };
         }
-        console.log(filters);
+        
         const filteredPosts = await Post.find(filters);
-        console.log(filteredPosts);
+
         if (!filteredPosts || filteredPosts.length === 0) {
             return {
                 statusCode: 404,
