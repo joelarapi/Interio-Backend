@@ -271,7 +271,7 @@ functions:
           path: /subscriptionManager
           method: POST
           cors: true
-  getSubscriptionManager:
+  getSubscriptionManagerById:
     handler: handlers/subscriptionManager/getManagerById.handler
     events:
       - http:
@@ -285,12 +285,12 @@ functions:
           path: /subscriptionManager/{id}
           method: PUT
           cors: true
-  getAllSubscriptionManager:
+  getSubscriptionManager:
     handler: handlers/subscriptionManager/getSubscriptionManager.handler
     events:
       - http:
-          path: /subscriptionManager/all
-          method: DELETE
+          path: /subscriptionManager/{id}
+          method: GET
           cors: true
   createPaymentTransaction:
     handler: handlers/paymentTransaction/createPayment.handler
