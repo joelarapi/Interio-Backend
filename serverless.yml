@@ -208,5 +208,19 @@ functions:
           path: /comment/{id}
           method: DELETE
           cors: true
+  createMessage:
+    handler: handlers/message/createMessage.handler
+    events:
+      - http:
+          path: /message
+          method: POST
+          cors: true
+  getMessageById:
+    handler: handlers/message/getMessageById.handler
+    events:
+      - http:
+          path: /message/{id}
+          method: GET
+          cors: true
   
  
