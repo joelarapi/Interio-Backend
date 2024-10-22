@@ -2,7 +2,8 @@ import SubscriptionManager from "../../models/SubscriptionManager.js";
 import connectDB from "../../configurations/connectDB.js";
 
 export const handler = async (event) => {
-    const { businessId } = event.pathParameters;
+    const { id } = event.pathParameters;
+    const businessId = id;
 
     try {
         await connectDB();

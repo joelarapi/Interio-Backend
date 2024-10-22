@@ -289,7 +289,7 @@ functions:
     handler: handlers/subscriptionManager/getSubscriptionManager.handler
     events:
       - http:
-          path: /subscriptionManager/{businessId}
+          path: /subscriptionManager/business/{id}
           method: GET
           cors: true
   createPaymentTransaction:
