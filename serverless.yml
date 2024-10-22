@@ -145,4 +145,33 @@ functions:
           path: /offer/{id}
           method: GET
           cors: true
+  createCategory:
+    handler: handlers/categories/createCategory.handler
+    events:
+      - http:
+          path: /category
+          method: POST
+          cors: true
+  deleteCategory:
+    handler: handlers/categories/deleteCategory.handler
+    events:
+      - http:
+          path: /category/{id}
+          method: DELETE
+          cors: true
+  getCategoryById:
+    handler: handlers/categories/getCategoryById.handler
+    events:
+      - http:
+          path: /category/{id}
+          method: GET
+          cors: true
+  getAllCategories:
+    handler: handlers/categories/getAllCategories.handler
+    events:
+      - http:
+          path: /category/all
+          method: GET
+          cors: true
+
  
