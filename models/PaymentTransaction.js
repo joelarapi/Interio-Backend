@@ -1,4 +1,5 @@
 import mongoose from "mongoose";
+import SubscriptionPlan from "./SubscriptionPlan.js";
 
 const paymentTransactionSchema = new mongoose.Schema({
     businessId: { type: mongoose.Schema.Types.ObjectId, required: true, ref: 'Business' },
@@ -14,6 +15,22 @@ const paymentTransactionSchema = new mongoose.Schema({
 
 paymentTransactionSchema.pre("save", async function(next){
     this.lastModified = Date.now();
+
+    if (this.isNew || this.isModified("subscriptionId")) {
+        try {
+            const subscriptionPlan = await SubscriptionPlan.findById(this.subscriptionId);
+            if (subscriptionPlan) {
+                if (this.amount !== subscriptionPlan.price) {
+                    this.amount = subscriptionPlan.price;
+                }
+            } else {
+                throw new Error('Subscription Plan not found');
+            }
+        } catch (err) {
+            next(err);
+        }
+    }
+    
     next();
 });
 
