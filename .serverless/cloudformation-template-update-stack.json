@@ -331,7 +331,7 @@
       "Properties": {
         "Code": {
           "S3Bucket": "serverless-framework-deployments-eu-central-1-7d33afbf-5e19",
-          "S3Key": "serverless/interio-service/dev/1729610844360-2024-10-22T15:27:24.360Z/interio-service.zip"
+          "S3Key": "serverless/interio-service/dev/1729610984026-2024-10-22T15:29:44.026Z/interio-service.zip"
         },
         "Handler": "handlers/user/getUserById.handler",
         "Runtime": "nodejs16.x",
@@ -359,7 +359,7 @@
       "Properties": {
         "Code": {
           "S3Bucket": "serverless-framework-deployments-eu-central-1-7d33afbf-5e19",
-          "S3Key": "serverless/interio-service/dev/1729610844360-2024-10-22T15:27:24.360Z/interio-service.zip"
+          "S3Key": "serverless/interio-service/dev/1729610984026-2024-10-22T15:29:44.026Z/interio-service.zip"
         },
         "Handler": "handlers/user/createUser.handler",
         "Runtime": "nodejs16.x",
@@ -387,7 +387,7 @@
       "Properties": {
         "Code": {
           "S3Bucket": "serverless-framework-deployments-eu-central-1-7d33afbf-5e19",
-          "S3Key": "serverless/interio-service/dev/1729610844360-2024-10-22T15:27:24.360Z/interio-service.zip"
+          "S3Key": "serverless/interio-service/dev/1729610984026-2024-10-22T15:29:44.026Z/interio-service.zip"
         },
         "Handler": "handlers/user/deleteUser.handler",
         "Runtime": "nodejs16.x",
@@ -415,7 +415,7 @@
       "Properties": {
         "Code": {
           "S3Bucket": "serverless-framework-deployments-eu-central-1-7d33afbf-5e19",
-          "S3Key": "serverless/interio-service/dev/1729610844360-2024-10-22T15:27:24.360Z/interio-service.zip"
+          "S3Key": "serverless/interio-service/dev/1729610984026-2024-10-22T15:29:44.026Z/interio-service.zip"
         },
         "Handler": "handlers/user/getUserByName.handler",
         "Runtime": "nodejs16.x",
@@ -443,7 +443,7 @@
       "Properties": {
         "Code": {
           "S3Bucket": "serverless-framework-deployments-eu-central-1-7d33afbf-5e19",
-          "S3Key": "serverless/interio-service/dev/1729610844360-2024-10-22T15:27:24.360Z/interio-service.zip"
+          "S3Key": "serverless/interio-service/dev/1729610984026-2024-10-22T15:29:44.026Z/interio-service.zip"
         },
         "Handler": "handlers/user/updateUser.handler",
         "Runtime": "nodejs16.x",
@@ -471,7 +471,7 @@
       "Properties": {
         "Code": {
           "S3Bucket": "serverless-framework-deployments-eu-central-1-7d33afbf-5e19",
-          "S3Key": "serverless/interio-service/dev/1729610844360-2024-10-22T15:27:24.360Z/interio-service.zip"
+          "S3Key": "serverless/interio-service/dev/1729610984026-2024-10-22T15:29:44.026Z/interio-service.zip"
         },
         "Handler": "handlers/business/getBusinessById.handler",
         "Runtime": "nodejs16.x",
@@ -499,7 +499,7 @@
       "Properties": {
         "Code": {
           "S3Bucket": "serverless-framework-deployments-eu-central-1-7d33afbf-5e19",
-          "S3Key": "serverless/interio-service/dev/1729610844360-2024-10-22T15:27:24.360Z/interio-service.zip"
+          "S3Key": "serverless/interio-service/dev/1729610984026-2024-10-22T15:29:44.026Z/interio-service.zip"
         },
         "Handler": "handlers/business/createBusiness.handler",
         "Runtime": "nodejs16.x",
@@ -527,7 +527,7 @@
       "Properties": {
         "Code": {
           "S3Bucket": "serverless-framework-deployments-eu-central-1-7d33afbf-5e19",
-          "S3Key": "serverless/interio-service/dev/1729610844360-2024-10-22T15:27:24.360Z/interio-service.zip"
+          "S3Key": "serverless/interio-service/dev/1729610984026-2024-10-22T15:29:44.026Z/interio-service.zip"
         },
         "Handler": "handlers/business/deleteBusiness.handler",
         "Runtime": "nodejs16.x",
@@ -555,7 +555,7 @@
       "Properties": {
         "Code": {
           "S3Bucket": "serverless-framework-deployments-eu-central-1-7d33afbf-5e19",
-          "S3Key": "serverless/interio-service/dev/1729610844360-2024-10-22T15:27:24.360Z/interio-service.zip"
+          "S3Key": "serverless/interio-service/dev/1729610984026-2024-10-22T15:29:44.026Z/interio-service.zip"
         },
         "Handler": "handlers/business/getBusinessByName.handler",
         "Runtime": "nodejs16.x",
@@ -583,7 +583,7 @@
       "Properties": {
         "Code": {
           "S3Bucket": "serverless-framework-deployments-eu-central-1-7d33afbf-5e19",
-          "S3Key": "serverless/interio-service/dev/1729610844360-2024-10-22T15:27:24.360Z/interio-service.zip"
+          "S3Key": "serverless/interio-service/dev/1729610984026-2024-10-22T15:29:44.026Z/interio-service.zip"
         },
         "Handler": "handlers/business/updateBusiness.handler",
         "Runtime": "nodejs16.x",
@@ -611,7 +611,7 @@
       "Properties": {
         "Code": {
           "S3Bucket": "serverless-framework-deployments-eu-central-1-7d33afbf-5e19",
-          "S3Key": "serverless/interio-service/dev/1729610844360-2024-10-22T15:27:24.360Z/interio-service.zip"
+          "S3Key": "serverless/interio-service/dev/1729610984026-2024-10-22T15:29:44.026Z/interio-service.zip"
         },
         "Handler": "handlers/post/getPostById.handler",
         "Runtime": "nodejs16.x",
@@ -639,7 +639,7 @@
       "Properties": {
         "Code": {
           "S3Bucket": "serverless-framework-deployments-eu-central-1-7d33afbf-5e19",
-          "S3Key": "serverless/interio-service/dev/1729610844360-2024-10-22T15:27:24.360Z/interio-service.zip"
+          "S3Key": "serverless/interio-service/dev/1729610984026-2024-10-22T15:29:44.026Z/interio-service.zip"
         },
         "Handler": "handlers/post/createPost.handler",
         "Runtime": "nodejs16.x",
@@ -667,7 +667,7 @@
       "Properties": {
         "Code": {
           "S3Bucket": "serverless-framework-deployments-eu-central-1-7d33afbf-5e19",
-          "S3Key": "serverless/interio-service/dev/1729610844360-2024-10-22T15:27:24.360Z/interio-service.zip"
+          "S3Key": "serverless/interio-service/dev/1729610984026-2024-10-22T15:29:44.026Z/interio-service.zip"
         },
         "Handler": "handlers/post/deletePost.handler",
         "Runtime": "nodejs16.x",
@@ -695,7 +695,7 @@
       "Properties": {
         "Code": {
           "S3Bucket": "serverless-framework-deployments-eu-central-1-7d33afbf-5e19",
-          "S3Key": "serverless/interio-service/dev/1729610844360-2024-10-22T15:27:24.360Z/interio-service.zip"
+          "S3Key": "serverless/interio-service/dev/1729610984026-2024-10-22T15:29:44.026Z/interio-service.zip"
         },
         "Handler": "handlers/post/getFilteredPosts.handler",
         "Runtime": "nodejs16.x",
@@ -723,7 +723,7 @@
       "Properties": {
         "Code": {
           "S3Bucket": "serverless-framework-deployments-eu-central-1-7d33afbf-5e19",
-          "S3Key": "serverless/interio-service/dev/1729610844360-2024-10-22T15:27:24.360Z/interio-service.zip"
+          "S3Key": "serverless/interio-service/dev/1729610984026-2024-10-22T15:29:44.026Z/interio-service.zip"
         },
         "Handler": "handlers/post/getAvailablePosts.handler",
         "Runtime": "nodejs16.x",
@@ -751,7 +751,7 @@
       "Properties": {
         "Code": {
           "S3Bucket": "serverless-framework-deployments-eu-central-1-7d33afbf-5e19",
-          "S3Key": "serverless/interio-service/dev/1729610844360-2024-10-22T15:27:24.360Z/interio-service.zip"
+          "S3Key": "serverless/interio-service/dev/1729610984026-2024-10-22T15:29:44.026Z/interio-service.zip"
         },
         "Handler": "handlers/offer/createOffer.handler",
         "Runtime": "nodejs16.x",
@@ -779,7 +779,7 @@
       "Properties": {
         "Code": {
           "S3Bucket": "serverless-framework-deployments-eu-central-1-7d33afbf-5e19",
-          "S3Key": "serverless/interio-service/dev/1729610844360-2024-10-22T15:27:24.360Z/interio-service.zip"
+          "S3Key": "serverless/interio-service/dev/1729610984026-2024-10-22T15:29:44.026Z/interio-service.zip"
         },
         "Handler": "handlers/offer/deleteOffer.handler",
         "Runtime": "nodejs16.x",
@@ -807,7 +807,7 @@
       "Properties": {
         "Code": {
           "S3Bucket": "serverless-framework-deployments-eu-central-1-7d33afbf-5e19",
-          "S3Key": "serverless/interio-service/dev/1729610844360-2024-10-22T15:27:24.360Z/interio-service.zip"
+          "S3Key": "serverless/interio-service/dev/1729610984026-2024-10-22T15:29:44.026Z/interio-service.zip"
         },
         "Handler": "handlers/offer/getOfferById.handler",
         "Runtime": "nodejs16.x",
@@ -835,7 +835,7 @@
       "Properties": {
         "Code": {
           "S3Bucket": "serverless-framework-deployments-eu-central-1-7d33afbf-5e19",
-          "S3Key": "serverless/interio-service/dev/1729610844360-2024-10-22T15:27:24.360Z/interio-service.zip"
+          "S3Key": "serverless/interio-service/dev/1729610984026-2024-10-22T15:29:44.026Z/interio-service.zip"
         },
         "Handler": "handlers/categories/createCategory.handler",
         "Runtime": "nodejs16.x",
@@ -863,7 +863,7 @@
       "Properties": {
         "Code": {
           "S3Bucket": "serverless-framework-deployments-eu-central-1-7d33afbf-5e19",
-          "S3Key": "serverless/interio-service/dev/1729610844360-2024-10-22T15:27:24.360Z/interio-service.zip"
+          "S3Key": "serverless/interio-service/dev/1729610984026-2024-10-22T15:29:44.026Z/interio-service.zip"
         },
         "Handler": "handlers/categories/deleteCategory.handler",
         "Runtime": "nodejs16.x",
@@ -891,7 +891,7 @@
       "Properties": {
         "Code": {
           "S3Bucket": "serverless-framework-deployments-eu-central-1-7d33afbf-5e19",
-          "S3Key": "serverless/interio-service/dev/1729610844360-2024-10-22T15:27:24.360Z/interio-service.zip"
+          "S3Key": "serverless/interio-service/dev/1729610984026-2024-10-22T15:29:44.026Z/interio-service.zip"
         },
         "Handler": "handlers/categories/getCategoryById.handler",
         "Runtime": "nodejs16.x",
@@ -919,7 +919,7 @@
       "Properties": {
         "Code": {
           "S3Bucket": "serverless-framework-deployments-eu-central-1-7d33afbf-5e19",
-          "S3Key": "serverless/interio-service/dev/1729610844360-2024-10-22T15:27:24.360Z/interio-service.zip"
+          "S3Key": "serverless/interio-service/dev/1729610984026-2024-10-22T15:29:44.026Z/interio-service.zip"
         },
         "Handler": "handlers/categories/getAllCategories.handler",
         "Runtime": "nodejs16.x",
@@ -947,7 +947,7 @@
       "Properties": {
         "Code": {
           "S3Bucket": "serverless-framework-deployments-eu-central-1-7d33afbf-5e19",
-          "S3Key": "serverless/interio-service/dev/1729610844360-2024-10-22T15:27:24.360Z/interio-service.zip"
+          "S3Key": "serverless/interio-service/dev/1729610984026-2024-10-22T15:29:44.026Z/interio-service.zip"
         },
         "Handler": "handlers/finishedJobs/createJob.handler",
         "Runtime": "nodejs16.x",
@@ -975,7 +975,7 @@
       "Properties": {
         "Code": {
           "S3Bucket": "serverless-framework-deployments-eu-central-1-7d33afbf-5e19",
-          "S3Key": "serverless/interio-service/dev/1729610844360-2024-10-22T15:27:24.360Z/interio-service.zip"
+          "S3Key": "serverless/interio-service/dev/1729610984026-2024-10-22T15:29:44.026Z/interio-service.zip"
         },
         "Handler": "handlers/finishedJobs/getJobById.handler",
         "Runtime": "nodejs16.x",
@@ -1003,7 +1003,7 @@
       "Properties": {
         "Code": {
           "S3Bucket": "serverless-framework-deployments-eu-central-1-7d33afbf-5e19",
-          "S3Key": "serverless/interio-service/dev/1729610844360-2024-10-22T15:27:24.360Z/interio-service.zip"
+          "S3Key": "serverless/interio-service/dev/1729610984026-2024-10-22T15:29:44.026Z/interio-service.zip"
         },
         "Handler": "handlers/comment/createComment.handler",
         "Runtime": "nodejs16.x",
@@ -1031,7 +1031,7 @@
       "Properties": {
         "Code": {
           "S3Bucket": "serverless-framework-deployments-eu-central-1-7d33afbf-5e19",
-          "S3Key": "serverless/interio-service/dev/1729610844360-2024-10-22T15:27:24.360Z/interio-service.zip"
+          "S3Key": "serverless/interio-service/dev/1729610984026-2024-10-22T15:29:44.026Z/interio-service.zip"
         },
         "Handler": "handlers/comment/getCommentById.handler",
         "Runtime": "nodejs16.x",
@@ -1059,7 +1059,7 @@
       "Properties": {
         "Code": {
           "S3Bucket": "serverless-framework-deployments-eu-central-1-7d33afbf-5e19",
-          "S3Key": "serverless/interio-service/dev/1729610844360-2024-10-22T15:27:24.360Z/interio-service.zip"
+          "S3Key": "serverless/interio-service/dev/1729610984026-2024-10-22T15:29:44.026Z/interio-service.zip"
         },
         "Handler": "handlers/comment/deleteComment.handler",
         "Runtime": "nodejs16.x",
@@ -1087,7 +1087,7 @@
       "Properties": {
         "Code": {
           "S3Bucket": "serverless-framework-deployments-eu-central-1-7d33afbf-5e19",
-          "S3Key": "serverless/interio-service/dev/1729610844360-2024-10-22T15:27:24.360Z/interio-service.zip"
+          "S3Key": "serverless/interio-service/dev/1729610984026-2024-10-22T15:29:44.026Z/interio-service.zip"
         },
         "Handler": "handlers/message/createMessage.handler",
         "Runtime": "nodejs16.x",
@@ -1115,7 +1115,7 @@
       "Properties": {
         "Code": {
           "S3Bucket": "serverless-framework-deployments-eu-central-1-7d33afbf-5e19",
-          "S3Key": "serverless/interio-service/dev/1729610844360-2024-10-22T15:27:24.360Z/interio-service.zip"
+          "S3Key": "serverless/interio-service/dev/1729610984026-2024-10-22T15:29:44.026Z/interio-service.zip"
         },
         "Handler": "handlers/message/getMessageById.handler",
         "Runtime": "nodejs16.x",
@@ -1143,7 +1143,7 @@
       "Properties": {
         "Code": {
           "S3Bucket": "serverless-framework-deployments-eu-central-1-7d33afbf-5e19",
-          "S3Key": "serverless/interio-service/dev/1729610844360-2024-10-22T15:27:24.360Z/interio-service.zip"
+          "S3Key": "serverless/interio-service/dev/1729610984026-2024-10-22T15:29:44.026Z/interio-service.zip"
         },
         "Handler": "handlers/notification/createNotification.handler",
         "Runtime": "nodejs16.x",
@@ -1171,7 +1171,7 @@
       "Properties": {
         "Code": {
           "S3Bucket": "serverless-framework-deployments-eu-central-1-7d33afbf-5e19",
-          "S3Key": "serverless/interio-service/dev/1729610844360-2024-10-22T15:27:24.360Z/interio-service.zip"
+          "S3Key": "serverless/interio-service/dev/1729610984026-2024-10-22T15:29:44.026Z/interio-service.zip"
         },
         "Handler": "handlers/notification/getNotificationById.handler",
         "Runtime": "nodejs16.x",
@@ -1199,7 +1199,7 @@
       "Properties": {
         "Code": {
           "S3Bucket": "serverless-framework-deployments-eu-central-1-7d33afbf-5e19",
-          "S3Key": "serverless/interio-service/dev/1729610844360-2024-10-22T15:27:24.360Z/interio-service.zip"
+          "S3Key": "serverless/interio-service/dev/1729610984026-2024-10-22T15:29:44.026Z/interio-service.zip"
         },
         "Handler": "handlers/subscriptionPlan/createPlan.handler",
         "Runtime": "nodejs16.x",
@@ -1227,7 +1227,7 @@
       "Properties": {
         "Code": {
           "S3Bucket": "serverless-framework-deployments-eu-central-1-7d33afbf-5e19",
-          "S3Key": "serverless/interio-service/dev/1729610844360-2024-10-22T15:27:24.360Z/interio-service.zip"
+          "S3Key": "serverless/interio-service/dev/1729610984026-2024-10-22T15:29:44.026Z/interio-service.zip"
         },
         "Handler": "handlers/subscriptionPlan/getPlanById.handler",
         "Runtime": "nodejs16.x",
@@ -1255,7 +1255,7 @@
       "Properties": {
         "Code": {
           "S3Bucket": "serverless-framework-deployments-eu-central-1-7d33afbf-5e19",
-          "S3Key": "serverless/interio-service/dev/1729610844360-2024-10-22T15:27:24.360Z/interio-service.zip"
+          "S3Key": "serverless/interio-service/dev/1729610984026-2024-10-22T15:29:44.026Z/interio-service.zip"
         },
         "Handler": "handlers/subscriptionPlan/getAll.handler",
         "Runtime": "nodejs16.x",
@@ -1283,7 +1283,7 @@
       "Properties": {
         "Code": {
           "S3Bucket": "serverless-framework-deployments-eu-central-1-7d33afbf-5e19",
-          "S3Key": "serverless/interio-service/dev/1729610844360-2024-10-22T15:27:24.360Z/interio-service.zip"
+          "S3Key": "serverless/interio-service/dev/1729610984026-2024-10-22T15:29:44.026Z/interio-service.zip"
         },
         "Handler": "handlers/subscriptionPlan/deletePlan.handler",
         "Runtime": "nodejs16.x",
@@ -1311,7 +1311,7 @@
       "Properties": {
         "Code": {
           "S3Bucket": "serverless-framework-deployments-eu-central-1-7d33afbf-5e19",
-          "S3Key": "serverless/interio-service/dev/1729610844360-2024-10-22T15:27:24.360Z/interio-service.zip"
+          "S3Key": "serverless/interio-service/dev/1729610984026-2024-10-22T15:29:44.026Z/interio-service.zip"
         },
         "Handler": "handlers/subscriptionManager/createManager.handler",
         "Runtime": "nodejs16.x",
@@ -1339,7 +1339,7 @@
       "Properties": {
         "Code": {
           "S3Bucket": "serverless-framework-deployments-eu-central-1-7d33afbf-5e19",
-          "S3Key": "serverless/interio-service/dev/1729610844360-2024-10-22T15:27:24.360Z/interio-service.zip"
+          "S3Key": "serverless/interio-service/dev/1729610984026-2024-10-22T15:29:44.026Z/interio-service.zip"
         },
         "Handler": "handlers/subscriptionManager/getManagerById.handler",
         "Runtime": "nodejs16.x",
@@ -1367,7 +1367,7 @@
       "Properties": {
         "Code": {
           "S3Bucket": "serverless-framework-deployments-eu-central-1-7d33afbf-5e19",
-          "S3Key": "serverless/interio-service/dev/1729610844360-2024-10-22T15:27:24.360Z/interio-service.zip"
+          "S3Key": "serverless/interio-service/dev/1729610984026-2024-10-22T15:29:44.026Z/interio-service.zip"
         },
         "Handler": "handlers/subscriptionManager/updateManager.handler",
         "Runtime": "nodejs16.x",
@@ -1395,7 +1395,7 @@
       "Properties": {
         "Code": {
           "S3Bucket": "serverless-framework-deployments-eu-central-1-7d33afbf-5e19",
-          "S3Key": "serverless/interio-service/dev/1729610844360-2024-10-22T15:27:24.360Z/interio-service.zip"
+          "S3Key": "serverless/interio-service/dev/1729610984026-2024-10-22T15:29:44.026Z/interio-service.zip"
         },
         "Handler": "handlers/subscriptionManager/getSubscriptionManager.handler",
         "Runtime": "nodejs16.x",
@@ -1423,7 +1423,7 @@
       "Properties": {
         "Code": {
           "S3Bucket": "serverless-framework-deployments-eu-central-1-7d33afbf-5e19",
-          "S3Key": "serverless/interio-service/dev/1729610844360-2024-10-22T15:27:24.360Z/interio-service.zip"
+          "S3Key": "serverless/interio-service/dev/1729610984026-2024-10-22T15:29:44.026Z/interio-service.zip"
         },
         "Handler": "handlers/paymentTransaction/createPayment.handler",
         "Runtime": "nodejs16.x",
@@ -1451,7 +1451,7 @@
       "Properties": {
         "Code": {
           "S3Bucket": "serverless-framework-deployments-eu-central-1-7d33afbf-5e19",
-          "S3Key": "serverless/interio-service/dev/1729610844360-2024-10-22T15:27:24.360Z/interio-service.zip"
+          "S3Key": "serverless/interio-service/dev/1729610984026-2024-10-22T15:29:44.026Z/interio-service.zip"
         },
         "Handler": "handlers/paymentTransaction/getPaymentById.handler",
         "Runtime": "nodejs16.x",
@@ -2258,6 +2258,30 @@
       "Properties": {
         "ParentId": {
           "Ref": "ApiGatewayResourceSubscriptionmanager"
+        },
+        "PathPart": "{id}",
+        "RestApiId": {
+          "Ref": "ApiGatewayRestApi"
+        }
+      }
+    },
+    "ApiGatewayResourceSubscriptionmanagerBusiness": {
+      "Type": "AWS::ApiGateway::Resource",
+      "Properties": {
+        "ParentId": {
+          "Ref": "ApiGatewayResourceSubscriptionmanager"
+        },
+        "PathPart": "business",
+        "RestApiId": {
+          "Ref": "ApiGatewayRestApi"
+        }
+      }
+    },
+    "ApiGatewayResourceSubscriptionmanagerBusinessIdVar": {
+      "Type": "AWS::ApiGateway::Resource",
+      "Properties": {
+        "ParentId": {
+          "Ref": "ApiGatewayResourceSubscriptionmanagerBusiness"
         },
         "PathPart": "{id}",
         "RestApiId": {
@@ -3536,7 +3560,7 @@
               "ResponseParameters": {
                 "method.response.header.Access-Control-Allow-Origin": "'*'",
                 "method.response.header.Access-Control-Allow-Headers": "'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token,X-Amz-User-Agent,X-Amzn-Trace-Id'",
-                "method.response.header.Access-Control-Allow-Methods": "'OPTIONS,GET,PUT'"
+                "method.response.header.Access-Control-Allow-Methods": "'OPTIONS,PUT,GET'"
               },
               "ResponseTemplates": {
                 "application/json": ""
@@ -3546,6 +3570,51 @@
         },
         "ResourceId": {
           "Ref": "ApiGatewayResourceSubscriptionmanagerIdVar"
+        },
+        "RestApiId": {
+          "Ref": "ApiGatewayRestApi"
+        }
+      }
+    },
+    "ApiGatewayMethodSubscriptionmanagerBusinessIdVarOptions": {
+      "Type": "AWS::ApiGateway::Method",
+      "Properties": {
+        "AuthorizationType": "NONE",
+        "HttpMethod": "OPTIONS",
+        "MethodResponses": [
+          {
+            "StatusCode": "200",
+            "ResponseParameters": {
+              "method.response.header.Access-Control-Allow-Origin": true,
+              "method.response.header.Access-Control-Allow-Headers": true,
+              "method.response.header.Access-Control-Allow-Methods": true
+            },
+            "ResponseModels": {}
+          }
+        ],
+        "RequestParameters": {},
+        "Integration": {
+          "Type": "MOCK",
+          "RequestTemplates": {
+            "application/json": "{statusCode:200}"
+          },
+          "ContentHandling": "CONVERT_TO_TEXT",
+          "IntegrationResponses": [
+            {
+              "StatusCode": "200",
+              "ResponseParameters": {
+                "method.response.header.Access-Control-Allow-Origin": "'*'",
+                "method.response.header.Access-Control-Allow-Headers": "'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token,X-Amz-User-Agent,X-Amzn-Trace-Id'",
+                "method.response.header.Access-Control-Allow-Methods": "'OPTIONS,GET'"
+              },
+              "ResponseTemplates": {
+                "application/json": ""
+              }
+            }
+          ]
+        },
+        "ResourceId": {
+          "Ref": "ApiGatewayResourceSubscriptionmanagerBusinessIdVar"
         },
         "RestApiId": {
           "Ref": "ApiGatewayRestApi"
@@ -5329,7 +5398,7 @@
                 ":lambda:path/2015-03-31/functions/",
                 {
                   "Fn::GetAtt": [
-                    "GetSubscriptionManagerLambdaFunction",
+                    "GetSubscriptionManagerByIdLambdaFunction",
                     "Arn"
                   ]
                 },
@@ -5341,7 +5410,7 @@
         "MethodResponses": []
       },
       "DependsOn": [
-        "GetSubscriptionManagerLambdaPermissionApiGateway"
+        "GetSubscriptionManagerByIdLambdaPermissionApiGateway"
       ]
     },
     "ApiGatewayMethodSubscriptionmanagerIdVarPut": {
@@ -5388,6 +5457,52 @@
       },
       "DependsOn": [
         "UpdateSubscriptionManagerLambdaPermissionApiGateway"
+      ]
+    },
+    "ApiGatewayMethodSubscriptionmanagerBusinessIdVarGet": {
+      "Type": "AWS::ApiGateway::Method",
+      "Properties": {
+        "HttpMethod": "GET",
+        "RequestParameters": {},
+        "ResourceId": {
+          "Ref": "ApiGatewayResourceSubscriptionmanagerBusinessIdVar"
+        },
+        "RestApiId": {
+          "Ref": "ApiGatewayRestApi"
+        },
+        "ApiKeyRequired": false,
+        "AuthorizationType": "NONE",
+        "Integration": {
+          "IntegrationHttpMethod": "POST",
+          "Type": "AWS_PROXY",
+          "Uri": {
+            "Fn::Join": [
+              "",
+              [
+                "arn:",
+                {
+                  "Ref": "AWS::Partition"
+                },
+                ":apigateway:",
+                {
+                  "Ref": "AWS::Region"
+                },
+                ":lambda:path/2015-03-31/functions/",
+                {
+                  "Fn::GetAtt": [
+                    "GetSubscriptionManagerLambdaFunction",
+                    "Arn"
+                  ]
+                },
+                "/invocations"
+              ]
+            ]
+          }
+        },
+        "MethodResponses": []
+      },
+      "DependsOn": [
+        "GetSubscriptionManagerLambdaPermissionApiGateway"
       ]
     },
     "ApiGatewayMethodPaymenttransactionPost": {
@@ -5482,7 +5597,7 @@
         "GetPaymentTransactionLambdaPermissionApiGateway"
       ]
     },
-    "ApiGatewayDeployment1729610840513": {
+    "ApiGatewayDeployment1729610980508": {
       "Type": "AWS::ApiGateway::Deployment",
       "Properties": {
         "RestApiId": {
@@ -5519,6 +5634,7 @@
         "ApiGatewayMethodSubscriptionplanAllOptions",
         "ApiGatewayMethodSubscriptionmanagerOptions",
         "ApiGatewayMethodSubscriptionmanagerIdVarOptions",
+        "ApiGatewayMethodSubscriptionmanagerBusinessIdVarOptions",
         "ApiGatewayMethodPaymenttransactionOptions",
         "ApiGatewayMethodPaymenttransactionIdVarOptions",
         "ApiGatewayMethodUserIdVarGet",
@@ -5559,7 +5675,7 @@
         "ApiGatewayMethodSubscriptionmanagerPost",
         "ApiGatewayMethodSubscriptionmanagerIdVarGet",
         "ApiGatewayMethodSubscriptionmanagerIdVarPut",
-        "ApiGatewayMethodSubscriptionmanagerIdVarGet",
+        "ApiGatewayMethodSubscriptionmanagerBusinessIdVarGet",
         "ApiGatewayMethodPaymenttransactionPost",
         "ApiGatewayMethodPaymenttransactionIdVarGet"
       ]
