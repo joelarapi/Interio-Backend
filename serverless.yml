@@ -222,5 +222,19 @@ functions:
           path: /message/{id}
           method: GET
           cors: true
+  createNotification:
+    handler: handlers/notification/createNotification.handler
+    events:
+      - http:
+          path: /notification
+          method: POST
+          cors: true
+  getNotificationById:
+    handler: handlers/notification/getNotificationById.handler
+    events:
+      - http:
+          path: /notification/{id}
+          method: GET
+          cors: true
   
  
