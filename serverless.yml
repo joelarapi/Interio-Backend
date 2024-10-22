@@ -187,4 +187,26 @@ functions:
           path: /finishedJobs/{id}
           method: GET
           cors: true
+  createComment:
+    handler: handlers/comment/createComment.handler
+    events:
+      - http:
+          path: /comment
+          method: POST
+          cors: true
+  getCommentById:
+    handler: handlers/comment/getCommentById.handler
+    events:
+      - http:
+          path: /comment/{id}
+          method: GET
+          cors: true
+  deleteComment:
+    handler: handlers/comment/deleteComment.handler
+    events:
+      - http:
+          path: /comment/{id}
+          method: DELETE
+          cors: true
+  
  

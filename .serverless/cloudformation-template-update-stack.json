@@ -146,6 +146,24 @@
         "LogGroupName": "/aws/lambda/interio-service-dev-getJobById"
       }
     },
+    "CreateCommentLogGroup": {
+      "Type": "AWS::Logs::LogGroup",
+      "Properties": {
+        "LogGroupName": "/aws/lambda/interio-service-dev-createComment"
+      }
+    },
+    "GetCommentByIdLogGroup": {
+      "Type": "AWS::Logs::LogGroup",
+      "Properties": {
+        "LogGroupName": "/aws/lambda/interio-service-dev-getCommentById"
+      }
+    },
+    "DeleteCommentLogGroup": {
+      "Type": "AWS::Logs::LogGroup",
+      "Properties": {
+        "LogGroupName": "/aws/lambda/interio-service-dev-deleteComment"
+      }
+    },
     "IamRoleLambdaExecution": {
       "Type": "AWS::IAM::Role",
       "Properties": {
@@ -229,7 +247,7 @@
       "Properties": {
         "Code": {
           "S3Bucket": "serverless-framework-deployments-eu-central-1-7d33afbf-5e19",
-          "S3Key": "serverless/interio-service/dev/1729587507814-2024-10-22T08:58:27.814Z/interio-service.zip"
+          "S3Key": "serverless/interio-service/dev/1729589736111-2024-10-22T09:35:36.111Z/interio-service.zip"
         },
         "Handler": "handlers/user/getUserById.handler",
         "Runtime": "nodejs16.x",
@@ -257,7 +275,7 @@
       "Properties": {
         "Code": {
           "S3Bucket": "serverless-framework-deployments-eu-central-1-7d33afbf-5e19",
-          "S3Key": "serverless/interio-service/dev/1729587507814-2024-10-22T08:58:27.814Z/interio-service.zip"
+          "S3Key": "serverless/interio-service/dev/1729589736111-2024-10-22T09:35:36.111Z/interio-service.zip"
         },
         "Handler": "handlers/user/createUser.handler",
         "Runtime": "nodejs16.x",
@@ -285,7 +303,7 @@
       "Properties": {
         "Code": {
           "S3Bucket": "serverless-framework-deployments-eu-central-1-7d33afbf-5e19",
-          "S3Key": "serverless/interio-service/dev/1729587507814-2024-10-22T08:58:27.814Z/interio-service.zip"
+          "S3Key": "serverless/interio-service/dev/1729589736111-2024-10-22T09:35:36.111Z/interio-service.zip"
         },
         "Handler": "handlers/user/deleteUser.handler",
         "Runtime": "nodejs16.x",
@@ -313,7 +331,7 @@
       "Properties": {
         "Code": {
           "S3Bucket": "serverless-framework-deployments-eu-central-1-7d33afbf-5e19",
-          "S3Key": "serverless/interio-service/dev/1729587507814-2024-10-22T08:58:27.814Z/interio-service.zip"
+          "S3Key": "serverless/interio-service/dev/1729589736111-2024-10-22T09:35:36.111Z/interio-service.zip"
         },
         "Handler": "handlers/user/getUserByName.handler",
         "Runtime": "nodejs16.x",
@@ -341,7 +359,7 @@
       "Properties": {
         "Code": {
           "S3Bucket": "serverless-framework-deployments-eu-central-1-7d33afbf-5e19",
-          "S3Key": "serverless/interio-service/dev/1729587507814-2024-10-22T08:58:27.814Z/interio-service.zip"
+          "S3Key": "serverless/interio-service/dev/1729589736111-2024-10-22T09:35:36.111Z/interio-service.zip"
         },
         "Handler": "handlers/user/updateUser.handler",
         "Runtime": "nodejs16.x",
@@ -369,7 +387,7 @@
       "Properties": {
         "Code": {
           "S3Bucket": "serverless-framework-deployments-eu-central-1-7d33afbf-5e19",
-          "S3Key": "serverless/interio-service/dev/1729587507814-2024-10-22T08:58:27.814Z/interio-service.zip"
+          "S3Key": "serverless/interio-service/dev/1729589736111-2024-10-22T09:35:36.111Z/interio-service.zip"
         },
         "Handler": "handlers/business/getBusinessById.handler",
         "Runtime": "nodejs16.x",
@@ -397,7 +415,7 @@
       "Properties": {
         "Code": {
           "S3Bucket": "serverless-framework-deployments-eu-central-1-7d33afbf-5e19",
-          "S3Key": "serverless/interio-service/dev/1729587507814-2024-10-22T08:58:27.814Z/interio-service.zip"
+          "S3Key": "serverless/interio-service/dev/1729589736111-2024-10-22T09:35:36.111Z/interio-service.zip"
         },
         "Handler": "handlers/business/createBusiness.handler",
         "Runtime": "nodejs16.x",
@@ -425,7 +443,7 @@
       "Properties": {
         "Code": {
           "S3Bucket": "serverless-framework-deployments-eu-central-1-7d33afbf-5e19",
-          "S3Key": "serverless/interio-service/dev/1729587507814-2024-10-22T08:58:27.814Z/interio-service.zip"
+          "S3Key": "serverless/interio-service/dev/1729589736111-2024-10-22T09:35:36.111Z/interio-service.zip"
         },
         "Handler": "handlers/business/deleteBusiness.handler",
         "Runtime": "nodejs16.x",
@@ -453,7 +471,7 @@
       "Properties": {
         "Code": {
           "S3Bucket": "serverless-framework-deployments-eu-central-1-7d33afbf-5e19",
-          "S3Key": "serverless/interio-service/dev/1729587507814-2024-10-22T08:58:27.814Z/interio-service.zip"
+          "S3Key": "serverless/interio-service/dev/1729589736111-2024-10-22T09:35:36.111Z/interio-service.zip"
         },
         "Handler": "handlers/business/getBusinessByName.handler",
         "Runtime": "nodejs16.x",
@@ -481,7 +499,7 @@
       "Properties": {
         "Code": {
           "S3Bucket": "serverless-framework-deployments-eu-central-1-7d33afbf-5e19",
-          "S3Key": "serverless/interio-service/dev/1729587507814-2024-10-22T08:58:27.814Z/interio-service.zip"
+          "S3Key": "serverless/interio-service/dev/1729589736111-2024-10-22T09:35:36.111Z/interio-service.zip"
         },
         "Handler": "handlers/business/updateBusiness.handler",
         "Runtime": "nodejs16.x",
@@ -509,7 +527,7 @@
       "Properties": {
         "Code": {
           "S3Bucket": "serverless-framework-deployments-eu-central-1-7d33afbf-5e19",
-          "S3Key": "serverless/interio-service/dev/1729587507814-2024-10-22T08:58:27.814Z/interio-service.zip"
+          "S3Key": "serverless/interio-service/dev/1729589736111-2024-10-22T09:35:36.111Z/interio-service.zip"
         },
         "Handler": "handlers/post/getPostById.handler",
         "Runtime": "nodejs16.x",
@@ -537,7 +555,7 @@
       "Properties": {
         "Code": {
           "S3Bucket": "serverless-framework-deployments-eu-central-1-7d33afbf-5e19",
-          "S3Key": "serverless/interio-service/dev/1729587507814-2024-10-22T08:58:27.814Z/interio-service.zip"
+          "S3Key": "serverless/interio-service/dev/1729589736111-2024-10-22T09:35:36.111Z/interio-service.zip"
         },
         "Handler": "handlers/post/createPost.handler",
         "Runtime": "nodejs16.x",
@@ -565,7 +583,7 @@
       "Properties": {
         "Code": {
           "S3Bucket": "serverless-framework-deployments-eu-central-1-7d33afbf-5e19",
-          "S3Key": "serverless/interio-service/dev/1729587507814-2024-10-22T08:58:27.814Z/interio-service.zip"
+          "S3Key": "serverless/interio-service/dev/1729589736111-2024-10-22T09:35:36.111Z/interio-service.zip"
         },
         "Handler": "handlers/post/deletePost.handler",
         "Runtime": "nodejs16.x",
@@ -593,7 +611,7 @@
       "Properties": {
         "Code": {
           "S3Bucket": "serverless-framework-deployments-eu-central-1-7d33afbf-5e19",
-          "S3Key": "serverless/interio-service/dev/1729587507814-2024-10-22T08:58:27.814Z/interio-service.zip"
+          "S3Key": "serverless/interio-service/dev/1729589736111-2024-10-22T09:35:36.111Z/interio-service.zip"
         },
         "Handler": "handlers/post/getFilteredPosts.handler",
         "Runtime": "nodejs16.x",
@@ -621,7 +639,7 @@
       "Properties": {
         "Code": {
           "S3Bucket": "serverless-framework-deployments-eu-central-1-7d33afbf-5e19",
-          "S3Key": "serverless/interio-service/dev/1729587507814-2024-10-22T08:58:27.814Z/interio-service.zip"
+          "S3Key": "serverless/interio-service/dev/1729589736111-2024-10-22T09:35:36.111Z/interio-service.zip"
         },
         "Handler": "handlers/post/getAvailablePosts.handler",
         "Runtime": "nodejs16.x",
@@ -649,7 +667,7 @@
       "Properties": {
         "Code": {
           "S3Bucket": "serverless-framework-deployments-eu-central-1-7d33afbf-5e19",
-          "S3Key": "serverless/interio-service/dev/1729587507814-2024-10-22T08:58:27.814Z/interio-service.zip"
+          "S3Key": "serverless/interio-service/dev/1729589736111-2024-10-22T09:35:36.111Z/interio-service.zip"
         },
         "Handler": "handlers/offer/createOffer.handler",
         "Runtime": "nodejs16.x",
@@ -677,7 +695,7 @@
       "Properties": {
         "Code": {
           "S3Bucket": "serverless-framework-deployments-eu-central-1-7d33afbf-5e19",
-          "S3Key": "serverless/interio-service/dev/1729587507814-2024-10-22T08:58:27.814Z/interio-service.zip"
+          "S3Key": "serverless/interio-service/dev/1729589736111-2024-10-22T09:35:36.111Z/interio-service.zip"
         },
         "Handler": "handlers/offer/deleteOffer.handler",
         "Runtime": "nodejs16.x",
@@ -705,7 +723,7 @@
       "Properties": {
         "Code": {
           "S3Bucket": "serverless-framework-deployments-eu-central-1-7d33afbf-5e19",
-          "S3Key": "serverless/interio-service/dev/1729587507814-2024-10-22T08:58:27.814Z/interio-service.zip"
+          "S3Key": "serverless/interio-service/dev/1729589736111-2024-10-22T09:35:36.111Z/interio-service.zip"
         },
         "Handler": "handlers/offer/getOfferById.handler",
         "Runtime": "nodejs16.x",
@@ -733,7 +751,7 @@
       "Properties": {
         "Code": {
           "S3Bucket": "serverless-framework-deployments-eu-central-1-7d33afbf-5e19",
-          "S3Key": "serverless/interio-service/dev/1729587507814-2024-10-22T08:58:27.814Z/interio-service.zip"
+          "S3Key": "serverless/interio-service/dev/1729589736111-2024-10-22T09:35:36.111Z/interio-service.zip"
         },
         "Handler": "handlers/categories/createCategory.handler",
         "Runtime": "nodejs16.x",
@@ -761,7 +779,7 @@
       "Properties": {
         "Code": {
           "S3Bucket": "serverless-framework-deployments-eu-central-1-7d33afbf-5e19",
-          "S3Key": "serverless/interio-service/dev/1729587507814-2024-10-22T08:58:27.814Z/interio-service.zip"
+          "S3Key": "serverless/interio-service/dev/1729589736111-2024-10-22T09:35:36.111Z/interio-service.zip"
         },
         "Handler": "handlers/categories/deleteCategory.handler",
         "Runtime": "nodejs16.x",
@@ -789,7 +807,7 @@
       "Properties": {
         "Code": {
           "S3Bucket": "serverless-framework-deployments-eu-central-1-7d33afbf-5e19",
-          "S3Key": "serverless/interio-service/dev/1729587507814-2024-10-22T08:58:27.814Z/interio-service.zip"
+          "S3Key": "serverless/interio-service/dev/1729589736111-2024-10-22T09:35:36.111Z/interio-service.zip"
         },
         "Handler": "handlers/categories/getCategoryById.handler",
         "Runtime": "nodejs16.x",
@@ -817,7 +835,7 @@
       "Properties": {
         "Code": {
           "S3Bucket": "serverless-framework-deployments-eu-central-1-7d33afbf-5e19",
-          "S3Key": "serverless/interio-service/dev/1729587507814-2024-10-22T08:58:27.814Z/interio-service.zip"
+          "S3Key": "serverless/interio-service/dev/1729589736111-2024-10-22T09:35:36.111Z/interio-service.zip"
         },
         "Handler": "handlers/categories/getAllCategories.handler",
         "Runtime": "nodejs16.x",
@@ -845,7 +863,7 @@
       "Properties": {
         "Code": {
           "S3Bucket": "serverless-framework-deployments-eu-central-1-7d33afbf-5e19",
-          "S3Key": "serverless/interio-service/dev/1729587507814-2024-10-22T08:58:27.814Z/interio-service.zip"
+          "S3Key": "serverless/interio-service/dev/1729589736111-2024-10-22T09:35:36.111Z/interio-service.zip"
         },
         "Handler": "handlers/finishedJobs/createJob.handler",
         "Runtime": "nodejs16.x",
@@ -873,7 +891,7 @@
       "Properties": {
         "Code": {
           "S3Bucket": "serverless-framework-deployments-eu-central-1-7d33afbf-5e19",
-          "S3Key": "serverless/interio-service/dev/1729587507814-2024-10-22T08:58:27.814Z/interio-service.zip"
+          "S3Key": "serverless/interio-service/dev/1729589736111-2024-10-22T09:35:36.111Z/interio-service.zip"
         },
         "Handler": "handlers/finishedJobs/getJobById.handler",
         "Runtime": "nodejs16.x",
@@ -894,6 +912,90 @@
       },
       "DependsOn": [
         "GetJobByIdLogGroup"
+      ]
+    },
+    "CreateCommentLambdaFunction": {
+      "Type": "AWS::Lambda::Function",
+      "Properties": {
+        "Code": {
+          "S3Bucket": "serverless-framework-deployments-eu-central-1-7d33afbf-5e19",
+          "S3Key": "serverless/interio-service/dev/1729589736111-2024-10-22T09:35:36.111Z/interio-service.zip"
+        },
+        "Handler": "handlers/comment/createComment.handler",
+        "Runtime": "nodejs16.x",
+        "FunctionName": "interio-service-dev-createComment",
+        "MemorySize": 128,
+        "Timeout": 6,
+        "Environment": {
+          "Variables": {
+            "MONGODB_URI": "mongodb+srv://interiotaleas:interiotaleas@cluster0.vnxct.mongodb.net/Interio"
+          }
+        },
+        "Role": {
+          "Fn::GetAtt": [
+            "IamRoleLambdaExecution",
+            "Arn"
+          ]
+        }
+      },
+      "DependsOn": [
+        "CreateCommentLogGroup"
+      ]
+    },
+    "GetCommentByIdLambdaFunction": {
+      "Type": "AWS::Lambda::Function",
+      "Properties": {
+        "Code": {
+          "S3Bucket": "serverless-framework-deployments-eu-central-1-7d33afbf-5e19",
+          "S3Key": "serverless/interio-service/dev/1729589736111-2024-10-22T09:35:36.111Z/interio-service.zip"
+        },
+        "Handler": "handlers/comment/getCommentById.handler",
+        "Runtime": "nodejs16.x",
+        "FunctionName": "interio-service-dev-getCommentById",
+        "MemorySize": 128,
+        "Timeout": 6,
+        "Environment": {
+          "Variables": {
+            "MONGODB_URI": "mongodb+srv://interiotaleas:interiotaleas@cluster0.vnxct.mongodb.net/Interio"
+          }
+        },
+        "Role": {
+          "Fn::GetAtt": [
+            "IamRoleLambdaExecution",
+            "Arn"
+          ]
+        }
+      },
+      "DependsOn": [
+        "GetCommentByIdLogGroup"
+      ]
+    },
+    "DeleteCommentLambdaFunction": {
+      "Type": "AWS::Lambda::Function",
+      "Properties": {
+        "Code": {
+          "S3Bucket": "serverless-framework-deployments-eu-central-1-7d33afbf-5e19",
+          "S3Key": "serverless/interio-service/dev/1729589736111-2024-10-22T09:35:36.111Z/interio-service.zip"
+        },
+        "Handler": "handlers/comment/deleteComment.handler",
+        "Runtime": "nodejs16.x",
+        "FunctionName": "interio-service-dev-deleteComment",
+        "MemorySize": 128,
+        "Timeout": 6,
+        "Environment": {
+          "Variables": {
+            "MONGODB_URI": "mongodb+srv://interiotaleas:interiotaleas@cluster0.vnxct.mongodb.net/Interio"
+          }
+        },
+        "Role": {
+          "Fn::GetAtt": [
+            "IamRoleLambdaExecution",
+            "Arn"
+          ]
+        }
+      },
+      "DependsOn": [
+        "DeleteCommentLogGroup"
       ]
     },
     "GetUserLambdaVersionezMCHunsiOxwmDicXPbjW0Q4fexn5mYH4n6S330mdM": {
@@ -1136,6 +1238,36 @@
         "CodeSha256": "l/C4NEDWaPzng5fBokC2P8bRE6cBGpv6knnCCnsxqMo="
       }
     },
+    "CreateCommentLambdaVersion2OUxb3wCzUMBrtydAtlmDLXCJ7Msb1X5dO82Cy4gM4": {
+      "Type": "AWS::Lambda::Version",
+      "DeletionPolicy": "Retain",
+      "Properties": {
+        "FunctionName": {
+          "Ref": "CreateCommentLambdaFunction"
+        },
+        "CodeSha256": "l/C4NEDWaPzng5fBokC2P8bRE6cBGpv6knnCCnsxqMo="
+      }
+    },
+    "GetCommentByIdLambdaVersionUpiVuH9fiYjfwJuxMxBZd03dUvVcMNYMK1YR1FxFWs": {
+      "Type": "AWS::Lambda::Version",
+      "DeletionPolicy": "Retain",
+      "Properties": {
+        "FunctionName": {
+          "Ref": "GetCommentByIdLambdaFunction"
+        },
+        "CodeSha256": "l/C4NEDWaPzng5fBokC2P8bRE6cBGpv6knnCCnsxqMo="
+      }
+    },
+    "DeleteCommentLambdaVersion5EjMMaBGmnvU6OU0AtOJkdOSFVYoI67yXHQwDGs0": {
+      "Type": "AWS::Lambda::Version",
+      "DeletionPolicy": "Retain",
+      "Properties": {
+        "FunctionName": {
+          "Ref": "DeleteCommentLambdaFunction"
+        },
+        "CodeSha256": "l/C4NEDWaPzng5fBokC2P8bRE6cBGpv6knnCCnsxqMo="
+      }
+    },
     "ApiGatewayRestApi": {
       "Type": "AWS::ApiGateway::RestApi",
       "Properties": {
@@ -1363,6 +1495,33 @@
       "Properties": {
         "ParentId": {
           "Ref": "ApiGatewayResourceFinishedjobs"
+        },
+        "PathPart": "{id}",
+        "RestApiId": {
+          "Ref": "ApiGatewayRestApi"
+        }
+      }
+    },
+    "ApiGatewayResourceComment": {
+      "Type": "AWS::ApiGateway::Resource",
+      "Properties": {
+        "ParentId": {
+          "Fn::GetAtt": [
+            "ApiGatewayRestApi",
+            "RootResourceId"
+          ]
+        },
+        "PathPart": "comment",
+        "RestApiId": {
+          "Ref": "ApiGatewayRestApi"
+        }
+      }
+    },
+    "ApiGatewayResourceCommentIdVar": {
+      "Type": "AWS::ApiGateway::Resource",
+      "Properties": {
+        "ParentId": {
+          "Ref": "ApiGatewayResourceComment"
         },
         "PathPart": "{id}",
         "RestApiId": {
@@ -2129,6 +2288,96 @@
         },
         "ResourceId": {
           "Ref": "ApiGatewayResourceFinishedjobsIdVar"
+        },
+        "RestApiId": {
+          "Ref": "ApiGatewayRestApi"
+        }
+      }
+    },
+    "ApiGatewayMethodCommentOptions": {
+      "Type": "AWS::ApiGateway::Method",
+      "Properties": {
+        "AuthorizationType": "NONE",
+        "HttpMethod": "OPTIONS",
+        "MethodResponses": [
+          {
+            "StatusCode": "200",
+            "ResponseParameters": {
+              "method.response.header.Access-Control-Allow-Origin": true,
+              "method.response.header.Access-Control-Allow-Headers": true,
+              "method.response.header.Access-Control-Allow-Methods": true
+            },
+            "ResponseModels": {}
+          }
+        ],
+        "RequestParameters": {},
+        "Integration": {
+          "Type": "MOCK",
+          "RequestTemplates": {
+            "application/json": "{statusCode:200}"
+          },
+          "ContentHandling": "CONVERT_TO_TEXT",
+          "IntegrationResponses": [
+            {
+              "StatusCode": "200",
+              "ResponseParameters": {
+                "method.response.header.Access-Control-Allow-Origin": "'*'",
+                "method.response.header.Access-Control-Allow-Headers": "'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token,X-Amz-User-Agent,X-Amzn-Trace-Id'",
+                "method.response.header.Access-Control-Allow-Methods": "'OPTIONS,POST'"
+              },
+              "ResponseTemplates": {
+                "application/json": ""
+              }
+            }
+          ]
+        },
+        "ResourceId": {
+          "Ref": "ApiGatewayResourceComment"
+        },
+        "RestApiId": {
+          "Ref": "ApiGatewayRestApi"
+        }
+      }
+    },
+    "ApiGatewayMethodCommentIdVarOptions": {
+      "Type": "AWS::ApiGateway::Method",
+      "Properties": {
+        "AuthorizationType": "NONE",
+        "HttpMethod": "OPTIONS",
+        "MethodResponses": [
+          {
+            "StatusCode": "200",
+            "ResponseParameters": {
+              "method.response.header.Access-Control-Allow-Origin": true,
+              "method.response.header.Access-Control-Allow-Headers": true,
+              "method.response.header.Access-Control-Allow-Methods": true
+            },
+            "ResponseModels": {}
+          }
+        ],
+        "RequestParameters": {},
+        "Integration": {
+          "Type": "MOCK",
+          "RequestTemplates": {
+            "application/json": "{statusCode:200}"
+          },
+          "ContentHandling": "CONVERT_TO_TEXT",
+          "IntegrationResponses": [
+            {
+              "StatusCode": "200",
+              "ResponseParameters": {
+                "method.response.header.Access-Control-Allow-Origin": "'*'",
+                "method.response.header.Access-Control-Allow-Headers": "'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token,X-Amz-User-Agent,X-Amzn-Trace-Id'",
+                "method.response.header.Access-Control-Allow-Methods": "'OPTIONS,DELETE,GET'"
+              },
+              "ResponseTemplates": {
+                "application/json": ""
+              }
+            }
+          ]
+        },
+        "ResourceId": {
+          "Ref": "ApiGatewayResourceCommentIdVar"
         },
         "RestApiId": {
           "Ref": "ApiGatewayRestApi"
@@ -3239,7 +3488,145 @@
         "GetJobByIdLambdaPermissionApiGateway"
       ]
     },
-    "ApiGatewayDeployment1729587503911": {
+    "ApiGatewayMethodCommentPost": {
+      "Type": "AWS::ApiGateway::Method",
+      "Properties": {
+        "HttpMethod": "POST",
+        "RequestParameters": {},
+        "ResourceId": {
+          "Ref": "ApiGatewayResourceComment"
+        },
+        "RestApiId": {
+          "Ref": "ApiGatewayRestApi"
+        },
+        "ApiKeyRequired": false,
+        "AuthorizationType": "NONE",
+        "Integration": {
+          "IntegrationHttpMethod": "POST",
+          "Type": "AWS_PROXY",
+          "Uri": {
+            "Fn::Join": [
+              "",
+              [
+                "arn:",
+                {
+                  "Ref": "AWS::Partition"
+                },
+                ":apigateway:",
+                {
+                  "Ref": "AWS::Region"
+                },
+                ":lambda:path/2015-03-31/functions/",
+                {
+                  "Fn::GetAtt": [
+                    "CreateCommentLambdaFunction",
+                    "Arn"
+                  ]
+                },
+                "/invocations"
+              ]
+            ]
+          }
+        },
+        "MethodResponses": []
+      },
+      "DependsOn": [
+        "CreateCommentLambdaPermissionApiGateway"
+      ]
+    },
+    "ApiGatewayMethodCommentIdVarGet": {
+      "Type": "AWS::ApiGateway::Method",
+      "Properties": {
+        "HttpMethod": "GET",
+        "RequestParameters": {},
+        "ResourceId": {
+          "Ref": "ApiGatewayResourceCommentIdVar"
+        },
+        "RestApiId": {
+          "Ref": "ApiGatewayRestApi"
+        },
+        "ApiKeyRequired": false,
+        "AuthorizationType": "NONE",
+        "Integration": {
+          "IntegrationHttpMethod": "POST",
+          "Type": "AWS_PROXY",
+          "Uri": {
+            "Fn::Join": [
+              "",
+              [
+                "arn:",
+                {
+                  "Ref": "AWS::Partition"
+                },
+                ":apigateway:",
+                {
+                  "Ref": "AWS::Region"
+                },
+                ":lambda:path/2015-03-31/functions/",
+                {
+                  "Fn::GetAtt": [
+                    "GetCommentByIdLambdaFunction",
+                    "Arn"
+                  ]
+                },
+                "/invocations"
+              ]
+            ]
+          }
+        },
+        "MethodResponses": []
+      },
+      "DependsOn": [
+        "GetCommentByIdLambdaPermissionApiGateway"
+      ]
+    },
+    "ApiGatewayMethodCommentIdVarDelete": {
+      "Type": "AWS::ApiGateway::Method",
+      "Properties": {
+        "HttpMethod": "DELETE",
+        "RequestParameters": {},
+        "ResourceId": {
+          "Ref": "ApiGatewayResourceCommentIdVar"
+        },
+        "RestApiId": {
+          "Ref": "ApiGatewayRestApi"
+        },
+        "ApiKeyRequired": false,
+        "AuthorizationType": "NONE",
+        "Integration": {
+          "IntegrationHttpMethod": "POST",
+          "Type": "AWS_PROXY",
+          "Uri": {
+            "Fn::Join": [
+              "",
+              [
+                "arn:",
+                {
+                  "Ref": "AWS::Partition"
+                },
+                ":apigateway:",
+                {
+                  "Ref": "AWS::Region"
+                },
+                ":lambda:path/2015-03-31/functions/",
+                {
+                  "Fn::GetAtt": [
+                    "DeleteCommentLambdaFunction",
+                    "Arn"
+                  ]
+                },
+                "/invocations"
+              ]
+            ]
+          }
+        },
+        "MethodResponses": []
+      },
+      "DependsOn": [
+        "DeleteCommentLambdaPermissionApiGateway"
+      ]
+    },
+    "ApiGatewayDeployment1729589732400": {
       "Type": "AWS::ApiGateway::Deployment",
       "Properties": {
         "RestApiId": {
@@ -3265,6 +3652,8 @@
         "ApiGatewayMethodCategoryAllOptions",
         "ApiGatewayMethodFinishedjobsOptions",
         "ApiGatewayMethodFinishedjobsIdVarOptions",
+        "ApiGatewayMethodCommentOptions",
+        "ApiGatewayMethodCommentIdVarOptions",
         "ApiGatewayMethodUserIdVarGet",
         "ApiGatewayMethodUserPost",
         "ApiGatewayMethodUserIdVarDelete",
@@ -3288,7 +3677,10 @@
         "ApiGatewayMethodCategoryIdVarGet",
         "ApiGatewayMethodCategoryAllGet",
         "ApiGatewayMethodFinishedjobsPost",
-        "ApiGatewayMethodFinishedjobsIdVarGet"
+        "ApiGatewayMethodFinishedjobsIdVarGet",
+        "ApiGatewayMethodCommentPost",
+        "ApiGatewayMethodCommentIdVarGet",
+        "ApiGatewayMethodCommentIdVarDelete"
       ]
     },
     "GetUserLambdaPermissionApiGateway": {
@@ -4178,6 +4570,117 @@
           ]
         }
       }
+    },
+    "CreateCommentLambdaPermissionApiGateway": {
+      "Type": "AWS::Lambda::Permission",
+      "Properties": {
+        "FunctionName": {
+          "Fn::GetAtt": [
+            "CreateCommentLambdaFunction",
+            "Arn"
+          ]
+        },
+        "Action": "lambda:InvokeFunction",
+        "Principal": "apigateway.amazonaws.com",
+        "SourceArn": {
+          "Fn::Join": [
+            "",
+            [
+              "arn:",
+              {
+                "Ref": "AWS::Partition"
+              },
+              ":execute-api:",
+              {
+                "Ref": "AWS::Region"
+              },
+              ":",
+              {
+                "Ref": "AWS::AccountId"
+              },
+              ":",
+              {
+                "Ref": "ApiGatewayRestApi"
+              },
+              "/*/*"
+            ]
+          ]
+        }
+      }
+    },
+    "GetCommentByIdLambdaPermissionApiGateway": {
+      "Type": "AWS::Lambda::Permission",
+      "Properties": {
+        "FunctionName": {
+          "Fn::GetAtt": [
+            "GetCommentByIdLambdaFunction",
+            "Arn"
+          ]
+        },
+        "Action": "lambda:InvokeFunction",
+        "Principal": "apigateway.amazonaws.com",
+        "SourceArn": {
+          "Fn::Join": [
+            "",
+            [
+              "arn:",
+              {
+                "Ref": "AWS::Partition"
+              },
+              ":execute-api:",
+              {
+                "Ref": "AWS::Region"
+              },
+              ":",
+              {
+                "Ref": "AWS::AccountId"
+              },
+              ":",
+              {
+                "Ref": "ApiGatewayRestApi"
+              },
+              "/*/*"
+            ]
+          ]
+        }
+      }
+    },
+    "DeleteCommentLambdaPermissionApiGateway": {
+      "Type": "AWS::Lambda::Permission",
+      "Properties": {
+        "FunctionName": {
+          "Fn::GetAtt": [
+            "DeleteCommentLambdaFunction",
+            "Arn"
+          ]
+        },
+        "Action": "lambda:InvokeFunction",
+        "Principal": "apigateway.amazonaws.com",
+        "SourceArn": {
+          "Fn::Join": [
+            "",
+            [
+              "arn:",
+              {
+                "Ref": "AWS::Partition"
+              },
+              ":execute-api:",
+              {
+                "Ref": "AWS::Region"
+              },
+              ":",
+              {
+                "Ref": "AWS::AccountId"
+              },
+              ":",
+              {
+                "Ref": "ApiGatewayRestApi"
+              },
+              "/*/*"
+            ]
+          ]
+        }
+      }
     }
   },
   "Outputs": {
@@ -4401,6 +4904,33 @@
       },
       "Export": {
         "Name": "sls-interio-service-dev-GetJobByIdLambdaFunctionQualifiedArn"
+      }
+    },
+    "CreateCommentLambdaFunctionQualifiedArn": {
+      "Description": "Current Lambda function version",
+      "Value": {
+        "Ref": "CreateCommentLambdaVersion2OUxb3wCzUMBrtydAtlmDLXCJ7Msb1X5dO82Cy4gM4"
+      },
+      "Export": {
+        "Name": "sls-interio-service-dev-CreateCommentLambdaFunctionQualifiedArn"
+      }
+    },
+    "GetCommentByIdLambdaFunctionQualifiedArn": {
+      "Description": "Current Lambda function version",
+      "Value": {
+        "Ref": "GetCommentByIdLambdaVersionUpiVuH9fiYjfwJuxMxBZd03dUvVcMNYMK1YR1FxFWs"
+      },
+      "Export": {
+        "Name": "sls-interio-service-dev-GetCommentByIdLambdaFunctionQualifiedArn"
+      }
+    },
+    "DeleteCommentLambdaFunctionQualifiedArn": {
+      "Description": "Current Lambda function version",
+      "Value": {
+        "Ref": "DeleteCommentLambdaVersion5EjMMaBGmnvU6OU0AtOJkdOSFVYoI67yXHQwDGs0"
+      },
+      "Export": {
+        "Name": "sls-interio-service-dev-DeleteCommentLambdaFunctionQualifiedArn"
       }
     },
     "ServiceEndpoint": {
