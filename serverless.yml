@@ -173,5 +173,18 @@ functions:
           path: /category/all
           method: GET
           cors: true
-
+  createJob:
+    handler: handlers/finishedJobs/createJob.handler
+    events:
+      - http:
+          path: /finishedJobs
+          method: POST
+          cors: true
+  getJobById:
+    handler: handlers/finishedJobs/getJobById.handler
+    events:
+      - http:
+          path: /finishedJobs/{id}
+          method: GET
+          cors: true
  
