@@ -1,7 +1,7 @@
 import SubscriptionPlan from "../../models/SubscriptionPlan.js";
 import connectDB from "../../configurations/connectDB.js";
 
-export const hanlder = async (event) => {
+export const handler = async (event) => {
     const { id } = event.pathParameters;
 
     try {
