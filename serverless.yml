@@ -292,6 +292,20 @@ functions:
           path: /subscriptionManager/all
           method: DELETE
           cors: true
+  createPaymentTransaction:
+    handler: handlers/paymentTransaction/createPayment.handler
+    events:
+      - http:
+          path: /paymentTransaction
+          method: POST
+          cors: true
+  getPaymentTransaction:
+    handler: handlers/paymentTransaction/getPaymentById.handler
+    events:
+      - http:
+          path: /paymentTransaction/{id}
+          method: GET
+          cors: true
   
   
   
