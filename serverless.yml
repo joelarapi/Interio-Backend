@@ -306,7 +306,59 @@ functions:
           path: /paymentTransaction/{id}
           method: GET
           cors: true
-  
-  
-  
- 
+  generatePresignedURL:
+    handler: handlers/logic/generatePresignedURL.handler
+    events:
+      - http:
+          path: /generatePresignedURL
+          method: POST
+          cors: true
+  getBusinessByCategory:
+    handler: handlers/logic/getBusinessByCategory.handler
+    events:
+      - http:
+          path: /getBusinessByCategory/{name}
+          method: GET
+          cors: true
+  getBusinessFinishedJobs:
+    handler: handlers/logic/getBusinessFinishedJobs.handler
+    events:
+      - http:
+          path: /getBusinessFinishedJobs/{id}
+          method: GET
+          cors: true
+  getPostComments:
+    handler: handlers/logic/getPostComments.handler
+    events:
+      - http:
+          path: /getPostComments/{id}
+          method: GET
+          cors: true
+  getPostOffers:
+    handler: handlers/logic/getPostOffers.handler
+    events:
+      - http:
+          path: /getPostOffers/{id}
+          method: GET
+          cors: true
+  getSuggesstedPosts:
+    handler: handlers/logic/getSuggesstedPosts.handler
+    events:
+      - http:
+          path: /getSuggesstedPosts/{id}
+          method: GET
+          cors: true
+  messageMarkAsRead:
+    handler: handlers/logic/messageMarkAsRead.handler
+    events:
+      - http:
+          path: /messageMarkAsRead/{id}
+          method: PUT
+          cors: true
+  notificationMarkAsRead:
+    handler: handlers/logic/notificationMarkAsRead.handler
+    events:
+      - http:
+          path: /notificationMarkAsRead/{id}
+          method: PUT
+          cors: true

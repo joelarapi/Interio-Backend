@@ -1,14 +1,16 @@
 import Business from "../../models/Business.js";
-import Category from "../../models/Category.js";
+import Category from "../../models/Categories.js";
 import connectDB from "../../configurations/connectDB.js";
 
 export const handler = async (event) => {
-    const { category } = event.pathParameters;
+    const { name } = event.pathParameters;
 
     try {
         await connectDB();
-        const categoryData = await Category.findOne({ name: { $regex: category, $options: 'i' } });
+        console.log(name);
+        const categoryData = await Category.findOne({ name: name });
         
+        console.log(categoryData);
         if (!categoryData) {
             return {
                 statusCode: 404,
@@ -21,6 +23,7 @@ export const handler = async (event) => {
 
         const businesses = await Business.find({ category: categoryData._id });
 
+        console.log(businesses);
         if (businesses.length === 0) {
             return {
                 statusCode: 404,

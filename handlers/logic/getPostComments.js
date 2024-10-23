@@ -2,11 +2,11 @@ import Comment from "../../models/Comment.js";
 import connectDB from "../../configurations/connectDB.js";
 
 export const handler = async (event) => {
-    const { postId } = event.pathParameters;
+    const { id } = event.pathParameters;
 
     try {
         await connectDB();
-        const comments = await Comment.find({ postId }).populate('authorId');
+        const comments = await Comment.find({ postId: id });
 
         return {
             statusCode: 200,

@@ -2,11 +2,11 @@ import Offer from '../../models/Offer.js';
 import connectDB from "../../configurations/connectDB.js";
 
 export const handler = async (event) => {
-    const { postId } = event.pathParameters;
+    const { id } = event.pathParameters;
 
     try {
         await connectDB();
-        const offers = await Offer.find({ postId }).populate('businessId');
+        const offers = await Offer.find({ postId: id });
 
         return {
             statusCode: 200,
