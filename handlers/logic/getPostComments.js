@@ -6,7 +6,7 @@ export const handler = async (event) => {
 
     try {
         await connectDB();
-        const comments = await Comment.find(id);
+        const comments = await Comment.find({ postId: id });
 
         return {
             statusCode: 200,

@@ -6,7 +6,7 @@ export const handler = async (event) => {
 
     try {
         await connectDB();
-        const jobs = await FinishedJobs.find(id);
+        const jobs = await FinishedJobs.find({ businessId: id });
         return {
             statusCode: 200,
             body: JSON.stringify(jobs),

@@ -311,7 +311,7 @@ functions:
     events:
       - http:
           path: /generatePresignedURL
-          method: GET
+          method: POST
           cors: true
   getBusinessByCategory:
     handler: handlers/logic/getBusinessByCategory.handler

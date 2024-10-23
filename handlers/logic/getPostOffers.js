@@ -6,7 +6,7 @@ export const handler = async (event) => {
 
     try {
         await connectDB();
-        const offers = await Offer.find(id);
+        const offers = await Offer.find({ postId: id });
 
         return {
             statusCode: 200,
