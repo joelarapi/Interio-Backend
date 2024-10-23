@@ -248,6 +248,54 @@
         "LogGroupName": "/aws/lambda/interio-service-dev-getPaymentTransaction"
       }
     },
+    "GeneratePresignedURLLogGroup": {
+      "Type": "AWS::Logs::LogGroup",
+      "Properties": {
+        "LogGroupName": "/aws/lambda/interio-service-dev-generatePresignedURL"
+      }
+    },
+    "GetBusinessByCategoryLogGroup": {
+      "Type": "AWS::Logs::LogGroup",
+      "Properties": {
+        "LogGroupName": "/aws/lambda/interio-service-dev-getBusinessByCategory"
+      }
+    },
+    "GetBusinessFinishedJobsLogGroup": {
+      "Type": "AWS::Logs::LogGroup",
+      "Properties": {
+        "LogGroupName": "/aws/lambda/interio-service-dev-getBusinessFinishedJobs"
+      }
+    },
+    "GetPostCommentsLogGroup": {
+      "Type": "AWS::Logs::LogGroup",
+      "Properties": {
+        "LogGroupName": "/aws/lambda/interio-service-dev-getPostComments"
+      }
+    },
+    "GetPostOffersLogGroup": {
+      "Type": "AWS::Logs::LogGroup",
+      "Properties": {
+        "LogGroupName": "/aws/lambda/interio-service-dev-getPostOffers"
+      }
+    },
+    "GetSuggesstedPostsLogGroup": {
+      "Type": "AWS::Logs::LogGroup",
+      "Properties": {
+        "LogGroupName": "/aws/lambda/interio-service-dev-getSuggesstedPosts"
+      }
+    },
+    "MessageMarkAsReadLogGroup": {
+      "Type": "AWS::Logs::LogGroup",
+      "Properties": {
+        "LogGroupName": "/aws/lambda/interio-service-dev-messageMarkAsRead"
+      }
+    },
+    "NotificationMarkAsReadLogGroup": {
+      "Type": "AWS::Logs::LogGroup",
+      "Properties": {
+        "LogGroupName": "/aws/lambda/interio-service-dev-notificationMarkAsRead"
+      }
+    },
     "IamRoleLambdaExecution": {
       "Type": "AWS::IAM::Role",
       "Properties": {
@@ -331,7 +379,7 @@
       "Properties": {
         "Code": {
           "S3Bucket": "serverless-framework-deployments-eu-central-1-7d33afbf-5e19",
-          "S3Key": "serverless/interio-service/dev/1729612122995-2024-10-22T15:48:42.995Z/interio-service.zip"
+          "S3Key": "serverless/interio-service/dev/1729669237168-2024-10-23T07:40:37.168Z/interio-service.zip"
         },
         "Handler": "handlers/user/getUserById.handler",
         "Runtime": "nodejs16.x",
@@ -359,7 +407,7 @@
       "Properties": {
         "Code": {
           "S3Bucket": "serverless-framework-deployments-eu-central-1-7d33afbf-5e19",
-          "S3Key": "serverless/interio-service/dev/1729612122995-2024-10-22T15:48:42.995Z/interio-service.zip"
+          "S3Key": "serverless/interio-service/dev/1729669237168-2024-10-23T07:40:37.168Z/interio-service.zip"
         },
         "Handler": "handlers/user/createUser.handler",
         "Runtime": "nodejs16.x",
@@ -387,7 +435,7 @@
       "Properties": {
         "Code": {
           "S3Bucket": "serverless-framework-deployments-eu-central-1-7d33afbf-5e19",
-          "S3Key": "serverless/interio-service/dev/1729612122995-2024-10-22T15:48:42.995Z/interio-service.zip"
+          "S3Key": "serverless/interio-service/dev/1729669237168-2024-10-23T07:40:37.168Z/interio-service.zip"
         },
         "Handler": "handlers/user/deleteUser.handler",
         "Runtime": "nodejs16.x",
@@ -415,7 +463,7 @@
       "Properties": {
         "Code": {
           "S3Bucket": "serverless-framework-deployments-eu-central-1-7d33afbf-5e19",
-          "S3Key": "serverless/interio-service/dev/1729612122995-2024-10-22T15:48:42.995Z/interio-service.zip"
+          "S3Key": "serverless/interio-service/dev/1729669237168-2024-10-23T07:40:37.168Z/interio-service.zip"
         },
         "Handler": "handlers/user/getUserByName.handler",
         "Runtime": "nodejs16.x",
@@ -443,7 +491,7 @@
       "Properties": {
         "Code": {
           "S3Bucket": "serverless-framework-deployments-eu-central-1-7d33afbf-5e19",
-          "S3Key": "serverless/interio-service/dev/1729612122995-2024-10-22T15:48:42.995Z/interio-service.zip"
+          "S3Key": "serverless/interio-service/dev/1729669237168-2024-10-23T07:40:37.168Z/interio-service.zip"
         },
         "Handler": "handlers/user/updateUser.handler",
         "Runtime": "nodejs16.x",
@@ -471,7 +519,7 @@
       "Properties": {
         "Code": {
           "S3Bucket": "serverless-framework-deployments-eu-central-1-7d33afbf-5e19",
-          "S3Key": "serverless/interio-service/dev/1729612122995-2024-10-22T15:48:42.995Z/interio-service.zip"
+          "S3Key": "serverless/interio-service/dev/1729669237168-2024-10-23T07:40:37.168Z/interio-service.zip"
         },
         "Handler": "handlers/business/getBusinessById.handler",
         "Runtime": "nodejs16.x",
@@ -499,7 +547,7 @@
       "Properties": {
         "Code": {
           "S3Bucket": "serverless-framework-deployments-eu-central-1-7d33afbf-5e19",
-          "S3Key": "serverless/interio-service/dev/1729612122995-2024-10-22T15:48:42.995Z/interio-service.zip"
+          "S3Key": "serverless/interio-service/dev/1729669237168-2024-10-23T07:40:37.168Z/interio-service.zip"
         },
         "Handler": "handlers/business/createBusiness.handler",
         "Runtime": "nodejs16.x",
@@ -527,7 +575,7 @@
       "Properties": {
         "Code": {
           "S3Bucket": "serverless-framework-deployments-eu-central-1-7d33afbf-5e19",
-          "S3Key": "serverless/interio-service/dev/1729612122995-2024-10-22T15:48:42.995Z/interio-service.zip"
+          "S3Key": "serverless/interio-service/dev/1729669237168-2024-10-23T07:40:37.168Z/interio-service.zip"
         },
         "Handler": "handlers/business/deleteBusiness.handler",
         "Runtime": "nodejs16.x",
@@ -555,7 +603,7 @@
       "Properties": {
         "Code": {
           "S3Bucket": "serverless-framework-deployments-eu-central-1-7d33afbf-5e19",
-          "S3Key": "serverless/interio-service/dev/1729612122995-2024-10-22T15:48:42.995Z/interio-service.zip"
+          "S3Key": "serverless/interio-service/dev/1729669237168-2024-10-23T07:40:37.168Z/interio-service.zip"
         },
         "Handler": "handlers/business/getBusinessByName.handler",
         "Runtime": "nodejs16.x",
@@ -583,7 +631,7 @@
       "Properties": {
         "Code": {
           "S3Bucket": "serverless-framework-deployments-eu-central-1-7d33afbf-5e19",
-          "S3Key": "serverless/interio-service/dev/1729612122995-2024-10-22T15:48:42.995Z/interio-service.zip"
+          "S3Key": "serverless/interio-service/dev/1729669237168-2024-10-23T07:40:37.168Z/interio-service.zip"
         },
         "Handler": "handlers/business/updateBusiness.handler",
         "Runtime": "nodejs16.x",
@@ -611,7 +659,7 @@
       "Properties": {
         "Code": {
           "S3Bucket": "serverless-framework-deployments-eu-central-1-7d33afbf-5e19",
-          "S3Key": "serverless/interio-service/dev/1729612122995-2024-10-22T15:48:42.995Z/interio-service.zip"
+          "S3Key": "serverless/interio-service/dev/1729669237168-2024-10-23T07:40:37.168Z/interio-service.zip"
         },
         "Handler": "handlers/post/getPostById.handler",
         "Runtime": "nodejs16.x",
@@ -639,7 +687,7 @@
       "Properties": {
         "Code": {
           "S3Bucket": "serverless-framework-deployments-eu-central-1-7d33afbf-5e19",
-          "S3Key": "serverless/interio-service/dev/1729612122995-2024-10-22T15:48:42.995Z/interio-service.zip"
+          "S3Key": "serverless/interio-service/dev/1729669237168-2024-10-23T07:40:37.168Z/interio-service.zip"
         },
         "Handler": "handlers/post/createPost.handler",
         "Runtime": "nodejs16.x",
@@ -667,7 +715,7 @@
       "Properties": {
         "Code": {
           "S3Bucket": "serverless-framework-deployments-eu-central-1-7d33afbf-5e19",
-          "S3Key": "serverless/interio-service/dev/1729612122995-2024-10-22T15:48:42.995Z/interio-service.zip"
+          "S3Key": "serverless/interio-service/dev/1729669237168-2024-10-23T07:40:37.168Z/interio-service.zip"
         },
         "Handler": "handlers/post/deletePost.handler",
         "Runtime": "nodejs16.x",
@@ -695,7 +743,7 @@
       "Properties": {
         "Code": {
           "S3Bucket": "serverless-framework-deployments-eu-central-1-7d33afbf-5e19",
-          "S3Key": "serverless/interio-service/dev/1729612122995-2024-10-22T15:48:42.995Z/interio-service.zip"
+          "S3Key": "serverless/interio-service/dev/1729669237168-2024-10-23T07:40:37.168Z/interio-service.zip"
         },
         "Handler": "handlers/post/getFilteredPosts.handler",
         "Runtime": "nodejs16.x",
@@ -723,7 +771,7 @@
       "Properties": {
         "Code": {
           "S3Bucket": "serverless-framework-deployments-eu-central-1-7d33afbf-5e19",
-          "S3Key": "serverless/interio-service/dev/1729612122995-2024-10-22T15:48:42.995Z/interio-service.zip"
+          "S3Key": "serverless/interio-service/dev/1729669237168-2024-10-23T07:40:37.168Z/interio-service.zip"
         },
         "Handler": "handlers/post/getAvailablePosts.handler",
         "Runtime": "nodejs16.x",
@@ -751,7 +799,7 @@
       "Properties": {
         "Code": {
           "S3Bucket": "serverless-framework-deployments-eu-central-1-7d33afbf-5e19",
-          "S3Key": "serverless/interio-service/dev/1729612122995-2024-10-22T15:48:42.995Z/interio-service.zip"
+          "S3Key": "serverless/interio-service/dev/1729669237168-2024-10-23T07:40:37.168Z/interio-service.zip"
         },
         "Handler": "handlers/offer/createOffer.handler",
         "Runtime": "nodejs16.x",
@@ -779,7 +827,7 @@
       "Properties": {
         "Code": {
           "S3Bucket": "serverless-framework-deployments-eu-central-1-7d33afbf-5e19",
-          "S3Key": "serverless/interio-service/dev/1729612122995-2024-10-22T15:48:42.995Z/interio-service.zip"
+          "S3Key": "serverless/interio-service/dev/1729669237168-2024-10-23T07:40:37.168Z/interio-service.zip"
         },
         "Handler": "handlers/offer/deleteOffer.handler",
         "Runtime": "nodejs16.x",
@@ -807,7 +855,7 @@
       "Properties": {
         "Code": {
           "S3Bucket": "serverless-framework-deployments-eu-central-1-7d33afbf-5e19",
-          "S3Key": "serverless/interio-service/dev/1729612122995-2024-10-22T15:48:42.995Z/interio-service.zip"
+          "S3Key": "serverless/interio-service/dev/1729669237168-2024-10-23T07:40:37.168Z/interio-service.zip"
         },
         "Handler": "handlers/offer/getOfferById.handler",
         "Runtime": "nodejs16.x",
@@ -835,7 +883,7 @@
       "Properties": {
         "Code": {
           "S3Bucket": "serverless-framework-deployments-eu-central-1-7d33afbf-5e19",
-          "S3Key": "serverless/interio-service/dev/1729612122995-2024-10-22T15:48:42.995Z/interio-service.zip"
+          "S3Key": "serverless/interio-service/dev/1729669237168-2024-10-23T07:40:37.168Z/interio-service.zip"
         },
         "Handler": "handlers/categories/createCategory.handler",
         "Runtime": "nodejs16.x",
@@ -863,7 +911,7 @@
       "Properties": {
         "Code": {
           "S3Bucket": "serverless-framework-deployments-eu-central-1-7d33afbf-5e19",
-          "S3Key": "serverless/interio-service/dev/1729612122995-2024-10-22T15:48:42.995Z/interio-service.zip"
+          "S3Key": "serverless/interio-service/dev/1729669237168-2024-10-23T07:40:37.168Z/interio-service.zip"
         },
         "Handler": "handlers/categories/deleteCategory.handler",
         "Runtime": "nodejs16.x",
@@ -891,7 +939,7 @@
       "Properties": {
         "Code": {
           "S3Bucket": "serverless-framework-deployments-eu-central-1-7d33afbf-5e19",
-          "S3Key": "serverless/interio-service/dev/1729612122995-2024-10-22T15:48:42.995Z/interio-service.zip"
+          "S3Key": "serverless/interio-service/dev/1729669237168-2024-10-23T07:40:37.168Z/interio-service.zip"
         },
         "Handler": "handlers/categories/getCategoryById.handler",
         "Runtime": "nodejs16.x",
@@ -919,7 +967,7 @@
       "Properties": {
         "Code": {
           "S3Bucket": "serverless-framework-deployments-eu-central-1-7d33afbf-5e19",
-          "S3Key": "serverless/interio-service/dev/1729612122995-2024-10-22T15:48:42.995Z/interio-service.zip"
+          "S3Key": "serverless/interio-service/dev/1729669237168-2024-10-23T07:40:37.168Z/interio-service.zip"
         },
         "Handler": "handlers/categories/getAllCategories.handler",
         "Runtime": "nodejs16.x",
@@ -947,7 +995,7 @@
       "Properties": {
         "Code": {
           "S3Bucket": "serverless-framework-deployments-eu-central-1-7d33afbf-5e19",
-          "S3Key": "serverless/interio-service/dev/1729612122995-2024-10-22T15:48:42.995Z/interio-service.zip"
+          "S3Key": "serverless/interio-service/dev/1729669237168-2024-10-23T07:40:37.168Z/interio-service.zip"
         },
         "Handler": "handlers/finishedJobs/createJob.handler",
         "Runtime": "nodejs16.x",
@@ -975,7 +1023,7 @@
       "Properties": {
         "Code": {
           "S3Bucket": "serverless-framework-deployments-eu-central-1-7d33afbf-5e19",
-          "S3Key": "serverless/interio-service/dev/1729612122995-2024-10-22T15:48:42.995Z/interio-service.zip"
+          "S3Key": "serverless/interio-service/dev/1729669237168-2024-10-23T07:40:37.168Z/interio-service.zip"
         },
         "Handler": "handlers/finishedJobs/getJobById.handler",
         "Runtime": "nodejs16.x",
@@ -1003,7 +1051,7 @@
       "Properties": {
         "Code": {
           "S3Bucket": "serverless-framework-deployments-eu-central-1-7d33afbf-5e19",
-          "S3Key": "serverless/interio-service/dev/1729612122995-2024-10-22T15:48:42.995Z/interio-service.zip"
+          "S3Key": "serverless/interio-service/dev/1729669237168-2024-10-23T07:40:37.168Z/interio-service.zip"
         },
         "Handler": "handlers/comment/createComment.handler",
         "Runtime": "nodejs16.x",
@@ -1031,7 +1079,7 @@
       "Properties": {
         "Code": {
           "S3Bucket": "serverless-framework-deployments-eu-central-1-7d33afbf-5e19",
-          "S3Key": "serverless/interio-service/dev/1729612122995-2024-10-22T15:48:42.995Z/interio-service.zip"
+          "S3Key": "serverless/interio-service/dev/1729669237168-2024-10-23T07:40:37.168Z/interio-service.zip"
         },
         "Handler": "handlers/comment/getCommentById.handler",
         "Runtime": "nodejs16.x",
@@ -1059,7 +1107,7 @@
       "Properties": {
         "Code": {
           "S3Bucket": "serverless-framework-deployments-eu-central-1-7d33afbf-5e19",
-          "S3Key": "serverless/interio-service/dev/1729612122995-2024-10-22T15:48:42.995Z/interio-service.zip"
+          "S3Key": "serverless/interio-service/dev/1729669237168-2024-10-23T07:40:37.168Z/interio-service.zip"
         },
         "Handler": "handlers/comment/deleteComment.handler",
         "Runtime": "nodejs16.x",
@@ -1087,7 +1135,7 @@
       "Properties": {
         "Code": {
           "S3Bucket": "serverless-framework-deployments-eu-central-1-7d33afbf-5e19",
-          "S3Key": "serverless/interio-service/dev/1729612122995-2024-10-22T15:48:42.995Z/interio-service.zip"
+          "S3Key": "serverless/interio-service/dev/1729669237168-2024-10-23T07:40:37.168Z/interio-service.zip"
         },
         "Handler": "handlers/message/createMessage.handler",
         "Runtime": "nodejs16.x",
@@ -1115,7 +1163,7 @@
       "Properties": {
         "Code": {
           "S3Bucket": "serverless-framework-deployments-eu-central-1-7d33afbf-5e19",
-          "S3Key": "serverless/interio-service/dev/1729612122995-2024-10-22T15:48:42.995Z/interio-service.zip"
+          "S3Key": "serverless/interio-service/dev/1729669237168-2024-10-23T07:40:37.168Z/interio-service.zip"
         },
         "Handler": "handlers/message/getMessageById.handler",
         "Runtime": "nodejs16.x",
@@ -1143,7 +1191,7 @@
       "Properties": {
         "Code": {
           "S3Bucket": "serverless-framework-deployments-eu-central-1-7d33afbf-5e19",
-          "S3Key": "serverless/interio-service/dev/1729612122995-2024-10-22T15:48:42.995Z/interio-service.zip"
+          "S3Key": "serverless/interio-service/dev/1729669237168-2024-10-23T07:40:37.168Z/interio-service.zip"
         },
         "Handler": "handlers/notification/createNotification.handler",
         "Runtime": "nodejs16.x",
@@ -1171,7 +1219,7 @@
       "Properties": {
         "Code": {
           "S3Bucket": "serverless-framework-deployments-eu-central-1-7d33afbf-5e19",
-          "S3Key": "serverless/interio-service/dev/1729612122995-2024-10-22T15:48:42.995Z/interio-service.zip"
+          "S3Key": "serverless/interio-service/dev/1729669237168-2024-10-23T07:40:37.168Z/interio-service.zip"
         },
         "Handler": "handlers/notification/getNotificationById.handler",
         "Runtime": "nodejs16.x",
@@ -1199,7 +1247,7 @@
       "Properties": {
         "Code": {
           "S3Bucket": "serverless-framework-deployments-eu-central-1-7d33afbf-5e19",
-          "S3Key": "serverless/interio-service/dev/1729612122995-2024-10-22T15:48:42.995Z/interio-service.zip"
+          "S3Key": "serverless/interio-service/dev/1729669237168-2024-10-23T07:40:37.168Z/interio-service.zip"
         },
         "Handler": "handlers/subscriptionPlan/createPlan.handler",
         "Runtime": "nodejs16.x",
@@ -1227,7 +1275,7 @@
       "Properties": {
         "Code": {
           "S3Bucket": "serverless-framework-deployments-eu-central-1-7d33afbf-5e19",
-          "S3Key": "serverless/interio-service/dev/1729612122995-2024-10-22T15:48:42.995Z/interio-service.zip"
+          "S3Key": "serverless/interio-service/dev/1729669237168-2024-10-23T07:40:37.168Z/interio-service.zip"
         },
         "Handler": "handlers/subscriptionPlan/getPlanById.handler",
         "Runtime": "nodejs16.x",
@@ -1255,7 +1303,7 @@
       "Properties": {
         "Code": {
           "S3Bucket": "serverless-framework-deployments-eu-central-1-7d33afbf-5e19",
-          "S3Key": "serverless/interio-service/dev/1729612122995-2024-10-22T15:48:42.995Z/interio-service.zip"
+          "S3Key": "serverless/interio-service/dev/1729669237168-2024-10-23T07:40:37.168Z/interio-service.zip"
         },
         "Handler": "handlers/subscriptionPlan/getAll.handler",
         "Runtime": "nodejs16.x",
@@ -1283,7 +1331,7 @@
       "Properties": {
         "Code": {
           "S3Bucket": "serverless-framework-deployments-eu-central-1-7d33afbf-5e19",
-          "S3Key": "serverless/interio-service/dev/1729612122995-2024-10-22T15:48:42.995Z/interio-service.zip"
+          "S3Key": "serverless/interio-service/dev/1729669237168-2024-10-23T07:40:37.168Z/interio-service.zip"
         },
         "Handler": "handlers/subscriptionPlan/deletePlan.handler",
         "Runtime": "nodejs16.x",
@@ -1311,7 +1359,7 @@
       "Properties": {
         "Code": {
           "S3Bucket": "serverless-framework-deployments-eu-central-1-7d33afbf-5e19",
-          "S3Key": "serverless/interio-service/dev/1729612122995-2024-10-22T15:48:42.995Z/interio-service.zip"
+          "S3Key": "serverless/interio-service/dev/1729669237168-2024-10-23T07:40:37.168Z/interio-service.zip"
         },
         "Handler": "handlers/subscriptionManager/createManager.handler",
         "Runtime": "nodejs16.x",
@@ -1339,7 +1387,7 @@
       "Properties": {
         "Code": {
           "S3Bucket": "serverless-framework-deployments-eu-central-1-7d33afbf-5e19",
-          "S3Key": "serverless/interio-service/dev/1729612122995-2024-10-22T15:48:42.995Z/interio-service.zip"
+          "S3Key": "serverless/interio-service/dev/1729669237168-2024-10-23T07:40:37.168Z/interio-service.zip"
         },
         "Handler": "handlers/subscriptionManager/getManagerById.handler",
         "Runtime": "nodejs16.x",
@@ -1367,7 +1415,7 @@
       "Properties": {
         "Code": {
           "S3Bucket": "serverless-framework-deployments-eu-central-1-7d33afbf-5e19",
-          "S3Key": "serverless/interio-service/dev/1729612122995-2024-10-22T15:48:42.995Z/interio-service.zip"
+          "S3Key": "serverless/interio-service/dev/1729669237168-2024-10-23T07:40:37.168Z/interio-service.zip"
         },
         "Handler": "handlers/subscriptionManager/updateManager.handler",
         "Runtime": "nodejs16.x",
@@ -1395,7 +1443,7 @@
       "Properties": {
         "Code": {
           "S3Bucket": "serverless-framework-deployments-eu-central-1-7d33afbf-5e19",
-          "S3Key": "serverless/interio-service/dev/1729612122995-2024-10-22T15:48:42.995Z/interio-service.zip"
+          "S3Key": "serverless/interio-service/dev/1729669237168-2024-10-23T07:40:37.168Z/interio-service.zip"
         },
         "Handler": "handlers/subscriptionManager/getSubscriptionManager.handler",
         "Runtime": "nodejs16.x",
@@ -1423,7 +1471,7 @@
       "Properties": {
         "Code": {
           "S3Bucket": "serverless-framework-deployments-eu-central-1-7d33afbf-5e19",
-          "S3Key": "serverless/interio-service/dev/1729612122995-2024-10-22T15:48:42.995Z/interio-service.zip"
+          "S3Key": "serverless/interio-service/dev/1729669237168-2024-10-23T07:40:37.168Z/interio-service.zip"
         },
         "Handler": "handlers/paymentTransaction/createPayment.handler",
         "Runtime": "nodejs16.x",
@@ -1451,7 +1499,7 @@
       "Properties": {
         "Code": {
           "S3Bucket": "serverless-framework-deployments-eu-central-1-7d33afbf-5e19",
-          "S3Key": "serverless/interio-service/dev/1729612122995-2024-10-22T15:48:42.995Z/interio-service.zip"
+          "S3Key": "serverless/interio-service/dev/1729669237168-2024-10-23T07:40:37.168Z/interio-service.zip"
         },
         "Handler": "handlers/paymentTransaction/getPaymentById.handler",
         "Runtime": "nodejs16.x",
@@ -1474,414 +1522,718 @@
         "GetPaymentTransactionLogGroup"
       ]
     },
-    "GetUserLambdaVersionLVaLQwtzET3Z6MzkXFNwDjLa5EGD0m6Guo9kwJqtNs": {
+    "GeneratePresignedURLLambdaFunction": {
+      "Type": "AWS::Lambda::Function",
+      "Properties": {
+        "Code": {
+          "S3Bucket": "serverless-framework-deployments-eu-central-1-7d33afbf-5e19",
+          "S3Key": "serverless/interio-service/dev/1729669237168-2024-10-23T07:40:37.168Z/interio-service.zip"
+        },
+        "Handler": "handlers/logic/generatePresignedURL.handler",
+        "Runtime": "nodejs16.x",
+        "FunctionName": "interio-service-dev-generatePresignedURL",
+        "MemorySize": 128,
+        "Timeout": 6,
+        "Environment": {
+          "Variables": {
+            "MONGODB_URI": "mongodb+srv://interiotaleas:interiotaleas@cluster0.vnxct.mongodb.net/Interio"
+          }
+        },
+        "Role": {
+          "Fn::GetAtt": [
+            "IamRoleLambdaExecution",
+            "Arn"
+          ]
+        }
+      },
+      "DependsOn": [
+        "GeneratePresignedURLLogGroup"
+      ]
+    },
+    "GetBusinessByCategoryLambdaFunction": {
+      "Type": "AWS::Lambda::Function",
+      "Properties": {
+        "Code": {
+          "S3Bucket": "serverless-framework-deployments-eu-central-1-7d33afbf-5e19",
+          "S3Key": "serverless/interio-service/dev/1729669237168-2024-10-23T07:40:37.168Z/interio-service.zip"
+        },
+        "Handler": "handlers/logic/getBusinessByCategory.handler",
+        "Runtime": "nodejs16.x",
+        "FunctionName": "interio-service-dev-getBusinessByCategory",
+        "MemorySize": 128,
+        "Timeout": 6,
+        "Environment": {
+          "Variables": {
+            "MONGODB_URI": "mongodb+srv://interiotaleas:interiotaleas@cluster0.vnxct.mongodb.net/Interio"
+          }
+        },
+        "Role": {
+          "Fn::GetAtt": [
+            "IamRoleLambdaExecution",
+            "Arn"
+          ]
+        }
+      },
+      "DependsOn": [
+        "GetBusinessByCategoryLogGroup"
+      ]
+    },
+    "GetBusinessFinishedJobsLambdaFunction": {
+      "Type": "AWS::Lambda::Function",
+      "Properties": {
+        "Code": {
+          "S3Bucket": "serverless-framework-deployments-eu-central-1-7d33afbf-5e19",
+          "S3Key": "serverless/interio-service/dev/1729669237168-2024-10-23T07:40:37.168Z/interio-service.zip"
+        },
+        "Handler": "handlers/logic/getBusinessFinishedJobs.handler",
+        "Runtime": "nodejs16.x",
+        "FunctionName": "interio-service-dev-getBusinessFinishedJobs",
+        "MemorySize": 128,
+        "Timeout": 6,
+        "Environment": {
+          "Variables": {
+            "MONGODB_URI": "mongodb+srv://interiotaleas:interiotaleas@cluster0.vnxct.mongodb.net/Interio"
+          }
+        },
+        "Role": {
+          "Fn::GetAtt": [
+            "IamRoleLambdaExecution",
+            "Arn"
+          ]
+        }
+      },
+      "DependsOn": [
+        "GetBusinessFinishedJobsLogGroup"
+      ]
+    },
+    "GetPostCommentsLambdaFunction": {
+      "Type": "AWS::Lambda::Function",
+      "Properties": {
+        "Code": {
+          "S3Bucket": "serverless-framework-deployments-eu-central-1-7d33afbf-5e19",
+          "S3Key": "serverless/interio-service/dev/1729669237168-2024-10-23T07:40:37.168Z/interio-service.zip"
+        },
+        "Handler": "handlers/logic/getPostComments.handler",
+        "Runtime": "nodejs16.x",
+        "FunctionName": "interio-service-dev-getPostComments",
+        "MemorySize": 128,
+        "Timeout": 6,
+        "Environment": {
+          "Variables": {
+            "MONGODB_URI": "mongodb+srv://interiotaleas:interiotaleas@cluster0.vnxct.mongodb.net/Interio"
+          }
+        },
+        "Role": {
+          "Fn::GetAtt": [
+            "IamRoleLambdaExecution",
+            "Arn"
+          ]
+        }
+      },
+      "DependsOn": [
+        "GetPostCommentsLogGroup"
+      ]
+    },
+    "GetPostOffersLambdaFunction": {
+      "Type": "AWS::Lambda::Function",
+      "Properties": {
+        "Code": {
+          "S3Bucket": "serverless-framework-deployments-eu-central-1-7d33afbf-5e19",
+          "S3Key": "serverless/interio-service/dev/1729669237168-2024-10-23T07:40:37.168Z/interio-service.zip"
+        },
+        "Handler": "handlers/logic/getPostOffers.handler",
+        "Runtime": "nodejs16.x",
+        "FunctionName": "interio-service-dev-getPostOffers",
+        "MemorySize": 128,
+        "Timeout": 6,
+        "Environment": {
+          "Variables": {
+            "MONGODB_URI": "mongodb+srv://interiotaleas:interiotaleas@cluster0.vnxct.mongodb.net/Interio"
+          }
+        },
+        "Role": {
+          "Fn::GetAtt": [
+            "IamRoleLambdaExecution",
+            "Arn"
+          ]
+        }
+      },
+      "DependsOn": [
+        "GetPostOffersLogGroup"
+      ]
+    },
+    "GetSuggesstedPostsLambdaFunction": {
+      "Type": "AWS::Lambda::Function",
+      "Properties": {
+        "Code": {
+          "S3Bucket": "serverless-framework-deployments-eu-central-1-7d33afbf-5e19",
+          "S3Key": "serverless/interio-service/dev/1729669237168-2024-10-23T07:40:37.168Z/interio-service.zip"
+        },
+        "Handler": "handlers/logic/getSuggesstedPosts.handler",
+        "Runtime": "nodejs16.x",
+        "FunctionName": "interio-service-dev-getSuggesstedPosts",
+        "MemorySize": 128,
+        "Timeout": 6,
+        "Environment": {
+          "Variables": {
+            "MONGODB_URI": "mongodb+srv://interiotaleas:interiotaleas@cluster0.vnxct.mongodb.net/Interio"
+          }
+        },
+        "Role": {
+          "Fn::GetAtt": [
+            "IamRoleLambdaExecution",
+            "Arn"
+          ]
+        }
+      },
+      "DependsOn": [
+        "GetSuggesstedPostsLogGroup"
+      ]
+    },
+    "MessageMarkAsReadLambdaFunction": {
+      "Type": "AWS::Lambda::Function",
+      "Properties": {
+        "Code": {
+          "S3Bucket": "serverless-framework-deployments-eu-central-1-7d33afbf-5e19",
+          "S3Key": "serverless/interio-service/dev/1729669237168-2024-10-23T07:40:37.168Z/interio-service.zip"
+        },
+        "Handler": "handlers/logic/messageMarkAsRead.handler",
+        "Runtime": "nodejs16.x",
+        "FunctionName": "interio-service-dev-messageMarkAsRead",
+        "MemorySize": 128,
+        "Timeout": 6,
+        "Environment": {
+          "Variables": {
+            "MONGODB_URI": "mongodb+srv://interiotaleas:interiotaleas@cluster0.vnxct.mongodb.net/Interio"
+          }
+        },
+        "Role": {
+          "Fn::GetAtt": [
+            "IamRoleLambdaExecution",
+            "Arn"
+          ]
+        }
+      },
+      "DependsOn": [
+        "MessageMarkAsReadLogGroup"
+      ]
+    },
+    "NotificationMarkAsReadLambdaFunction": {
+      "Type": "AWS::Lambda::Function",
+      "Properties": {
+        "Code": {
+          "S3Bucket": "serverless-framework-deployments-eu-central-1-7d33afbf-5e19",
+          "S3Key": "serverless/interio-service/dev/1729669237168-2024-10-23T07:40:37.168Z/interio-service.zip"
+        },
+        "Handler": "handlers/logic/notificationMarkAsRead.handler",
+        "Runtime": "nodejs16.x",
+        "FunctionName": "interio-service-dev-notificationMarkAsRead",
+        "MemorySize": 128,
+        "Timeout": 6,
+        "Environment": {
+          "Variables": {
+            "MONGODB_URI": "mongodb+srv://interiotaleas:interiotaleas@cluster0.vnxct.mongodb.net/Interio"
+          }
+        },
+        "Role": {
+          "Fn::GetAtt": [
+            "IamRoleLambdaExecution",
+            "Arn"
+          ]
+        }
+      },
+      "DependsOn": [
+        "NotificationMarkAsReadLogGroup"
+      ]
+    },
+    "GetUserLambdaVersionOCrgN5EBdfDD9PeUlp0e9V8XYSQcDnyisiXPtUwHEY": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "GetUserLambdaFunction"
         },
-        "CodeSha256": "4WUL15u+PeLQzmrOrq7wSWZn0eHolWvCRPiZLBbjd2g="
+        "CodeSha256": "nTW01f7Aa56z6OPSDc4/qWDpvH69OR2Z76QQTt+s6DU="
       }
     },
-    "CreateUserLambdaVersiondiPNlpA28vAeQbOUknDXgriD9NbxM0UqW0qWOue0": {
+    "CreateUserLambdaVersionsxmKwJSuAld23qvvkDjKq1S2rzW2grSA53oCt9VGY": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "CreateUserLambdaFunction"
         },
-        "CodeSha256": "4WUL15u+PeLQzmrOrq7wSWZn0eHolWvCRPiZLBbjd2g="
+        "CodeSha256": "nTW01f7Aa56z6OPSDc4/qWDpvH69OR2Z76QQTt+s6DU="
       }
     },
-    "DeleteUserLambdaVersionqPfCeY4pIAhD6VUNHmTH0hBnqx8JD3we07rcMvI8": {
+    "DeleteUserLambdaVersionAGlSoAsYmuK1k7GanjTEWYEYudx22ZgQzosIuDVcffQ": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "DeleteUserLambdaFunction"
         },
-        "CodeSha256": "4WUL15u+PeLQzmrOrq7wSWZn0eHolWvCRPiZLBbjd2g="
+        "CodeSha256": "nTW01f7Aa56z6OPSDc4/qWDpvH69OR2Z76QQTt+s6DU="
       }
     },
-    "GetUserNameLambdaVersionoCIHJdvK6gjKXtn2sziel5dmuG5mR3sPrsBhxyZEI": {
+    "GetUserNameLambdaVersionMpBxYtjO9dDVybTNXr8PWnsmpKJNtlY6N63PsXSaJI": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "GetUserNameLambdaFunction"
         },
-        "CodeSha256": "4WUL15u+PeLQzmrOrq7wSWZn0eHolWvCRPiZLBbjd2g="
+        "CodeSha256": "nTW01f7Aa56z6OPSDc4/qWDpvH69OR2Z76QQTt+s6DU="
       }
     },
-    "UpdateUserLambdaVersionEC9hsnvpB3Vr4S3lmLJX7fDmoojLWq7Ec6pYpzHmSQ": {
+    "UpdateUserLambdaVersionzoL0fW4joQ5CgLW9yjeKhmeW8oArC0KXJtPJL8C6i8": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "UpdateUserLambdaFunction"
         },
-        "CodeSha256": "4WUL15u+PeLQzmrOrq7wSWZn0eHolWvCRPiZLBbjd2g="
+        "CodeSha256": "nTW01f7Aa56z6OPSDc4/qWDpvH69OR2Z76QQTt+s6DU="
       }
     },
-    "GetBusinessByIdLambdaVersionm0VKkEqOZfvqA3sbwwzeZ0uh7km3N9vby9rcjWFWA": {
+    "GetBusinessByIdLambdaVersion9XfFzGPSEh11Ta66Pw3Wsk2NhiifnKdHRtb6MYzDco": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "GetBusinessByIdLambdaFunction"
         },
-        "CodeSha256": "4WUL15u+PeLQzmrOrq7wSWZn0eHolWvCRPiZLBbjd2g="
+        "CodeSha256": "nTW01f7Aa56z6OPSDc4/qWDpvH69OR2Z76QQTt+s6DU="
       }
     },
-    "CreateBusinessLambdaVersioneOnzfdT2ywtuUHjnhM46aKscKXCMcebFqTDcmI0Svg": {
+    "CreateBusinessLambdaVersionSLCsBy8Ip7MDPPMdAbEqh0aY7apL2orrNOyak0Fx8": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "CreateBusinessLambdaFunction"
         },
-        "CodeSha256": "4WUL15u+PeLQzmrOrq7wSWZn0eHolWvCRPiZLBbjd2g="
+        "CodeSha256": "nTW01f7Aa56z6OPSDc4/qWDpvH69OR2Z76QQTt+s6DU="
       }
     },
-    "DeleteBusinessLambdaVersion959zZAST1AFCprkEunCUjDP3AEmJAqunEgHndVg7nBw": {
+    "DeleteBusinessLambdaVersionsQdy0Ur4SMYWVC4FeTBdbbPW8qeko26BaysaFPE0U": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "DeleteBusinessLambdaFunction"
         },
-        "CodeSha256": "4WUL15u+PeLQzmrOrq7wSWZn0eHolWvCRPiZLBbjd2g="
+        "CodeSha256": "nTW01f7Aa56z6OPSDc4/qWDpvH69OR2Z76QQTt+s6DU="
       }
     },
-    "GetBusinessNameLambdaVersionfy3WYrmc4qpAetbuWZGYTxsicgJWi5SjTcOSuasyhk": {
+    "GetBusinessNameLambdaVersionHZFMgjVigp1UMYR9RqVGw9zqHrIrU24p2wZdbs9c": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "GetBusinessNameLambdaFunction"
         },
-        "CodeSha256": "4WUL15u+PeLQzmrOrq7wSWZn0eHolWvCRPiZLBbjd2g="
+        "CodeSha256": "nTW01f7Aa56z6OPSDc4/qWDpvH69OR2Z76QQTt+s6DU="
       }
     },
-    "UpdateBusinessLambdaVersionCv58oH5h3Lc85wG0Ge6lsYoQhbB3qU5fihwdvfDZw": {
+    "UpdateBusinessLambdaVersionqpvVxhz2ZOtTIWgAJa0KdE86NnqzQ6KoMnMQyGSVoY": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "UpdateBusinessLambdaFunction"
         },
-        "CodeSha256": "4WUL15u+PeLQzmrOrq7wSWZn0eHolWvCRPiZLBbjd2g="
+        "CodeSha256": "nTW01f7Aa56z6OPSDc4/qWDpvH69OR2Z76QQTt+s6DU="
       }
     },
-    "GetPostByIdLambdaVersionqK1iQJbUJSq1lnfuUF17ktTPSF4ImfSHrAOZHpYZW18": {
+    "GetPostByIdLambdaVersionhf9psaDueP7W69Df1Tp08MUumcyojYyq6PRupOHDcI": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "GetPostByIdLambdaFunction"
         },
-        "CodeSha256": "4WUL15u+PeLQzmrOrq7wSWZn0eHolWvCRPiZLBbjd2g="
+        "CodeSha256": "nTW01f7Aa56z6OPSDc4/qWDpvH69OR2Z76QQTt+s6DU="
       }
     },
-    "CreatePostLambdaVersionQ3MXNJo2kb492VPAdPfw8iPdF9rmWN4hz4YyFOmknPg": {
+    "CreatePostLambdaVersionuBE3WSK6jSdZHIU29jYFarXlqNYbOy3yJbS2gB7U": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "CreatePostLambdaFunction"
         },
-        "CodeSha256": "4WUL15u+PeLQzmrOrq7wSWZn0eHolWvCRPiZLBbjd2g="
+        "CodeSha256": "nTW01f7Aa56z6OPSDc4/qWDpvH69OR2Z76QQTt+s6DU="
       }
     },
-    "DeletePostLambdaVersionaenPdqu6xKUzPAbxMSIKQJ6qb6bflLp4lR4eZKTAQ": {
+    "DeletePostLambdaVersioncz0PoFKGyOpEjCh9grR8Vm62hEUwLPanfwcS76ZOg": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "DeletePostLambdaFunction"
         },
-        "CodeSha256": "4WUL15u+PeLQzmrOrq7wSWZn0eHolWvCRPiZLBbjd2g="
+        "CodeSha256": "nTW01f7Aa56z6OPSDc4/qWDpvH69OR2Z76QQTt+s6DU="
       }
     },
-    "GetFiltredPostsLambdaVersion8Pa2CBT7AMEJYr5IavQSeG0itqCE5WNWuqw91aFp0": {
+    "GetFiltredPostsLambdaVersionEU72oG6hAYJmDbJ50ip1En8TsPX0lk18wgRrT130": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "GetFiltredPostsLambdaFunction"
         },
-        "CodeSha256": "4WUL15u+PeLQzmrOrq7wSWZn0eHolWvCRPiZLBbjd2g="
+        "CodeSha256": "nTW01f7Aa56z6OPSDc4/qWDpvH69OR2Z76QQTt+s6DU="
       }
     },
-    "GetAvailablePostsLambdaVersionHTV9W5xRrvjnY9OqsIJQHIE1e8HREcNuzlrSrS2q8QA": {
+    "GetAvailablePostsLambdaVersion66PdLGIPFAWyEJDGrmA5F4IkTtNg5qePw0u3irPvzdk": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "GetAvailablePostsLambdaFunction"
         },
-        "CodeSha256": "4WUL15u+PeLQzmrOrq7wSWZn0eHolWvCRPiZLBbjd2g="
+        "CodeSha256": "nTW01f7Aa56z6OPSDc4/qWDpvH69OR2Z76QQTt+s6DU="
       }
     },
-    "CreateOfferLambdaVersionQBYhiFqMrdjrQNVWEogAQbY3osUWubJ6GlNXIqzGEsU": {
+    "CreateOfferLambdaVersionx1hiivmkNKb6E03BvCKWpxOd1rPV7j4QOf1GxSrMI": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "CreateOfferLambdaFunction"
         },
-        "CodeSha256": "4WUL15u+PeLQzmrOrq7wSWZn0eHolWvCRPiZLBbjd2g="
+        "CodeSha256": "nTW01f7Aa56z6OPSDc4/qWDpvH69OR2Z76QQTt+s6DU="
       }
     },
-    "DeleteOfferLambdaVersionEH2FmIConFPbQcMZ64xQm4OGLOR6InRZXDsTpNm7yE": {
+    "DeleteOfferLambdaVersioneTN0o3L8Us3DsOzPxTKJQ0mWxHzOlEAkwvPIjhGs": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "DeleteOfferLambdaFunction"
         },
-        "CodeSha256": "4WUL15u+PeLQzmrOrq7wSWZn0eHolWvCRPiZLBbjd2g="
+        "CodeSha256": "nTW01f7Aa56z6OPSDc4/qWDpvH69OR2Z76QQTt+s6DU="
       }
     },
-    "GetOfferByIdLambdaVersionsL51Oe17mJNox2YsKJKAxXPkaesVgrl9ryWdPoyA": {
+    "GetOfferByIdLambdaVersionae5TaG67cJDDFUPWenaHIu4WuotB0nYWZ9IFexajAw": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "GetOfferByIdLambdaFunction"
         },
-        "CodeSha256": "4WUL15u+PeLQzmrOrq7wSWZn0eHolWvCRPiZLBbjd2g="
+        "CodeSha256": "nTW01f7Aa56z6OPSDc4/qWDpvH69OR2Z76QQTt+s6DU="
       }
     },
-    "CreateCategoryLambdaVersionyDWILpj8OPaI33LBa9bdYXzqPCVPoQf5s7fFNSFAR9M": {
+    "CreateCategoryLambdaVersionqGwQtrHke25CFwi2cUjcbWZi8vfgx32UBo6OkypMfw": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "CreateCategoryLambdaFunction"
         },
-        "CodeSha256": "4WUL15u+PeLQzmrOrq7wSWZn0eHolWvCRPiZLBbjd2g="
+        "CodeSha256": "nTW01f7Aa56z6OPSDc4/qWDpvH69OR2Z76QQTt+s6DU="
       }
     },
-    "DeleteCategoryLambdaVersionZuZm6lagWVvng5n0BZvd3iPOf8JUABrhVGRc4DnqQ": {
+    "DeleteCategoryLambdaVersionHI2g8X6eMp6LIpy6WKQvHVaGEtyguoFlmeG1KtnEI4": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "DeleteCategoryLambdaFunction"
         },
-        "CodeSha256": "4WUL15u+PeLQzmrOrq7wSWZn0eHolWvCRPiZLBbjd2g="
+        "CodeSha256": "nTW01f7Aa56z6OPSDc4/qWDpvH69OR2Z76QQTt+s6DU="
       }
     },
-    "GetCategoryByIdLambdaVersionR7iNupptLs3CEyQKe9JddPh4E4jV0DRpkMJFK9IFP8": {
+    "GetCategoryByIdLambdaVersionVu6lhHkpqyIz0BHjCe9RKxlCBi4yqjo1ZnNoaQrxS5U": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "GetCategoryByIdLambdaFunction"
         },
-        "CodeSha256": "4WUL15u+PeLQzmrOrq7wSWZn0eHolWvCRPiZLBbjd2g="
+        "CodeSha256": "nTW01f7Aa56z6OPSDc4/qWDpvH69OR2Z76QQTt+s6DU="
       }
     },
-    "GetAllCategoriesLambdaVersiongZ3MDC9744VdW1PzgplsvodFM5CoFExYXHjQwleXowo": {
+    "GetAllCategoriesLambdaVersionOEy5FHInB7IHKDKiXYQwnQKGggjpILrLD7ZapdUCkI": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "GetAllCategoriesLambdaFunction"
         },
-        "CodeSha256": "4WUL15u+PeLQzmrOrq7wSWZn0eHolWvCRPiZLBbjd2g="
+        "CodeSha256": "nTW01f7Aa56z6OPSDc4/qWDpvH69OR2Z76QQTt+s6DU="
       }
     },
-    "CreateJobLambdaVersion5eCTJpcgefxBlepYwctOIDPfOgnAuNloBmrcHFfxk": {
+    "CreateJobLambdaVersioniJ8aP4lFw5qvtKml4qVV3V3hTvqeNzoBgxnk2T7n9M": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "CreateJobLambdaFunction"
         },
-        "CodeSha256": "4WUL15u+PeLQzmrOrq7wSWZn0eHolWvCRPiZLBbjd2g="
+        "CodeSha256": "nTW01f7Aa56z6OPSDc4/qWDpvH69OR2Z76QQTt+s6DU="
       }
     },
-    "GetJobByIdLambdaVersionxnpnth090BFjJGEXdVr2VZk0EF3yQHM2u9gbfOS03M": {
+    "GetJobByIdLambdaVersiondiQFbwbYxPLwvsphZUGCGMx9rn4P08D8AT0gbTmwSZg": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "GetJobByIdLambdaFunction"
         },
-        "CodeSha256": "4WUL15u+PeLQzmrOrq7wSWZn0eHolWvCRPiZLBbjd2g="
+        "CodeSha256": "nTW01f7Aa56z6OPSDc4/qWDpvH69OR2Z76QQTt+s6DU="
       }
     },
-    "CreateCommentLambdaVersionvL54MBFlWuVOQ0wS5D1Xsv2D4gcppX8OMqdU5zRyPxQ": {
+    "CreateCommentLambdaVersion0DvbWdgAerEly6tavX4eHkl3PxGicDXWsyJ9wKCKI": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "CreateCommentLambdaFunction"
         },
-        "CodeSha256": "4WUL15u+PeLQzmrOrq7wSWZn0eHolWvCRPiZLBbjd2g="
+        "CodeSha256": "nTW01f7Aa56z6OPSDc4/qWDpvH69OR2Z76QQTt+s6DU="
       }
     },
-    "GetCommentByIdLambdaVersion3iFol9sZKJJLVeAl4JDEHNm80hXKZ7BNvejdG3BRg": {
+    "GetCommentByIdLambdaVersionFRw4flSGnkRrPPguame1gTDwiJ3OpjGrhrUuVOUQ4": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "GetCommentByIdLambdaFunction"
         },
-        "CodeSha256": "4WUL15u+PeLQzmrOrq7wSWZn0eHolWvCRPiZLBbjd2g="
+        "CodeSha256": "nTW01f7Aa56z6OPSDc4/qWDpvH69OR2Z76QQTt+s6DU="
       }
     },
-    "DeleteCommentLambdaVersiond6ZiaUz2iy5caNvM2JqI209BiVBSxnGG2jKBA2pQ6Fo": {
+    "DeleteCommentLambdaVersionOfCzt7KX29jey2XfgY2a2BgLKp69tbaibZqjEIM": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "DeleteCommentLambdaFunction"
         },
-        "CodeSha256": "4WUL15u+PeLQzmrOrq7wSWZn0eHolWvCRPiZLBbjd2g="
+        "CodeSha256": "nTW01f7Aa56z6OPSDc4/qWDpvH69OR2Z76QQTt+s6DU="
       }
     },
-    "CreateMessageLambdaVersionER0n2qIqAMUzUeS1vhcqU47kavn76GTf7ZRG69SZT8": {
+    "CreateMessageLambdaVersionXy1ShBXA4Su11ZNc0fi3nHEf2CrqdMcHsESCl3ibo": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "CreateMessageLambdaFunction"
         },
-        "CodeSha256": "4WUL15u+PeLQzmrOrq7wSWZn0eHolWvCRPiZLBbjd2g="
+        "CodeSha256": "nTW01f7Aa56z6OPSDc4/qWDpvH69OR2Z76QQTt+s6DU="
       }
     },
-    "GetMessageByIdLambdaVersionIlf4YcWFPPJfdAR8cpqpK1TX2l8WXsYVNtY6IR7o": {
+    "GetMessageByIdLambdaVersionAeMm3Pw7naUtHEufn2G8pSLttcRlZ1lLV8MT45CvRA": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "GetMessageByIdLambdaFunction"
         },
-        "CodeSha256": "4WUL15u+PeLQzmrOrq7wSWZn0eHolWvCRPiZLBbjd2g="
+        "CodeSha256": "nTW01f7Aa56z6OPSDc4/qWDpvH69OR2Z76QQTt+s6DU="
       }
     },
-    "CreateNotificationLambdaVersion7HTT24tRWeuVU8J6YxxaNGNAemQgpcJpyQqn937mg": {
+    "CreateNotificationLambdaVersion5tkM6vGlldDWBJtD3Iv3LH58n2ocjhD0KlQO7G1A": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "CreateNotificationLambdaFunction"
         },
-        "CodeSha256": "4WUL15u+PeLQzmrOrq7wSWZn0eHolWvCRPiZLBbjd2g="
+        "CodeSha256": "nTW01f7Aa56z6OPSDc4/qWDpvH69OR2Z76QQTt+s6DU="
       }
     },
-    "GetNotificationByIdLambdaVersionHyb6vZfsTIKXFA8zZY55lQTsyxWdPAZf7X73Mjs": {
+    "GetNotificationByIdLambdaVersion4YMDAttpP8ARQbmjllQ3VPDgA7vYAK21epxcMDleko": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "GetNotificationByIdLambdaFunction"
         },
-        "CodeSha256": "4WUL15u+PeLQzmrOrq7wSWZn0eHolWvCRPiZLBbjd2g="
+        "CodeSha256": "nTW01f7Aa56z6OPSDc4/qWDpvH69OR2Z76QQTt+s6DU="
       }
     },
-    "CreateSubscriptionPlanLambdaVersioncMzbn1RcnCG5iHMMNtD1Undq64CjU1yrJYMVX6llu4": {
+    "CreateSubscriptionPlanLambdaVersionT4kmyLUPqNqIevNZMY9ISHguBfu5i9c0FdnQMCvJ0": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "CreateSubscriptionPlanLambdaFunction"
         },
-        "CodeSha256": "4WUL15u+PeLQzmrOrq7wSWZn0eHolWvCRPiZLBbjd2g="
+        "CodeSha256": "nTW01f7Aa56z6OPSDc4/qWDpvH69OR2Z76QQTt+s6DU="
       }
     },
-    "GetSubscriptionPlanLambdaVersion4VplnXM7srmv7nJ3tLvRPASzRlPnqud96sx4ztHfks": {
+    "GetSubscriptionPlanLambdaVersionL55A3iB7LpY6NTElxmFsZHllUihH3KECSjYeXVgXM": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "GetSubscriptionPlanLambdaFunction"
         },
-        "CodeSha256": "4WUL15u+PeLQzmrOrq7wSWZn0eHolWvCRPiZLBbjd2g="
+        "CodeSha256": "nTW01f7Aa56z6OPSDc4/qWDpvH69OR2Z76QQTt+s6DU="
       }
     },
-    "GetAllSubscriptionPlansLambdaVersion09pHQG2mxq702rQJ9VUJh5oCXVemg0A8AGUTXXyZgGk": {
+    "GetAllSubscriptionPlansLambdaVersionWFoxPB4JknUmx8pEfV047sExvFxaaFMWqlk8FroBbbA": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "GetAllSubscriptionPlansLambdaFunction"
         },
-        "CodeSha256": "4WUL15u+PeLQzmrOrq7wSWZn0eHolWvCRPiZLBbjd2g="
+        "CodeSha256": "nTW01f7Aa56z6OPSDc4/qWDpvH69OR2Z76QQTt+s6DU="
       }
     },
-    "DeleteSubscriptionPlanLambdaVersioniAAZd89xuTRCFWPjFrsUJBPujbkt1XWelZAPiiN84g": {
+    "DeleteSubscriptionPlanLambdaVersionVb01Lg3RUnUoZXXDYAKUM7g8c5AOEvCianBdU0wFto": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "DeleteSubscriptionPlanLambdaFunction"
         },
-        "CodeSha256": "4WUL15u+PeLQzmrOrq7wSWZn0eHolWvCRPiZLBbjd2g="
+        "CodeSha256": "nTW01f7Aa56z6OPSDc4/qWDpvH69OR2Z76QQTt+s6DU="
       }
     },
-    "CreateSubscriptionManagerLambdaVersion4BVaYXQiWynVMdwaysC58jiHVjayD1rMo0hBHSkrus8": {
+    "CreateSubscriptionManagerLambdaVersion56joeuhrhMWGIvETjSTzXIoNmPKpDfNBDdIkQEgM0": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "CreateSubscriptionManagerLambdaFunction"
         },
-        "CodeSha256": "4WUL15u+PeLQzmrOrq7wSWZn0eHolWvCRPiZLBbjd2g="
+        "CodeSha256": "nTW01f7Aa56z6OPSDc4/qWDpvH69OR2Z76QQTt+s6DU="
       }
     },
-    "GetSubscriptionManagerByIdLambdaVersionKGLpHVSs4vj9MFzNfEbTiawUrKnw0wAlKtY2wxNfWc": {
+    "GetSubscriptionManagerByIdLambdaVersionbcKyn0URiptIhBp7qYVt9edo47JYq6mhAzn4OGoi1E": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "GetSubscriptionManagerByIdLambdaFunction"
         },
-        "CodeSha256": "4WUL15u+PeLQzmrOrq7wSWZn0eHolWvCRPiZLBbjd2g="
+        "CodeSha256": "nTW01f7Aa56z6OPSDc4/qWDpvH69OR2Z76QQTt+s6DU="
       }
     },
-    "UpdateSubscriptionManagerLambdaVersionqRjeX2ZzStF1Qu4f6rCxPsMgrKkf2bCuiY5vCfnFuXA": {
+    "UpdateSubscriptionManagerLambdaVersionz3KoltZFWqydNqCgbaHcSSo2BssBGs7IEc6N61TJuI": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "UpdateSubscriptionManagerLambdaFunction"
         },
-        "CodeSha256": "4WUL15u+PeLQzmrOrq7wSWZn0eHolWvCRPiZLBbjd2g="
+        "CodeSha256": "nTW01f7Aa56z6OPSDc4/qWDpvH69OR2Z76QQTt+s6DU="
       }
     },
-    "GetSubscriptionManagerLambdaVersionNh2KQHecAYT8ErnfGOLiCzfUQUNzpW3SwtSIMfYDJ20": {
+    "GetSubscriptionManagerLambdaVersionFssZZFff1n1WTEzXFiHgcUkfgG3CXqbke9yxX4PQ": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "GetSubscriptionManagerLambdaFunction"
         },
-        "CodeSha256": "4WUL15u+PeLQzmrOrq7wSWZn0eHolWvCRPiZLBbjd2g="
+        "CodeSha256": "nTW01f7Aa56z6OPSDc4/qWDpvH69OR2Z76QQTt+s6DU="
       }
     },
-    "CreatePaymentTransactionLambdaVersionBPpqa6AjQBH2hZ6M0RIIYovmUgpdRU8wz7cL0uNbQ": {
+    "CreatePaymentTransactionLambdaVersionuqp5iLJNX4qMToMOYcoar1xRTGelJrsWpnYbc2RseA": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "CreatePaymentTransactionLambdaFunction"
         },
-        "CodeSha256": "4WUL15u+PeLQzmrOrq7wSWZn0eHolWvCRPiZLBbjd2g="
+        "CodeSha256": "nTW01f7Aa56z6OPSDc4/qWDpvH69OR2Z76QQTt+s6DU="
       }
     },
-    "GetPaymentTransactionLambdaVersion4ktyDE4oOOjkVcosMqGT8nqzKtis0QzN9REQoLfrUno": {
+    "GetPaymentTransactionLambdaVersionitbKBgZIpzoWZd982nKzVo7V6C866pptBRfTdj7s": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "GetPaymentTransactionLambdaFunction"
         },
-        "CodeSha256": "4WUL15u+PeLQzmrOrq7wSWZn0eHolWvCRPiZLBbjd2g="
+        "CodeSha256": "nTW01f7Aa56z6OPSDc4/qWDpvH69OR2Z76QQTt+s6DU="
+      }
+    },
+    "GeneratePresignedURLLambdaVersionZKpDlcBXRcSH1fNdajnI5UH32PoeQx0nkq9e9waJrY": {
+      "Type": "AWS::Lambda::Version",
+      "DeletionPolicy": "Retain",
+      "Properties": {
+        "FunctionName": {
+          "Ref": "GeneratePresignedURLLambdaFunction"
+        },
+        "CodeSha256": "nTW01f7Aa56z6OPSDc4/qWDpvH69OR2Z76QQTt+s6DU="
+      }
+    },
+    "GetBusinessByCategoryLambdaVersion3iV2VDGMxEaxGfAdD8fvaTCATBOqxvs6YOvhJ0X1u4": {
+      "Type": "AWS::Lambda::Version",
+      "DeletionPolicy": "Retain",
+      "Properties": {
+        "FunctionName": {
+          "Ref": "GetBusinessByCategoryLambdaFunction"
+        },
+        "CodeSha256": "nTW01f7Aa56z6OPSDc4/qWDpvH69OR2Z76QQTt+s6DU="
+      }
+    },
+    "GetBusinessFinishedJobsLambdaVersion38lk1OtGRG1wj7E3icKMQMr0FmVNtMKD0WIiP6INao": {
+      "Type": "AWS::Lambda::Version",
+      "DeletionPolicy": "Retain",
+      "Properties": {
+        "FunctionName": {
+          "Ref": "GetBusinessFinishedJobsLambdaFunction"
+        },
+        "CodeSha256": "nTW01f7Aa56z6OPSDc4/qWDpvH69OR2Z76QQTt+s6DU="
+      }
+    },
+    "GetPostCommentsLambdaVersion7gQBJrzE1yIIsLEAzPfHE4sXmuOWLRXiTEUH6ogagg": {
+      "Type": "AWS::Lambda::Version",
+      "DeletionPolicy": "Retain",
+      "Properties": {
+        "FunctionName": {
+          "Ref": "GetPostCommentsLambdaFunction"
+        },
+        "CodeSha256": "nTW01f7Aa56z6OPSDc4/qWDpvH69OR2Z76QQTt+s6DU="
+      }
+    },
+    "GetPostOffersLambdaVersiony2vIqWgfWWHgGtzEEEv7VhfvkK8LGIemXb6Ur3n0": {
+      "Type": "AWS::Lambda::Version",
+      "DeletionPolicy": "Retain",
+      "Properties": {
+        "FunctionName": {
+          "Ref": "GetPostOffersLambdaFunction"
+        },
+        "CodeSha256": "nTW01f7Aa56z6OPSDc4/qWDpvH69OR2Z76QQTt+s6DU="
+      }
+    },
+    "GetSuggesstedPostsLambdaVersionHEFHxo7qQT7REnT41HkYxjotToe7eurzQLoX3cATE": {
+      "Type": "AWS::Lambda::Version",
+      "DeletionPolicy": "Retain",
+      "Properties": {
+        "FunctionName": {
+          "Ref": "GetSuggesstedPostsLambdaFunction"
+        },
+        "CodeSha256": "nTW01f7Aa56z6OPSDc4/qWDpvH69OR2Z76QQTt+s6DU="
+      }
+    },
+    "MessageMarkAsReadLambdaVersionI5C5QjlsX0vIKCzvo9Nsa63YJ9hWhXZHk9DS7j857I": {
+      "Type": "AWS::Lambda::Version",
+      "DeletionPolicy": "Retain",
+      "Properties": {
+        "FunctionName": {
+          "Ref": "MessageMarkAsReadLambdaFunction"
+        },
+        "CodeSha256": "nTW01f7Aa56z6OPSDc4/qWDpvH69OR2Z76QQTt+s6DU="
+      }
+    },
+    "NotificationMarkAsReadLambdaVersionmRD9sqAvpxDT59x2JGsJvgl2vjPVMgAfp9zGmRq1IGU": {
+      "Type": "AWS::Lambda::Version",
+      "DeletionPolicy": "Retain",
+      "Properties": {
+        "FunctionName": {
+          "Ref": "NotificationMarkAsReadLambdaFunction"
+        },
+        "CodeSha256": "nTW01f7Aa56z6OPSDc4/qWDpvH69OR2Z76QQTt+s6DU="
       }
     },
     "ApiGatewayRestApi": {
@@ -2309,6 +2661,210 @@
       "Properties": {
         "ParentId": {
           "Ref": "ApiGatewayResourcePaymenttransaction"
+        },
+        "PathPart": "{id}",
+        "RestApiId": {
+          "Ref": "ApiGatewayRestApi"
+        }
+      }
+    },
+    "ApiGatewayResourceGeneratepresignedurl": {
+      "Type": "AWS::ApiGateway::Resource",
+      "Properties": {
+        "ParentId": {
+          "Fn::GetAtt": [
+            "ApiGatewayRestApi",
+            "RootResourceId"
+          ]
+        },
+        "PathPart": "generatePresignedURL",
+        "RestApiId": {
+          "Ref": "ApiGatewayRestApi"
+        }
+      }
+    },
+    "ApiGatewayResourceGetbusinessbycategory": {
+      "Type": "AWS::ApiGateway::Resource",
+      "Properties": {
+        "ParentId": {
+          "Fn::GetAtt": [
+            "ApiGatewayRestApi",
+            "RootResourceId"
+          ]
+        },
+        "PathPart": "getBusinessByCategory",
+        "RestApiId": {
+          "Ref": "ApiGatewayRestApi"
+        }
+      }
+    },
+    "ApiGatewayResourceGetbusinessbycategoryNameVar": {
+      "Type": "AWS::ApiGateway::Resource",
+      "Properties": {
+        "ParentId": {
+          "Ref": "ApiGatewayResourceGetbusinessbycategory"
+        },
+        "PathPart": "{name}",
+        "RestApiId": {
+          "Ref": "ApiGatewayRestApi"
+        }
+      }
+    },
+    "ApiGatewayResourceGetbusinessfinishedjobs": {
+      "Type": "AWS::ApiGateway::Resource",
+      "Properties": {
+        "ParentId": {
+          "Fn::GetAtt": [
+            "ApiGatewayRestApi",
+            "RootResourceId"
+          ]
+        },
+        "PathPart": "getBusinessFinishedJobs",
+        "RestApiId": {
+          "Ref": "ApiGatewayRestApi"
+        }
+      }
+    },
+    "ApiGatewayResourceGetbusinessfinishedjobsIdVar": {
+      "Type": "AWS::ApiGateway::Resource",
+      "Properties": {
+        "ParentId": {
+          "Ref": "ApiGatewayResourceGetbusinessfinishedjobs"
+        },
+        "PathPart": "{id}",
+        "RestApiId": {
+          "Ref": "ApiGatewayRestApi"
+        }
+      }
+    },
+    "ApiGatewayResourceGetpostcomments": {
+      "Type": "AWS::ApiGateway::Resource",
+      "Properties": {
+        "ParentId": {
+          "Fn::GetAtt": [
+            "ApiGatewayRestApi",
+            "RootResourceId"
+          ]
+        },
+        "PathPart": "getPostComments",
+        "RestApiId": {
+          "Ref": "ApiGatewayRestApi"
+        }
+      }
+    },
+    "ApiGatewayResourceGetpostcommentsIdVar": {
+      "Type": "AWS::ApiGateway::Resource",
+      "Properties": {
+        "ParentId": {
+          "Ref": "ApiGatewayResourceGetpostcomments"
+        },
+        "PathPart": "{id}",
+        "RestApiId": {
+          "Ref": "ApiGatewayRestApi"
+        }
+      }
+    },
+    "ApiGatewayResourceGetpostoffers": {
+      "Type": "AWS::ApiGateway::Resource",
+      "Properties": {
+        "ParentId": {
+          "Fn::GetAtt": [
+            "ApiGatewayRestApi",
+            "RootResourceId"
+          ]
+        },
+        "PathPart": "getPostOffers",
+        "RestApiId": {
+          "Ref": "ApiGatewayRestApi"
+        }
+      }
+    },
+    "ApiGatewayResourceGetpostoffersIdVar": {
+      "Type": "AWS::ApiGateway::Resource",
+      "Properties": {
+        "ParentId": {
+          "Ref": "ApiGatewayResourceGetpostoffers"
+        },
+        "PathPart": "{id}",
+        "RestApiId": {
+          "Ref": "ApiGatewayRestApi"
+        }
+      }
+    },
+    "ApiGatewayResourceGetsuggesstedposts": {
+      "Type": "AWS::ApiGateway::Resource",
+      "Properties": {
+        "ParentId": {
+          "Fn::GetAtt": [
+            "ApiGatewayRestApi",
+            "RootResourceId"
+          ]
+        },
+        "PathPart": "getSuggesstedPosts",
+        "RestApiId": {
+          "Ref": "ApiGatewayRestApi"
+        }
+      }
+    },
+    "ApiGatewayResourceGetsuggesstedpostsIdVar": {
+      "Type": "AWS::ApiGateway::Resource",
+      "Properties": {
+        "ParentId": {
+          "Ref": "ApiGatewayResourceGetsuggesstedposts"
+        },
+        "PathPart": "{id}",
+        "RestApiId": {
+          "Ref": "ApiGatewayRestApi"
+        }
+      }
+    },
+    "ApiGatewayResourceMessagemarkasread": {
+      "Type": "AWS::ApiGateway::Resource",
+      "Properties": {
+        "ParentId": {
+          "Fn::GetAtt": [
+            "ApiGatewayRestApi",
+            "RootResourceId"
+          ]
+        },
+        "PathPart": "messageMarkAsRead",
+        "RestApiId": {
+          "Ref": "ApiGatewayRestApi"
+        }
+      }
+    },
+    "ApiGatewayResourceMessagemarkasreadIdVar": {
+      "Type": "AWS::ApiGateway::Resource",
+      "Properties": {
+        "ParentId": {
+          "Ref": "ApiGatewayResourceMessagemarkasread"
+        },
+        "PathPart": "{id}",
+        "RestApiId": {
+          "Ref": "ApiGatewayRestApi"
+        }
+      }
+    },
+    "ApiGatewayResourceNotificationmarkasread": {
+      "Type": "AWS::ApiGateway::Resource",
+      "Properties": {
+        "ParentId": {
+          "Fn::GetAtt": [
+            "ApiGatewayRestApi",
+            "RootResourceId"
+          ]
+        },
+        "PathPart": "notificationMarkAsRead",
+        "RestApiId": {
+          "Ref": "ApiGatewayRestApi"
+        }
+      }
+    },
+    "ApiGatewayResourceNotificationmarkasreadIdVar": {
+      "Type": "AWS::ApiGateway::Resource",
+      "Properties": {
+        "ParentId": {
+          "Ref": "ApiGatewayResourceNotificationmarkasread"
         },
         "PathPart": "{id}",
         "RestApiId": {
@@ -3705,6 +4261,366 @@
         },
         "ResourceId": {
           "Ref": "ApiGatewayResourcePaymenttransactionIdVar"
+        },
+        "RestApiId": {
+          "Ref": "ApiGatewayRestApi"
+        }
+      }
+    },
+    "ApiGatewayMethodGeneratepresignedurlOptions": {
+      "Type": "AWS::ApiGateway::Method",
+      "Properties": {
+        "AuthorizationType": "NONE",
+        "HttpMethod": "OPTIONS",
+        "MethodResponses": [
+          {
+            "StatusCode": "200",
+            "ResponseParameters": {
+              "method.response.header.Access-Control-Allow-Origin": true,
+              "method.response.header.Access-Control-Allow-Headers": true,
+              "method.response.header.Access-Control-Allow-Methods": true
+            },
+            "ResponseModels": {}
+          }
+        ],
+        "RequestParameters": {},
+        "Integration": {
+          "Type": "MOCK",
+          "RequestTemplates": {
+            "application/json": "{statusCode:200}"
+          },
+          "ContentHandling": "CONVERT_TO_TEXT",
+          "IntegrationResponses": [
+            {
+              "StatusCode": "200",
+              "ResponseParameters": {
+                "method.response.header.Access-Control-Allow-Origin": "'*'",
+                "method.response.header.Access-Control-Allow-Headers": "'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token,X-Amz-User-Agent,X-Amzn-Trace-Id'",
+                "method.response.header.Access-Control-Allow-Methods": "'OPTIONS,GET'"
+              },
+              "ResponseTemplates": {
+                "application/json": ""
+              }
+            }
+          ]
+        },
+        "ResourceId": {
+          "Ref": "ApiGatewayResourceGeneratepresignedurl"
+        },
+        "RestApiId": {
+          "Ref": "ApiGatewayRestApi"
+        }
+      }
+    },
+    "ApiGatewayMethodGetbusinessbycategoryNameVarOptions": {
+      "Type": "AWS::ApiGateway::Method",
+      "Properties": {
+        "AuthorizationType": "NONE",
+        "HttpMethod": "OPTIONS",
+        "MethodResponses": [
+          {
+            "StatusCode": "200",
+            "ResponseParameters": {
+              "method.response.header.Access-Control-Allow-Origin": true,
+              "method.response.header.Access-Control-Allow-Headers": true,
+              "method.response.header.Access-Control-Allow-Methods": true
+            },
+            "ResponseModels": {}
+          }
+        ],
+        "RequestParameters": {},
+        "Integration": {
+          "Type": "MOCK",
+          "RequestTemplates": {
+            "application/json": "{statusCode:200}"
+          },
+          "ContentHandling": "CONVERT_TO_TEXT",
+          "IntegrationResponses": [
+            {
+              "StatusCode": "200",
+              "ResponseParameters": {
+                "method.response.header.Access-Control-Allow-Origin": "'*'",
+                "method.response.header.Access-Control-Allow-Headers": "'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token,X-Amz-User-Agent,X-Amzn-Trace-Id'",
+                "method.response.header.Access-Control-Allow-Methods": "'OPTIONS,GET'"
+              },
+              "ResponseTemplates": {
+                "application/json": ""
+              }
+            }
+          ]
+        },
+        "ResourceId": {
+          "Ref": "ApiGatewayResourceGetbusinessbycategoryNameVar"
+        },
+        "RestApiId": {
+          "Ref": "ApiGatewayRestApi"
+        }
+      }
+    },
+    "ApiGatewayMethodGetbusinessfinishedjobsIdVarOptions": {
+      "Type": "AWS::ApiGateway::Method",
+      "Properties": {
+        "AuthorizationType": "NONE",
+        "HttpMethod": "OPTIONS",
+        "MethodResponses": [
+          {
+            "StatusCode": "200",
+            "ResponseParameters": {
+              "method.response.header.Access-Control-Allow-Origin": true,
+              "method.response.header.Access-Control-Allow-Headers": true,
+              "method.response.header.Access-Control-Allow-Methods": true
+            },
+            "ResponseModels": {}
+          }
+        ],
+        "RequestParameters": {},
+        "Integration": {
+          "Type": "MOCK",
+          "RequestTemplates": {
+            "application/json": "{statusCode:200}"
+          },
+          "ContentHandling": "CONVERT_TO_TEXT",
+          "IntegrationResponses": [
+            {
+              "StatusCode": "200",
+              "ResponseParameters": {
+                "method.response.header.Access-Control-Allow-Origin": "'*'",
+                "method.response.header.Access-Control-Allow-Headers": "'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token,X-Amz-User-Agent,X-Amzn-Trace-Id'",
+                "method.response.header.Access-Control-Allow-Methods": "'OPTIONS,GET'"
+              },
+              "ResponseTemplates": {
+                "application/json": ""
+              }
+            }
+          ]
+        },
+        "ResourceId": {
+          "Ref": "ApiGatewayResourceGetbusinessfinishedjobsIdVar"
+        },
+        "RestApiId": {
+          "Ref": "ApiGatewayRestApi"
+        }
+      }
+    },
+    "ApiGatewayMethodGetpostcommentsIdVarOptions": {
+      "Type": "AWS::ApiGateway::Method",
+      "Properties": {
+        "AuthorizationType": "NONE",
+        "HttpMethod": "OPTIONS",
+        "MethodResponses": [
+          {
+            "StatusCode": "200",
+            "ResponseParameters": {
+              "method.response.header.Access-Control-Allow-Origin": true,
+              "method.response.header.Access-Control-Allow-Headers": true,
+              "method.response.header.Access-Control-Allow-Methods": true
+            },
+            "ResponseModels": {}
+          }
+        ],
+        "RequestParameters": {},
+        "Integration": {
+          "Type": "MOCK",
+          "RequestTemplates": {
+            "application/json": "{statusCode:200}"
+          },
+          "ContentHandling": "CONVERT_TO_TEXT",
+          "IntegrationResponses": [
+            {
+              "StatusCode": "200",
+              "ResponseParameters": {
+                "method.response.header.Access-Control-Allow-Origin": "'*'",
+                "method.response.header.Access-Control-Allow-Headers": "'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token,X-Amz-User-Agent,X-Amzn-Trace-Id'",
+                "method.response.header.Access-Control-Allow-Methods": "'OPTIONS,GET'"
+              },
+              "ResponseTemplates": {
+                "application/json": ""
+              }
+            }
+          ]
+        },
+        "ResourceId": {
+          "Ref": "ApiGatewayResourceGetpostcommentsIdVar"
+        },
+        "RestApiId": {
+          "Ref": "ApiGatewayRestApi"
+        }
+      }
+    },
+    "ApiGatewayMethodGetpostoffersIdVarOptions": {
+      "Type": "AWS::ApiGateway::Method",
+      "Properties": {
+        "AuthorizationType": "NONE",
+        "HttpMethod": "OPTIONS",
+        "MethodResponses": [
+          {
+            "StatusCode": "200",
+            "ResponseParameters": {
+              "method.response.header.Access-Control-Allow-Origin": true,
+              "method.response.header.Access-Control-Allow-Headers": true,
+              "method.response.header.Access-Control-Allow-Methods": true
+            },
+            "ResponseModels": {}
+          }
+        ],
+        "RequestParameters": {},
+        "Integration": {
+          "Type": "MOCK",
+          "RequestTemplates": {
+            "application/json": "{statusCode:200}"
+          },
+          "ContentHandling": "CONVERT_TO_TEXT",
+          "IntegrationResponses": [
+            {
+              "StatusCode": "200",
+              "ResponseParameters": {
+                "method.response.header.Access-Control-Allow-Origin": "'*'",
+                "method.response.header.Access-Control-Allow-Headers": "'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token,X-Amz-User-Agent,X-Amzn-Trace-Id'",
+                "method.response.header.Access-Control-Allow-Methods": "'OPTIONS,GET'"
+              },
+              "ResponseTemplates": {
+                "application/json": ""
+              }
+            }
+          ]
+        },
+        "ResourceId": {
+          "Ref": "ApiGatewayResourceGetpostoffersIdVar"
+        },
+        "RestApiId": {
+          "Ref": "ApiGatewayRestApi"
+        }
+      }
+    },
+    "ApiGatewayMethodGetsuggesstedpostsIdVarOptions": {
+      "Type": "AWS::ApiGateway::Method",
+      "Properties": {
+        "AuthorizationType": "NONE",
+        "HttpMethod": "OPTIONS",
+        "MethodResponses": [
+          {
+            "StatusCode": "200",
+            "ResponseParameters": {
+              "method.response.header.Access-Control-Allow-Origin": true,
+              "method.response.header.Access-Control-Allow-Headers": true,
+              "method.response.header.Access-Control-Allow-Methods": true
+            },
+            "ResponseModels": {}
+          }
+        ],
+        "RequestParameters": {},
+        "Integration": {
+          "Type": "MOCK",
+          "RequestTemplates": {
+            "application/json": "{statusCode:200}"
+          },
+          "ContentHandling": "CONVERT_TO_TEXT",
+          "IntegrationResponses": [
+            {
+              "StatusCode": "200",
+              "ResponseParameters": {
+                "method.response.header.Access-Control-Allow-Origin": "'*'",
+                "method.response.header.Access-Control-Allow-Headers": "'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token,X-Amz-User-Agent,X-Amzn-Trace-Id'",
+                "method.response.header.Access-Control-Allow-Methods": "'OPTIONS,GET'"
+              },
+              "ResponseTemplates": {
+                "application/json": ""
+              }
+            }
+          ]
+        },
+        "ResourceId": {
+          "Ref": "ApiGatewayResourceGetsuggesstedpostsIdVar"
+        },
+        "RestApiId": {
+          "Ref": "ApiGatewayRestApi"
+        }
+      }
+    },
+    "ApiGatewayMethodMessagemarkasreadIdVarOptions": {
+      "Type": "AWS::ApiGateway::Method",
+      "Properties": {
+        "AuthorizationType": "NONE",
+        "HttpMethod": "OPTIONS",
+        "MethodResponses": [
+          {
+            "StatusCode": "200",
+            "ResponseParameters": {
+              "method.response.header.Access-Control-Allow-Origin": true,
+              "method.response.header.Access-Control-Allow-Headers": true,
+              "method.response.header.Access-Control-Allow-Methods": true
+            },
+            "ResponseModels": {}
+          }
+        ],
+        "RequestParameters": {},
+        "Integration": {
+          "Type": "MOCK",
+          "RequestTemplates": {
+            "application/json": "{statusCode:200}"
+          },
+          "ContentHandling": "CONVERT_TO_TEXT",
+          "IntegrationResponses": [
+            {
+              "StatusCode": "200",
+              "ResponseParameters": {
+                "method.response.header.Access-Control-Allow-Origin": "'*'",
+                "method.response.header.Access-Control-Allow-Headers": "'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token,X-Amz-User-Agent,X-Amzn-Trace-Id'",
+                "method.response.header.Access-Control-Allow-Methods": "'OPTIONS,PUT'"
+              },
+              "ResponseTemplates": {
+                "application/json": ""
+              }
+            }
+          ]
+        },
+        "ResourceId": {
+          "Ref": "ApiGatewayResourceMessagemarkasreadIdVar"
+        },
+        "RestApiId": {
+          "Ref": "ApiGatewayRestApi"
+        }
+      }
+    },
+    "ApiGatewayMethodNotificationmarkasreadIdVarOptions": {
+      "Type": "AWS::ApiGateway::Method",
+      "Properties": {
+        "AuthorizationType": "NONE",
+        "HttpMethod": "OPTIONS",
+        "MethodResponses": [
+          {
+            "StatusCode": "200",
+            "ResponseParameters": {
+              "method.response.header.Access-Control-Allow-Origin": true,
+              "method.response.header.Access-Control-Allow-Headers": true,
+              "method.response.header.Access-Control-Allow-Methods": true
+            },
+            "ResponseModels": {}
+          }
+        ],
+        "RequestParameters": {},
+        "Integration": {
+          "Type": "MOCK",
+          "RequestTemplates": {
+            "application/json": "{statusCode:200}"
+          },
+          "ContentHandling": "CONVERT_TO_TEXT",
+          "IntegrationResponses": [
+            {
+              "StatusCode": "200",
+              "ResponseParameters": {
+                "method.response.header.Access-Control-Allow-Origin": "'*'",
+                "method.response.header.Access-Control-Allow-Headers": "'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token,X-Amz-User-Agent,X-Amzn-Trace-Id'",
+                "method.response.header.Access-Control-Allow-Methods": "'OPTIONS,PUT'"
+              },
+              "ResponseTemplates": {
+                "application/json": ""
+              }
+            }
+          ]
+        },
+        "ResourceId": {
+          "Ref": "ApiGatewayResourceNotificationmarkasreadIdVar"
         },
         "RestApiId": {
           "Ref": "ApiGatewayRestApi"
@@ -5597,7 +6513,375 @@
         "GetPaymentTransactionLambdaPermissionApiGateway"
       ]
     },
-    "ApiGatewayDeployment1729612119549": {
+    "ApiGatewayMethodGeneratepresignedurlGet": {
+      "Type": "AWS::ApiGateway::Method",
+      "Properties": {
+        "HttpMethod": "GET",
+        "RequestParameters": {},
+        "ResourceId": {
+          "Ref": "ApiGatewayResourceGeneratepresignedurl"
+        },
+        "RestApiId": {
+          "Ref": "ApiGatewayRestApi"
+        },
+        "ApiKeyRequired": false,
+        "AuthorizationType": "NONE",
+        "Integration": {
+          "IntegrationHttpMethod": "POST",
+          "Type": "AWS_PROXY",
+          "Uri": {
+            "Fn::Join": [
+              "",
+              [
+                "arn:",
+                {
+                  "Ref": "AWS::Partition"
+                },
+                ":apigateway:",
+                {
+                  "Ref": "AWS::Region"
+                },
+                ":lambda:path/2015-03-31/functions/",
+                {
+                  "Fn::GetAtt": [
+                    "GeneratePresignedURLLambdaFunction",
+                    "Arn"
+                  ]
+                },
+                "/invocations"
+              ]
+            ]
+          }
+        },
+        "MethodResponses": []
+      },
+      "DependsOn": [
+        "GeneratePresignedURLLambdaPermissionApiGateway"
+      ]
+    },
+    "ApiGatewayMethodGetbusinessbycategoryNameVarGet": {
+      "Type": "AWS::ApiGateway::Method",
+      "Properties": {
+        "HttpMethod": "GET",
+        "RequestParameters": {},
+        "ResourceId": {
+          "Ref": "ApiGatewayResourceGetbusinessbycategoryNameVar"
+        },
+        "RestApiId": {
+          "Ref": "ApiGatewayRestApi"
+        },
+        "ApiKeyRequired": false,
+        "AuthorizationType": "NONE",
+        "Integration": {
+          "IntegrationHttpMethod": "POST",
+          "Type": "AWS_PROXY",
+          "Uri": {
+            "Fn::Join": [
+              "",
+              [
+                "arn:",
+                {
+                  "Ref": "AWS::Partition"
+                },
+                ":apigateway:",
+                {
+                  "Ref": "AWS::Region"
+                },
+                ":lambda:path/2015-03-31/functions/",
+                {
+                  "Fn::GetAtt": [
+                    "GetBusinessByCategoryLambdaFunction",
+                    "Arn"
+                  ]
+                },
+                "/invocations"
+              ]
+            ]
+          }
+        },
+        "MethodResponses": []
+      },
+      "DependsOn": [
+        "GetBusinessByCategoryLambdaPermissionApiGateway"
+      ]
+    },
+    "ApiGatewayMethodGetbusinessfinishedjobsIdVarGet": {
+      "Type": "AWS::ApiGateway::Method",
+      "Properties": {
+        "HttpMethod": "GET",
+        "RequestParameters": {},
+        "ResourceId": {
+          "Ref": "ApiGatewayResourceGetbusinessfinishedjobsIdVar"
+        },
+        "RestApiId": {
+          "Ref": "ApiGatewayRestApi"
+        },
+        "ApiKeyRequired": false,
+        "AuthorizationType": "NONE",
+        "Integration": {
+          "IntegrationHttpMethod": "POST",
+          "Type": "AWS_PROXY",
+          "Uri": {
+            "Fn::Join": [
+              "",
+              [
+                "arn:",
+                {
+                  "Ref": "AWS::Partition"
+                },
+                ":apigateway:",
+                {
+                  "Ref": "AWS::Region"
+                },
+                ":lambda:path/2015-03-31/functions/",
+                {
+                  "Fn::GetAtt": [
+                    "GetBusinessFinishedJobsLambdaFunction",
+                    "Arn"
+                  ]
+                },
+                "/invocations"
+              ]
+            ]
+          }
+        },
+        "MethodResponses": []
+      },
+      "DependsOn": [
+        "GetBusinessFinishedJobsLambdaPermissionApiGateway"
+      ]
+    },
+    "ApiGatewayMethodGetpostcommentsIdVarGet": {
+      "Type": "AWS::ApiGateway::Method",
+      "Properties": {
+        "HttpMethod": "GET",
+        "RequestParameters": {},
+        "ResourceId": {
+          "Ref": "ApiGatewayResourceGetpostcommentsIdVar"
+        },
+        "RestApiId": {
+          "Ref": "ApiGatewayRestApi"
+        },
+        "ApiKeyRequired": false,
+        "AuthorizationType": "NONE",
+        "Integration": {
+          "IntegrationHttpMethod": "POST",
+          "Type": "AWS_PROXY",
+          "Uri": {
+            "Fn::Join": [
+              "",
+              [
+                "arn:",
+                {
+                  "Ref": "AWS::Partition"
+                },
+                ":apigateway:",
+                {
+                  "Ref": "AWS::Region"
+                },
+                ":lambda:path/2015-03-31/functions/",
+                {
+                  "Fn::GetAtt": [
+                    "GetPostCommentsLambdaFunction",
+                    "Arn"
+                  ]
+                },
+                "/invocations"
+              ]
+            ]
+          }
+        },
+        "MethodResponses": []
+      },
+      "DependsOn": [
+        "GetPostCommentsLambdaPermissionApiGateway"
+      ]
+    },
+    "ApiGatewayMethodGetpostoffersIdVarGet": {
+      "Type": "AWS::ApiGateway::Method",
+      "Properties": {
+        "HttpMethod": "GET",
+        "RequestParameters": {},
+        "ResourceId": {
+          "Ref": "ApiGatewayResourceGetpostoffersIdVar"
+        },
+        "RestApiId": {
+          "Ref": "ApiGatewayRestApi"
+        },
+        "ApiKeyRequired": false,
+        "AuthorizationType": "NONE",
+        "Integration": {
+          "IntegrationHttpMethod": "POST",
+          "Type": "AWS_PROXY",
+          "Uri": {
+            "Fn::Join": [
+              "",
+              [
+                "arn:",
+                {
+                  "Ref": "AWS::Partition"
+                },
+                ":apigateway:",
+                {
+                  "Ref": "AWS::Region"
+                },
+                ":lambda:path/2015-03-31/functions/",
+                {
+                  "Fn::GetAtt": [
+                    "GetPostOffersLambdaFunction",
+                    "Arn"
+                  ]
+                },
+                "/invocations"
+              ]
+            ]
+          }
+        },
+        "MethodResponses": []
+      },
+      "DependsOn": [
+        "GetPostOffersLambdaPermissionApiGateway"
+      ]
+    },
+    "ApiGatewayMethodGetsuggesstedpostsIdVarGet": {
+      "Type": "AWS::ApiGateway::Method",
+      "Properties": {
+        "HttpMethod": "GET",
+        "RequestParameters": {},
+        "ResourceId": {
+          "Ref": "ApiGatewayResourceGetsuggesstedpostsIdVar"
+        },
+        "RestApiId": {
+          "Ref": "ApiGatewayRestApi"
+        },
+        "ApiKeyRequired": false,
+        "AuthorizationType": "NONE",
+        "Integration": {
+          "IntegrationHttpMethod": "POST",
+          "Type": "AWS_PROXY",
+          "Uri": {
+            "Fn::Join": [
+              "",
+              [
+                "arn:",
+                {
+                  "Ref": "AWS::Partition"
+                },
+                ":apigateway:",
+                {
+                  "Ref": "AWS::Region"
+                },
+                ":lambda:path/2015-03-31/functions/",
+                {
+                  "Fn::GetAtt": [
+                    "GetSuggesstedPostsLambdaFunction",
+                    "Arn"
+                  ]
+                },
+                "/invocations"
+              ]
+            ]
+          }
+        },
+        "MethodResponses": []
+      },
+      "DependsOn": [
+        "GetSuggesstedPostsLambdaPermissionApiGateway"
+      ]
+    },
+    "ApiGatewayMethodMessagemarkasreadIdVarPut": {
+      "Type": "AWS::ApiGateway::Method",
+      "Properties": {
+        "HttpMethod": "PUT",
+        "RequestParameters": {},
+        "ResourceId": {
+          "Ref": "ApiGatewayResourceMessagemarkasreadIdVar"
+        },
+        "RestApiId": {
+          "Ref": "ApiGatewayRestApi"
+        },
+        "ApiKeyRequired": false,
+        "AuthorizationType": "NONE",
+        "Integration": {
+          "IntegrationHttpMethod": "POST",
+          "Type": "AWS_PROXY",
+          "Uri": {
+            "Fn::Join": [
+              "",
+              [
+                "arn:",
+                {
+                  "Ref": "AWS::Partition"
+                },
+                ":apigateway:",
+                {
+                  "Ref": "AWS::Region"
+                },
+                ":lambda:path/2015-03-31/functions/",
+                {
+                  "Fn::GetAtt": [
+                    "MessageMarkAsReadLambdaFunction",
+                    "Arn"
+                  ]
+                },
+                "/invocations"
+              ]
+            ]
+          }
+        },
+        "MethodResponses": []
+      },
+      "DependsOn": [
+        "MessageMarkAsReadLambdaPermissionApiGateway"
+      ]
+    },
+    "ApiGatewayMethodNotificationmarkasreadIdVarPut": {
+      "Type": "AWS::ApiGateway::Method",
+      "Properties": {
+        "HttpMethod": "PUT",
+        "RequestParameters": {},
+        "ResourceId": {
+          "Ref": "ApiGatewayResourceNotificationmarkasreadIdVar"
+        },
+        "RestApiId": {
+          "Ref": "ApiGatewayRestApi"
+        },
+        "ApiKeyRequired": false,
+        "AuthorizationType": "NONE",
+        "Integration": {
+          "IntegrationHttpMethod": "POST",
+          "Type": "AWS_PROXY",
+          "Uri": {
+            "Fn::Join": [
+              "",
+              [
+                "arn:",
+                {
+                  "Ref": "AWS::Partition"
+                },
+                ":apigateway:",
+                {
+                  "Ref": "AWS::Region"
+                },
+                ":lambda:path/2015-03-31/functions/",
+                {
+                  "Fn::GetAtt": [
+                    "NotificationMarkAsReadLambdaFunction",
+                    "Arn"
+                  ]
+                },
+                "/invocations"
+              ]
+            ]
+          }
+        },
+        "MethodResponses": []
+      },
+      "DependsOn": [
+        "NotificationMarkAsReadLambdaPermissionApiGateway"
+      ]
+    },
+    "ApiGatewayDeployment1729669217874": {
       "Type": "AWS::ApiGateway::Deployment",
       "Properties": {
         "RestApiId": {
@@ -5637,6 +6921,14 @@
         "ApiGatewayMethodSubscriptionmanagerBusinessIdVarOptions",
         "ApiGatewayMethodPaymenttransactionOptions",
         "ApiGatewayMethodPaymenttransactionIdVarOptions",
+        "ApiGatewayMethodGeneratepresignedurlOptions",
+        "ApiGatewayMethodGetbusinessbycategoryNameVarOptions",
+        "ApiGatewayMethodGetbusinessfinishedjobsIdVarOptions",
+        "ApiGatewayMethodGetpostcommentsIdVarOptions",
+        "ApiGatewayMethodGetpostoffersIdVarOptions",
+        "ApiGatewayMethodGetsuggesstedpostsIdVarOptions",
+        "ApiGatewayMethodMessagemarkasreadIdVarOptions",
+        "ApiGatewayMethodNotificationmarkasreadIdVarOptions",
         "ApiGatewayMethodUserIdVarGet",
         "ApiGatewayMethodUserPost",
         "ApiGatewayMethodUserIdVarDelete",
@@ -5677,7 +6969,15 @@
         "ApiGatewayMethodSubscriptionmanagerIdVarPut",
         "ApiGatewayMethodSubscriptionmanagerBusinessIdVarGet",
         "ApiGatewayMethodPaymenttransactionPost",
-        "ApiGatewayMethodPaymenttransactionIdVarGet"
+        "ApiGatewayMethodPaymenttransactionIdVarGet",
+        "ApiGatewayMethodGeneratepresignedurlGet",
+        "ApiGatewayMethodGetbusinessbycategoryNameVarGet",
+        "ApiGatewayMethodGetbusinessfinishedjobsIdVarGet",
+        "ApiGatewayMethodGetpostcommentsIdVarGet",
+        "ApiGatewayMethodGetpostoffersIdVarGet",
+        "ApiGatewayMethodGetsuggesstedpostsIdVarGet",
+        "ApiGatewayMethodMessagemarkasreadIdVarPut",
+        "ApiGatewayMethodNotificationmarkasreadIdVarPut"
       ]
     },
     "GetUserLambdaPermissionApiGateway": {
@@ -7196,6 +8496,302 @@
           ]
         }
       }
+    },
+    "GeneratePresignedURLLambdaPermissionApiGateway": {
+      "Type": "AWS::Lambda::Permission",
+      "Properties": {
+        "FunctionName": {
+          "Fn::GetAtt": [
+            "GeneratePresignedURLLambdaFunction",
+            "Arn"
+          ]
+        },
+        "Action": "lambda:InvokeFunction",
+        "Principal": "apigateway.amazonaws.com",
+        "SourceArn": {
+          "Fn::Join": [
+            "",
+            [
+              "arn:",
+              {
+                "Ref": "AWS::Partition"
+              },
+              ":execute-api:",
+              {
+                "Ref": "AWS::Region"
+              },
+              ":",
+              {
+                "Ref": "AWS::AccountId"
+              },
+              ":",
+              {
+                "Ref": "ApiGatewayRestApi"
+              },
+              "/*/*"
+            ]
+          ]
+        }
+      }
+    },
+    "GetBusinessByCategoryLambdaPermissionApiGateway": {
+      "Type": "AWS::Lambda::Permission",
+      "Properties": {
+        "FunctionName": {
+          "Fn::GetAtt": [
+            "GetBusinessByCategoryLambdaFunction",
+            "Arn"
+          ]
+        },
+        "Action": "lambda:InvokeFunction",
+        "Principal": "apigateway.amazonaws.com",
+        "SourceArn": {
+          "Fn::Join": [
+            "",
+            [
+              "arn:",
+              {
+                "Ref": "AWS::Partition"
+              },
+              ":execute-api:",
+              {
+                "Ref": "AWS::Region"
+              },
+              ":",
+              {
+                "Ref": "AWS::AccountId"
+              },
+              ":",
+              {
+                "Ref": "ApiGatewayRestApi"
+              },
+              "/*/*"
+            ]
+          ]
+        }
+      }
+    },
+    "GetBusinessFinishedJobsLambdaPermissionApiGateway": {
+      "Type": "AWS::Lambda::Permission",
+      "Properties": {
+        "FunctionName": {
+          "Fn::GetAtt": [
+            "GetBusinessFinishedJobsLambdaFunction",
+            "Arn"
+          ]
+        },
+        "Action": "lambda:InvokeFunction",
+        "Principal": "apigateway.amazonaws.com",
+        "SourceArn": {
+          "Fn::Join": [
+            "",
+            [
+              "arn:",
+              {
+                "Ref": "AWS::Partition"
+              },
+              ":execute-api:",
+              {
+                "Ref": "AWS::Region"
+              },
+              ":",
+              {
+                "Ref": "AWS::AccountId"
+              },
+              ":",
+              {
+                "Ref": "ApiGatewayRestApi"
+              },
+              "/*/*"
+            ]
+          ]
+        }
+      }
+    },
+    "GetPostCommentsLambdaPermissionApiGateway": {
+      "Type": "AWS::Lambda::Permission",
+      "Properties": {
+        "FunctionName": {
+          "Fn::GetAtt": [
+            "GetPostCommentsLambdaFunction",
+            "Arn"
+          ]
+        },
+        "Action": "lambda:InvokeFunction",
+        "Principal": "apigateway.amazonaws.com",
+        "SourceArn": {
+          "Fn::Join": [
+            "",
+            [
+              "arn:",
+              {
+                "Ref": "AWS::Partition"
+              },
+              ":execute-api:",
+              {
+                "Ref": "AWS::Region"
+              },
+              ":",
+              {
+                "Ref": "AWS::AccountId"
+              },
+              ":",
+              {
+                "Ref": "ApiGatewayRestApi"
+              },
+              "/*/*"
+            ]
+          ]
+        }
+      }
+    },
+    "GetPostOffersLambdaPermissionApiGateway": {
+      "Type": "AWS::Lambda::Permission",
+      "Properties": {
+        "FunctionName": {
+          "Fn::GetAtt": [
+            "GetPostOffersLambdaFunction",
+            "Arn"
+          ]
+        },
+        "Action": "lambda:InvokeFunction",
+        "Principal": "apigateway.amazonaws.com",
+        "SourceArn": {
+          "Fn::Join": [
+            "",
+            [
+              "arn:",
+              {
+                "Ref": "AWS::Partition"
+              },
+              ":execute-api:",
+              {
+                "Ref": "AWS::Region"
+              },
+              ":",
+              {
+                "Ref": "AWS::AccountId"
+              },
+              ":",
+              {
+                "Ref": "ApiGatewayRestApi"
+              },
+              "/*/*"
+            ]
+          ]
+        }
+      }
+    },
+    "GetSuggesstedPostsLambdaPermissionApiGateway": {
+      "Type": "AWS::Lambda::Permission",
+      "Properties": {
+        "FunctionName": {
+          "Fn::GetAtt": [
+            "GetSuggesstedPostsLambdaFunction",
+            "Arn"
+          ]
+        },
+        "Action": "lambda:InvokeFunction",
+        "Principal": "apigateway.amazonaws.com",
+        "SourceArn": {
+          "Fn::Join": [
+            "",
+            [
+              "arn:",
+              {
+                "Ref": "AWS::Partition"
+              },
+              ":execute-api:",
+              {
+                "Ref": "AWS::Region"
+              },
+              ":",
+              {
+                "Ref": "AWS::AccountId"
+              },
+              ":",
+              {
+                "Ref": "ApiGatewayRestApi"
+              },
+              "/*/*"
+            ]
+          ]
+        }
+      }
+    },
+    "MessageMarkAsReadLambdaPermissionApiGateway": {
+      "Type": "AWS::Lambda::Permission",
+      "Properties": {
+        "FunctionName": {
+          "Fn::GetAtt": [
+            "MessageMarkAsReadLambdaFunction",
+            "Arn"
+          ]
+        },
+        "Action": "lambda:InvokeFunction",
+        "Principal": "apigateway.amazonaws.com",
+        "SourceArn": {
+          "Fn::Join": [
+            "",
+            [
+              "arn:",
+              {
+                "Ref": "AWS::Partition"
+              },
+              ":execute-api:",
+              {
+                "Ref": "AWS::Region"
+              },
+              ":",
+              {
+                "Ref": "AWS::AccountId"
+              },
+              ":",
+              {
+                "Ref": "ApiGatewayRestApi"
+              },
+              "/*/*"
+            ]
+          ]
+        }
+      }
+    },
+    "NotificationMarkAsReadLambdaPermissionApiGateway": {
+      "Type": "AWS::Lambda::Permission",
+      "Properties": {
+        "FunctionName": {
+          "Fn::GetAtt": [
+            "NotificationMarkAsReadLambdaFunction",
+            "Arn"
+          ]
+        },
+        "Action": "lambda:InvokeFunction",
+        "Principal": "apigateway.amazonaws.com",
+        "SourceArn": {
+          "Fn::Join": [
+            "",
+            [
+              "arn:",
+              {
+                "Ref": "AWS::Partition"
+              },
+              ":execute-api:",
+              {
+                "Ref": "AWS::Region"
+              },
+              ":",
+              {
+                "Ref": "AWS::AccountId"
+              },
+              ":",
+              {
+                "Ref": "ApiGatewayRestApi"
+              },
+              "/*/*"
+            ]
+          ]
+        }
+      }
     }
   },
   "Outputs": {
@@ -7208,7 +8804,7 @@
     "GetUserLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "GetUserLambdaVersionLVaLQwtzET3Z6MzkXFNwDjLa5EGD0m6Guo9kwJqtNs"
+        "Ref": "GetUserLambdaVersionOCrgN5EBdfDD9PeUlp0e9V8XYSQcDnyisiXPtUwHEY"
       },
       "Export": {
         "Name": "sls-interio-service-dev-GetUserLambdaFunctionQualifiedArn"
@@ -7217,7 +8813,7 @@
     "CreateUserLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "CreateUserLambdaVersiondiPNlpA28vAeQbOUknDXgriD9NbxM0UqW0qWOue0"
+        "Ref": "CreateUserLambdaVersionsxmKwJSuAld23qvvkDjKq1S2rzW2grSA53oCt9VGY"
       },
       "Export": {
         "Name": "sls-interio-service-dev-CreateUserLambdaFunctionQualifiedArn"
@@ -7226,7 +8822,7 @@
     "DeleteUserLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "DeleteUserLambdaVersionqPfCeY4pIAhD6VUNHmTH0hBnqx8JD3we07rcMvI8"
+        "Ref": "DeleteUserLambdaVersionAGlSoAsYmuK1k7GanjTEWYEYudx22ZgQzosIuDVcffQ"
       },
       "Export": {
         "Name": "sls-interio-service-dev-DeleteUserLambdaFunctionQualifiedArn"
@@ -7235,7 +8831,7 @@
     "GetUserNameLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "GetUserNameLambdaVersionoCIHJdvK6gjKXtn2sziel5dmuG5mR3sPrsBhxyZEI"
+        "Ref": "GetUserNameLambdaVersionMpBxYtjO9dDVybTNXr8PWnsmpKJNtlY6N63PsXSaJI"
       },
       "Export": {
         "Name": "sls-interio-service-dev-GetUserNameLambdaFunctionQualifiedArn"
@@ -7244,7 +8840,7 @@
     "UpdateUserLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "UpdateUserLambdaVersionEC9hsnvpB3Vr4S3lmLJX7fDmoojLWq7Ec6pYpzHmSQ"
+        "Ref": "UpdateUserLambdaVersionzoL0fW4joQ5CgLW9yjeKhmeW8oArC0KXJtPJL8C6i8"
       },
       "Export": {
         "Name": "sls-interio-service-dev-UpdateUserLambdaFunctionQualifiedArn"
@@ -7253,7 +8849,7 @@
     "GetBusinessByIdLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "GetBusinessByIdLambdaVersionm0VKkEqOZfvqA3sbwwzeZ0uh7km3N9vby9rcjWFWA"
+        "Ref": "GetBusinessByIdLambdaVersion9XfFzGPSEh11Ta66Pw3Wsk2NhiifnKdHRtb6MYzDco"
       },
       "Export": {
         "Name": "sls-interio-service-dev-GetBusinessByIdLambdaFunctionQualifiedArn"
@@ -7262,7 +8858,7 @@
     "CreateBusinessLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "CreateBusinessLambdaVersioneOnzfdT2ywtuUHjnhM46aKscKXCMcebFqTDcmI0Svg"
+        "Ref": "CreateBusinessLambdaVersionSLCsBy8Ip7MDPPMdAbEqh0aY7apL2orrNOyak0Fx8"
       },
       "Export": {
         "Name": "sls-interio-service-dev-CreateBusinessLambdaFunctionQualifiedArn"
@@ -7271,7 +8867,7 @@
     "DeleteBusinessLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "DeleteBusinessLambdaVersion959zZAST1AFCprkEunCUjDP3AEmJAqunEgHndVg7nBw"
+        "Ref": "DeleteBusinessLambdaVersionsQdy0Ur4SMYWVC4FeTBdbbPW8qeko26BaysaFPE0U"
       },
       "Export": {
         "Name": "sls-interio-service-dev-DeleteBusinessLambdaFunctionQualifiedArn"
@@ -7280,7 +8876,7 @@
     "GetBusinessNameLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "GetBusinessNameLambdaVersionfy3WYrmc4qpAetbuWZGYTxsicgJWi5SjTcOSuasyhk"
+        "Ref": "GetBusinessNameLambdaVersionHZFMgjVigp1UMYR9RqVGw9zqHrIrU24p2wZdbs9c"
       },
       "Export": {
         "Name": "sls-interio-service-dev-GetBusinessNameLambdaFunctionQualifiedArn"
@@ -7289,7 +8885,7 @@
     "UpdateBusinessLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "UpdateBusinessLambdaVersionCv58oH5h3Lc85wG0Ge6lsYoQhbB3qU5fihwdvfDZw"
+        "Ref": "UpdateBusinessLambdaVersionqpvVxhz2ZOtTIWgAJa0KdE86NnqzQ6KoMnMQyGSVoY"
       },
       "Export": {
         "Name": "sls-interio-service-dev-UpdateBusinessLambdaFunctionQualifiedArn"
@@ -7298,7 +8894,7 @@
     "GetPostByIdLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "GetPostByIdLambdaVersionqK1iQJbUJSq1lnfuUF17ktTPSF4ImfSHrAOZHpYZW18"
+        "Ref": "GetPostByIdLambdaVersionhf9psaDueP7W69Df1Tp08MUumcyojYyq6PRupOHDcI"
       },
       "Export": {
         "Name": "sls-interio-service-dev-GetPostByIdLambdaFunctionQualifiedArn"
@@ -7307,7 +8903,7 @@
     "CreatePostLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "CreatePostLambdaVersionQ3MXNJo2kb492VPAdPfw8iPdF9rmWN4hz4YyFOmknPg"
+        "Ref": "CreatePostLambdaVersionuBE3WSK6jSdZHIU29jYFarXlqNYbOy3yJbS2gB7U"
       },
       "Export": {
         "Name": "sls-interio-service-dev-CreatePostLambdaFunctionQualifiedArn"
@@ -7316,7 +8912,7 @@
     "DeletePostLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "DeletePostLambdaVersionaenPdqu6xKUzPAbxMSIKQJ6qb6bflLp4lR4eZKTAQ"
+        "Ref": "DeletePostLambdaVersioncz0PoFKGyOpEjCh9grR8Vm62hEUwLPanfwcS76ZOg"
       },
       "Export": {
         "Name": "sls-interio-service-dev-DeletePostLambdaFunctionQualifiedArn"
@@ -7325,7 +8921,7 @@
     "GetFiltredPostsLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "GetFiltredPostsLambdaVersion8Pa2CBT7AMEJYr5IavQSeG0itqCE5WNWuqw91aFp0"
+        "Ref": "GetFiltredPostsLambdaVersionEU72oG6hAYJmDbJ50ip1En8TsPX0lk18wgRrT130"
       },
       "Export": {
         "Name": "sls-interio-service-dev-GetFiltredPostsLambdaFunctionQualifiedArn"
@@ -7334,7 +8930,7 @@
     "GetAvailablePostsLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "GetAvailablePostsLambdaVersionHTV9W5xRrvjnY9OqsIJQHIE1e8HREcNuzlrSrS2q8QA"
+        "Ref": "GetAvailablePostsLambdaVersion66PdLGIPFAWyEJDGrmA5F4IkTtNg5qePw0u3irPvzdk"
       },
       "Export": {
         "Name": "sls-interio-service-dev-GetAvailablePostsLambdaFunctionQualifiedArn"
@@ -7343,7 +8939,7 @@
     "CreateOfferLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "CreateOfferLambdaVersionQBYhiFqMrdjrQNVWEogAQbY3osUWubJ6GlNXIqzGEsU"
+        "Ref": "CreateOfferLambdaVersionx1hiivmkNKb6E03BvCKWpxOd1rPV7j4QOf1GxSrMI"
       },
       "Export": {
         "Name": "sls-interio-service-dev-CreateOfferLambdaFunctionQualifiedArn"
@@ -7352,7 +8948,7 @@
     "DeleteOfferLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "DeleteOfferLambdaVersionEH2FmIConFPbQcMZ64xQm4OGLOR6InRZXDsTpNm7yE"
+        "Ref": "DeleteOfferLambdaVersioneTN0o3L8Us3DsOzPxTKJQ0mWxHzOlEAkwvPIjhGs"
       },
       "Export": {
         "Name": "sls-interio-service-dev-DeleteOfferLambdaFunctionQualifiedArn"
@@ -7361,7 +8957,7 @@
     "GetOfferByIdLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "GetOfferByIdLambdaVersionsL51Oe17mJNox2YsKJKAxXPkaesVgrl9ryWdPoyA"
+        "Ref": "GetOfferByIdLambdaVersionae5TaG67cJDDFUPWenaHIu4WuotB0nYWZ9IFexajAw"
       },
       "Export": {
         "Name": "sls-interio-service-dev-GetOfferByIdLambdaFunctionQualifiedArn"
@@ -7370,7 +8966,7 @@
     "CreateCategoryLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "CreateCategoryLambdaVersionyDWILpj8OPaI33LBa9bdYXzqPCVPoQf5s7fFNSFAR9M"
+        "Ref": "CreateCategoryLambdaVersionqGwQtrHke25CFwi2cUjcbWZi8vfgx32UBo6OkypMfw"
       },
       "Export": {
         "Name": "sls-interio-service-dev-CreateCategoryLambdaFunctionQualifiedArn"
@@ -7379,7 +8975,7 @@
     "DeleteCategoryLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "DeleteCategoryLambdaVersionZuZm6lagWVvng5n0BZvd3iPOf8JUABrhVGRc4DnqQ"
+        "Ref": "DeleteCategoryLambdaVersionHI2g8X6eMp6LIpy6WKQvHVaGEtyguoFlmeG1KtnEI4"
       },
       "Export": {
         "Name": "sls-interio-service-dev-DeleteCategoryLambdaFunctionQualifiedArn"
@@ -7388,7 +8984,7 @@
     "GetCategoryByIdLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "GetCategoryByIdLambdaVersionR7iNupptLs3CEyQKe9JddPh4E4jV0DRpkMJFK9IFP8"
+        "Ref": "GetCategoryByIdLambdaVersionVu6lhHkpqyIz0BHjCe9RKxlCBi4yqjo1ZnNoaQrxS5U"
       },
       "Export": {
         "Name": "sls-interio-service-dev-GetCategoryByIdLambdaFunctionQualifiedArn"
@@ -7397,7 +8993,7 @@
     "GetAllCategoriesLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "GetAllCategoriesLambdaVersiongZ3MDC9744VdW1PzgplsvodFM5CoFExYXHjQwleXowo"
+        "Ref": "GetAllCategoriesLambdaVersionOEy5FHInB7IHKDKiXYQwnQKGggjpILrLD7ZapdUCkI"
       },
       "Export": {
         "Name": "sls-interio-service-dev-GetAllCategoriesLambdaFunctionQualifiedArn"
@@ -7406,7 +9002,7 @@
     "CreateJobLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "CreateJobLambdaVersion5eCTJpcgefxBlepYwctOIDPfOgnAuNloBmrcHFfxk"
+        "Ref": "CreateJobLambdaVersioniJ8aP4lFw5qvtKml4qVV3V3hTvqeNzoBgxnk2T7n9M"
       },
       "Export": {
         "Name": "sls-interio-service-dev-CreateJobLambdaFunctionQualifiedArn"
@@ -7415,7 +9011,7 @@
     "GetJobByIdLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "GetJobByIdLambdaVersionxnpnth090BFjJGEXdVr2VZk0EF3yQHM2u9gbfOS03M"
+        "Ref": "GetJobByIdLambdaVersiondiQFbwbYxPLwvsphZUGCGMx9rn4P08D8AT0gbTmwSZg"
       },
       "Export": {
         "Name": "sls-interio-service-dev-GetJobByIdLambdaFunctionQualifiedArn"
@@ -7424,7 +9020,7 @@
     "CreateCommentLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "CreateCommentLambdaVersionvL54MBFlWuVOQ0wS5D1Xsv2D4gcppX8OMqdU5zRyPxQ"
+        "Ref": "CreateCommentLambdaVersion0DvbWdgAerEly6tavX4eHkl3PxGicDXWsyJ9wKCKI"
       },
       "Export": {
         "Name": "sls-interio-service-dev-CreateCommentLambdaFunctionQualifiedArn"
@@ -7433,7 +9029,7 @@
     "GetCommentByIdLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "GetCommentByIdLambdaVersion3iFol9sZKJJLVeAl4JDEHNm80hXKZ7BNvejdG3BRg"
+        "Ref": "GetCommentByIdLambdaVersionFRw4flSGnkRrPPguame1gTDwiJ3OpjGrhrUuVOUQ4"
       },
       "Export": {
         "Name": "sls-interio-service-dev-GetCommentByIdLambdaFunctionQualifiedArn"
@@ -7442,7 +9038,7 @@
     "DeleteCommentLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "DeleteCommentLambdaVersiond6ZiaUz2iy5caNvM2JqI209BiVBSxnGG2jKBA2pQ6Fo"
+        "Ref": "DeleteCommentLambdaVersionOfCzt7KX29jey2XfgY2a2BgLKp69tbaibZqjEIM"
       },
       "Export": {
         "Name": "sls-interio-service-dev-DeleteCommentLambdaFunctionQualifiedArn"
@@ -7451,7 +9047,7 @@
     "CreateMessageLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "CreateMessageLambdaVersionER0n2qIqAMUzUeS1vhcqU47kavn76GTf7ZRG69SZT8"
+        "Ref": "CreateMessageLambdaVersionXy1ShBXA4Su11ZNc0fi3nHEf2CrqdMcHsESCl3ibo"
       },
       "Export": {
         "Name": "sls-interio-service-dev-CreateMessageLambdaFunctionQualifiedArn"
@@ -7460,7 +9056,7 @@
     "GetMessageByIdLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "GetMessageByIdLambdaVersionIlf4YcWFPPJfdAR8cpqpK1TX2l8WXsYVNtY6IR7o"
+        "Ref": "GetMessageByIdLambdaVersionAeMm3Pw7naUtHEufn2G8pSLttcRlZ1lLV8MT45CvRA"
       },
       "Export": {
         "Name": "sls-interio-service-dev-GetMessageByIdLambdaFunctionQualifiedArn"
@@ -7469,7 +9065,7 @@
     "CreateNotificationLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "CreateNotificationLambdaVersion7HTT24tRWeuVU8J6YxxaNGNAemQgpcJpyQqn937mg"
+        "Ref": "CreateNotificationLambdaVersion5tkM6vGlldDWBJtD3Iv3LH58n2ocjhD0KlQO7G1A"
       },
       "Export": {
         "Name": "sls-interio-service-dev-CreateNotificationLambdaFunctionQualifiedArn"
@@ -7478,7 +9074,7 @@
     "GetNotificationByIdLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "GetNotificationByIdLambdaVersionHyb6vZfsTIKXFA8zZY55lQTsyxWdPAZf7X73Mjs"
+        "Ref": "GetNotificationByIdLambdaVersion4YMDAttpP8ARQbmjllQ3VPDgA7vYAK21epxcMDleko"
       },
       "Export": {
         "Name": "sls-interio-service-dev-GetNotificationByIdLambdaFunctionQualifiedArn"
@@ -7487,7 +9083,7 @@
     "CreateSubscriptionPlanLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "CreateSubscriptionPlanLambdaVersioncMzbn1RcnCG5iHMMNtD1Undq64CjU1yrJYMVX6llu4"
+        "Ref": "CreateSubscriptionPlanLambdaVersionT4kmyLUPqNqIevNZMY9ISHguBfu5i9c0FdnQMCvJ0"
       },
       "Export": {
         "Name": "sls-interio-service-dev-CreateSubscriptionPlanLambdaFunctionQualifiedArn"
@@ -7496,7 +9092,7 @@
     "GetSubscriptionPlanLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "GetSubscriptionPlanLambdaVersion4VplnXM7srmv7nJ3tLvRPASzRlPnqud96sx4ztHfks"
+        "Ref": "GetSubscriptionPlanLambdaVersionL55A3iB7LpY6NTElxmFsZHllUihH3KECSjYeXVgXM"
       },
       "Export": {
         "Name": "sls-interio-service-dev-GetSubscriptionPlanLambdaFunctionQualifiedArn"
@@ -7505,7 +9101,7 @@
     "GetAllSubscriptionPlansLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "GetAllSubscriptionPlansLambdaVersion09pHQG2mxq702rQJ9VUJh5oCXVemg0A8AGUTXXyZgGk"
+        "Ref": "GetAllSubscriptionPlansLambdaVersionWFoxPB4JknUmx8pEfV047sExvFxaaFMWqlk8FroBbbA"
       },
       "Export": {
         "Name": "sls-interio-service-dev-GetAllSubscriptionPlansLambdaFunctionQualifiedArn"
@@ -7514,7 +9110,7 @@
     "DeleteSubscriptionPlanLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "DeleteSubscriptionPlanLambdaVersioniAAZd89xuTRCFWPjFrsUJBPujbkt1XWelZAPiiN84g"
+        "Ref": "DeleteSubscriptionPlanLambdaVersionVb01Lg3RUnUoZXXDYAKUM7g8c5AOEvCianBdU0wFto"
       },
       "Export": {
         "Name": "sls-interio-service-dev-DeleteSubscriptionPlanLambdaFunctionQualifiedArn"
@@ -7523,7 +9119,7 @@
     "CreateSubscriptionManagerLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "CreateSubscriptionManagerLambdaVersion4BVaYXQiWynVMdwaysC58jiHVjayD1rMo0hBHSkrus8"
+        "Ref": "CreateSubscriptionManagerLambdaVersion56joeuhrhMWGIvETjSTzXIoNmPKpDfNBDdIkQEgM0"
       },
       "Export": {
         "Name": "sls-interio-service-dev-CreateSubscriptionManagerLambdaFunctionQualifiedArn"
@@ -7532,7 +9128,7 @@
     "GetSubscriptionManagerByIdLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "GetSubscriptionManagerByIdLambdaVersionKGLpHVSs4vj9MFzNfEbTiawUrKnw0wAlKtY2wxNfWc"
+        "Ref": "GetSubscriptionManagerByIdLambdaVersionbcKyn0URiptIhBp7qYVt9edo47JYq6mhAzn4OGoi1E"
       },
       "Export": {
         "Name": "sls-interio-service-dev-GetSubscriptionManagerByIdLambdaFunctionQualifiedArn"
@@ -7541,7 +9137,7 @@
     "UpdateSubscriptionManagerLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "UpdateSubscriptionManagerLambdaVersionqRjeX2ZzStF1Qu4f6rCxPsMgrKkf2bCuiY5vCfnFuXA"
+        "Ref": "UpdateSubscriptionManagerLambdaVersionz3KoltZFWqydNqCgbaHcSSo2BssBGs7IEc6N61TJuI"
       },
       "Export": {
         "Name": "sls-interio-service-dev-UpdateSubscriptionManagerLambdaFunctionQualifiedArn"
@@ -7550,7 +9146,7 @@
     "GetSubscriptionManagerLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "GetSubscriptionManagerLambdaVersionNh2KQHecAYT8ErnfGOLiCzfUQUNzpW3SwtSIMfYDJ20"
+        "Ref": "GetSubscriptionManagerLambdaVersionFssZZFff1n1WTEzXFiHgcUkfgG3CXqbke9yxX4PQ"
       },
       "Export": {
         "Name": "sls-interio-service-dev-GetSubscriptionManagerLambdaFunctionQualifiedArn"
@@ -7559,7 +9155,7 @@
     "CreatePaymentTransactionLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "CreatePaymentTransactionLambdaVersionBPpqa6AjQBH2hZ6M0RIIYovmUgpdRU8wz7cL0uNbQ"
+        "Ref": "CreatePaymentTransactionLambdaVersionuqp5iLJNX4qMToMOYcoar1xRTGelJrsWpnYbc2RseA"
       },
       "Export": {
         "Name": "sls-interio-service-dev-CreatePaymentTransactionLambdaFunctionQualifiedArn"
@@ -7568,10 +9164,82 @@
     "GetPaymentTransactionLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "GetPaymentTransactionLambdaVersion4ktyDE4oOOjkVcosMqGT8nqzKtis0QzN9REQoLfrUno"
+        "Ref": "GetPaymentTransactionLambdaVersionitbKBgZIpzoWZd982nKzVo7V6C866pptBRfTdj7s"
       },
       "Export": {
         "Name": "sls-interio-service-dev-GetPaymentTransactionLambdaFunctionQualifiedArn"
+      }
+    },
+    "GeneratePresignedURLLambdaFunctionQualifiedArn": {
+      "Description": "Current Lambda function version",
+      "Value": {
+        "Ref": "GeneratePresignedURLLambdaVersionZKpDlcBXRcSH1fNdajnI5UH32PoeQx0nkq9e9waJrY"
+      },
+      "Export": {
+        "Name": "sls-interio-service-dev-GeneratePresignedURLLambdaFunctionQualifiedArn"
+      }
+    },
+    "GetBusinessByCategoryLambdaFunctionQualifiedArn": {
+      "Description": "Current Lambda function version",
+      "Value": {
+        "Ref": "GetBusinessByCategoryLambdaVersion3iV2VDGMxEaxGfAdD8fvaTCATBOqxvs6YOvhJ0X1u4"
+      },
+      "Export": {
+        "Name": "sls-interio-service-dev-GetBusinessByCategoryLambdaFunctionQualifiedArn"
+      }
+    },
+    "GetBusinessFinishedJobsLambdaFunctionQualifiedArn": {
+      "Description": "Current Lambda function version",
+      "Value": {
+        "Ref": "GetBusinessFinishedJobsLambdaVersion38lk1OtGRG1wj7E3icKMQMr0FmVNtMKD0WIiP6INao"
+      },
+      "Export": {
+        "Name": "sls-interio-service-dev-GetBusinessFinishedJobsLambdaFunctionQualifiedArn"
+      }
+    },
+    "GetPostCommentsLambdaFunctionQualifiedArn": {
+      "Description": "Current Lambda function version",
+      "Value": {
+        "Ref": "GetPostCommentsLambdaVersion7gQBJrzE1yIIsLEAzPfHE4sXmuOWLRXiTEUH6ogagg"
+      },
+      "Export": {
+        "Name": "sls-interio-service-dev-GetPostCommentsLambdaFunctionQualifiedArn"
+      }
+    },
+    "GetPostOffersLambdaFunctionQualifiedArn": {
+      "Description": "Current Lambda function version",
+      "Value": {
+        "Ref": "GetPostOffersLambdaVersiony2vIqWgfWWHgGtzEEEv7VhfvkK8LGIemXb6Ur3n0"
+      },
+      "Export": {
+        "Name": "sls-interio-service-dev-GetPostOffersLambdaFunctionQualifiedArn"
+      }
+    },
+    "GetSuggesstedPostsLambdaFunctionQualifiedArn": {
+      "Description": "Current Lambda function version",
+      "Value": {
+        "Ref": "GetSuggesstedPostsLambdaVersionHEFHxo7qQT7REnT41HkYxjotToe7eurzQLoX3cATE"
+      },
+      "Export": {
+        "Name": "sls-interio-service-dev-GetSuggesstedPostsLambdaFunctionQualifiedArn"
+      }
+    },
+    "MessageMarkAsReadLambdaFunctionQualifiedArn": {
+      "Description": "Current Lambda function version",
+      "Value": {
+        "Ref": "MessageMarkAsReadLambdaVersionI5C5QjlsX0vIKCzvo9Nsa63YJ9hWhXZHk9DS7j857I"
+      },
+      "Export": {
+        "Name": "sls-interio-service-dev-MessageMarkAsReadLambdaFunctionQualifiedArn"
+      }
+    },
+    "NotificationMarkAsReadLambdaFunctionQualifiedArn": {
+      "Description": "Current Lambda function version",
+      "Value": {
+        "Ref": "NotificationMarkAsReadLambdaVersionmRD9sqAvpxDT59x2JGsJvgl2vjPVMgAfp9zGmRq1IGU"
+      },
+      "Export": {
+        "Name": "sls-interio-service-dev-NotificationMarkAsReadLambdaFunctionQualifiedArn"
       }
     },
     "ServiceEndpoint": {

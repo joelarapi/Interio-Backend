@@ -3,11 +3,11 @@ import Post from "../../models/Post.js";
 import connectDB from "../../configurations/connectDB.js";
 
 export const handler = async (event) => {
-    const { businessId } = event.pathParameters;
+    const { id } = event.pathParameters;
 
     try {
         await connectDB();
-        const business = await Business.findById(businessId).populate('category');
+        const business = await Business.findById(id);
 
         if (!business) {
             return {

@@ -3,11 +3,11 @@ import Category from "../../models/Category.js";
 import connectDB from "../../configurations/connectDB.js";
 
 export const handler = async (event) => {
-    const { category } = event.pathParameters;
+    const { name } = event.pathParameters;
 
     try {
         await connectDB();
-        const categoryData = await Category.findOne({ name: { $regex: category, $options: 'i' } });
+        const categoryData = await Category.findOne({ name: { $regex: name, $options: 'i' } });
         
         if (!categoryData) {
             return {
